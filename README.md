@@ -8,3 +8,6 @@ em projetos como o [Colaboradados](http://colaboradados.github.io/) e a [lista
 de catálogos de dados abertos no
 Brasil](https://github.com/dadosgovbr/catalogos-dados-brasil).
 
+Onde foi localizada uma mudança de endereço (URL) nos portais, as tabelas foram
+atualizadas.
+
