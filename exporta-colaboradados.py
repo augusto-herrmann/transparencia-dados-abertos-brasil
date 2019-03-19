@@ -36,9 +36,9 @@ import rows
 if args.estaduais:
     states = rows.import_from_csv(args.entrada)
     for state in states:
-        output += '## {}\n\n'.format(state.uf_nome)
+        output += '## {}\n\n'.format(state.uf_nome.upper())
         name = portal_type[state.tipo.strip()] + ' do Estado de ' + state.uf_nome
-        output += '-  **[{}]({})**: {}\n\n'.format(name, state.url, state.url)
+        output += '-   **[{}]({})**: {}\n\n'.format(name, state.url, state.url)
 elif args.municipais:
     cities = rows.import_from_csv(args.entrada)
     states = set([city.uf.upper() for city in cities])
@@ -47,7 +47,7 @@ elif args.municipais:
         for city in (city for city in cities if city.uf==state and city.url.strip()):
             output += '### {}\n\n'.format(city.municipio)
             name = portal_type[city.tipo.strip()] + ' do Município de ' + city.municipio
-            output += '-  **[{}]({})**: {}\n\n'.format(name, city.url, city.url)
+            output += '-   **[{}]({})**: {}\n\n'.format(name, city.url, city.url)
             if city.observacao.strip():
                 output += '*Observação:* {}\n\n'.format(city.observacao.strip())
         output += '\n'
