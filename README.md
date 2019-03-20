@@ -1,5 +1,7 @@
 Para uma descrição em português, veja o arquivo 🇧🇷[LEIAME.md](LEIAME.md).
 
+[![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
+
 ## Transparency and Open Data Portals of Brazilian states and municipalities
 
 This repository contains spreadsheets originally converted from tables 31 and
