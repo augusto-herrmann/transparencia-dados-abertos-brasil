@@ -1,13 +1,16 @@
-## Portais de Transparência e Dados Abertos de estados e municípios do Brasil
+Para uma descrição em português, veja o arquivo [LEIAME.md](LEIAME.md).
 
-Este repositório contém uma conversão em tabela dos quadros 31 e 32 da [tese
-de doutorado de Rodrigo Klein (2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
+## Transparency and Open Data Portals of Brazilian states and municipalities
 
-O objetivo é colaborar no monitoramento da transparência de estados e municípios 
-em projetos como o [Colaboradados](http://colaboradados.github.io/) e a [lista
-de catálogos de dados abertos no
-Brasil](https://github.com/dadosgovbr/catalogos-dados-brasil).
+This repository contains spreadsheets originally converted from tables 31 and
+32 from [the PhD thesis of Rodrigo Klein
+(2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
 
-Onde foi localizada uma mudança de endereço (URL) nos portais, as tabelas foram
-atualizadas.
+The objective is to collaborate on the monitoring of transparency of Brazilian
+states and municipalities in projects such as
+[Colaboradados](http://colaboradados.github.io/) and the [list of open data
+catalogs in Brazil](https://github.com/dadosgovbr/catalogos-dados-brasil).
+
+Where we notices a change in the portals' addresses (URLs) the tables have been
+updated.
 
