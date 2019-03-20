@@ -11,6 +11,6 @@ states and municipalities in projects such as
 [Colaboradados](http://colaboradados.github.io/) and the [list of open data
 catalogs in Brazil](https://github.com/dadosgovbr/catalogos-dados-brasil).
 
-Where we notices a change in the portals' addresses (URLs) the tables have been
+Where we noticed a change in the portals' addresses (URLs) the tables have been
 updated.
 
