@@ -1,4 +1,4 @@
-Para uma descrição em português, veja o arquivo [LEIAME.md](LEIAME.md).
+Para uma descrição em português, veja o arquivo 🇧🇷[LEIAME.md](LEIAME.md).
 
 ## Transparency and Open Data Portals of Brazilian states and municipalities
 
