@@ -4,9 +4,15 @@ Para uma descrição em português, veja o arquivo 🇧🇷[LEIAME.md](LEIAME.md
 
 ## Transparency and Open Data Portals of Brazilian states and municipalities
 
-This repository contains spreadsheets originally converted from tables 31 and
-32 from [the PhD thesis of Rodrigo Klein
-(2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
+Obtaining a list of transparency and open data portals of all of the 27
+Brazilian states and 5,570 municipalities can be a daunting task. This
+project has the goal of consolidating and keeping up to date all of that
+reference information.
+
+This repository contains spreadsheets obtained from several public data
+sources and then validated:
+
+* tables 31 and 32 from [the PhD thesis of Rodrigo Klein (2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
 
 The objective is to collaborate on the monitoring of transparency of Brazilian
 states and municipalities in projects such as
