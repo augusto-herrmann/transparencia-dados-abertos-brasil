@@ -11,11 +11,18 @@
       "schema": {
         "fields": [
           {
-            "name": "state",
+            "name": "state_code",
             "type": "string",
             "format": "default",
-            "title": "State",
-            "description": "Brazilian state (abbreviation)"
+            "title": "State code",
+            "description": "Brazilian state abbreviation"
+          },
+          {
+            "name": "municipality_code",
+            "type": "integer",
+            "format": "default",
+            "title": "Municipality code",
+            "description": "Municipality code, according to IBGE"
           },
           {
             "name": "municipality",
