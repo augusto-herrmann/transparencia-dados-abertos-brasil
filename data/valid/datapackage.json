@@ -2,121 +2,84 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "path": "portais-estaduais.csv",
+      "path": "brazilian-transparency-and-open-data-portals.csv",
       "profile": "tabular-data-resource",
-      "name": "portais-estaduais",
+      "name": "brazilian-transparency-and-open-data-portals",
       "format": "csv",
       "mediatype": "text/csv",
       "encoding": "utf-8",
       "schema": {
         "fields": [
           {
-            "name": "uf",
+            "name": "state",
             "type": "string",
             "format": "default",
-            "title": "UF",
-            "description": "Sigla da unidade federativa"
+            "title": "State",
+            "description": "Brazilian state (abbreviation)"
           },
           {
-            "name": "uf_nome",
+            "name": "municipality",
             "type": "string",
             "format": "default",
-            "title": "UF Nome",
-            "description": "Nome da unidade federativa"
+            "title": "Municipality",
+            "description": "Municipality name"
           },
           {
-            "name": "url",
+            "name": "sphere",
             "type": "string",
-            "format": "uri",
-            "title": "URL",
-            "description": "Endereço (URL) do portal"
+            "format": "default",
+            "title": "Sphere",
+            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality."
           },
           {
-            "name": "tipo",
+            "name": "branch",
             "type": "string",
             "format": "default",
-            "title": "tipo",
-            "description": "Tipo do portal, conforme proposto na tese de doutorado de Rodrigo Klein, 2017.\n\nSPT: Somente portal da transparência\nPTDAG: Portal da transparência e dados abertos\nPEDAG: Portal de dados abertos"
-          }
-        ],
-        "missingValues": [
-          ""
-        ]
-      },
-      "title": "Portais Estaduais",
-      "description": "Relação de portais de transparência e de dados abertos dos estados brasileiros. Baseado na tabela da tese doutorado de Rodrigo Klein, 2017."
-    },
-    {
-      "path": "portais-municipais.csv",
-      "profile": "tabular-data-resource",
-      "name": "portais-municipais",
-      "format": "csv",
-      "mediatype": "text/csv",
-      "encoding": "utf-8",
-      "schema": {
-        "fields": [
-          {
-            "name": "uf",
-            "type": "string",
-            "format": "default",
-            "title": "UF",
-            "description": "Sigla da unidade federativa"
-          },
-          {
-            "name": "município",
-            "type": "string",
-            "format": "default",
-            "title": "Município",
-            "description": "Nome do município"
-          },
-          {
-            "name": "população",
-            "type": "integer",
-            "format": "default",
-            "title": "População",
-            "description": "Número de habitantes do município, segundo o Censo de 2010 do IBGE"
+            "title": "branch",
+            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp."
           },
           {
             "name": "url",
             "type": "string",
             "format": "uri",
             "title": "URL",
-            "description": "Endereço (URL) do portal"
+            "description": "Portal's URL"
           },
           {
-            "name": "tipo",
+            "name": "type",
             "type": "string",
             "format": "default",
-            "title": "tipo",
-            "description": "Tipo do portal, conforme proposto na tese de doutorado de Rodrigo Klein, 2017.\n\nSPT: Somente portal da transparência\nPTDAG: Portal da transparência e dados abertos\nPEDAG: Portal de dados abertos"
+            "title": "type of portal",
+            "description": "Type of portal (according to KLEIN, 2017).\n\nSPT: Transparency portal only\nPTDAG: Transparency and open data portal\nPEDAG: Open data portal"
           },
           {
-            "name": "observação",
+            "name": "notes",
             "type": "string",
             "format": "default",
-            "title": "observação",
-            "description": "Observação de quem coletou a informação, por exemplo, sobre o que está presente no portal, a classificação de tipo do portal, etc."
+            "title": "notes",
+            "description": "Notes on the surveying of information, e.g., what is the scope of the portal, type categorization, etc."
           }
         ],
         "missingValues": [
           ""
         ]
       },
-      "title": "Portais Municipais",
-      "description": "Relação dos portais de transparência e de dados abertos dos municípios brasileiros que possuem 300 mil habitantes ou mais. Baseado na tabela da tese doutorado de Rodrigo Klein, 2017."
+      "title": "Brazilian Transparency and Open Data Portals",
+      "description": "A listing of known transparency and open data portals of Brazilian public administration top level entities (e.g. states, municipalities, etc.)."
     }
   ],
   "keywords": [
-    "transparência",
-    "dados abertos",
-    "estados",
-    "municípios"
+    "transparency",
+    "open data",
+    "brazil",
+    "brazilian states",
+    "brazilian municipalities"
   ],
-  "name": "transparencia-dados-abertos-brasil",
-  "title": "Portais de Transparência e de Dados Abertos no Brasil",
-  "description": "Relação de portais de transparência e de dados abertos de todos os estados e dos municípios brasileiros com mais de 300 mil habitantes.",
-  "homepage": "https://github.com/augusto-herrmann/transparencia-dados-abertos-klein-2017/",
-  "version": "1.0.0",
+  "name": "brazilian-transparency-and-open-data-portals",
+  "title": "Brazilian Transparency and Open Data Portals",
+  "description": "Known Transparency and Open Data Portals of Brazilian public entities.",
+  "homepage": "https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil",
+  "version": "0.0.1",
   "contributors": [
     {
       "title": "Augusto Herrmann",
