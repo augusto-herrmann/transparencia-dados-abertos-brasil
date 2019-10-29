@@ -65,6 +65,20 @@
             "format": "default",
             "title": "notes",
             "description": "Notes on the surveying of information, e.g., what is the scope of the portal, type categorization, etc."
+          },
+          {
+            "name": "last-verified-auto",
+            "type": "datetime",
+            "format": "default",
+            "title": "Last verified (auto)",
+            "description": "Last time the site was automatically verified to be in working order"
+          },
+          {
+            "name": "last-verified-manual",
+            "type": "datetime",
+            "format": "default",
+            "title": "Last verified (manual)",
+            "description": "Last time the site was manually verified to be in working order"
           }
         ],
         "missingValues": [
