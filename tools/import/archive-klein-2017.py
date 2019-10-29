@@ -11,6 +11,9 @@ df_state = (
     .rename(columns={'uf': 'state_code', 'tipo': 'type'})
 )
 
+df_state['sphere'] = 'state'
+df_state['branch'] = 'executive'
+
 # municipality portals
 
 df_municipality = (
@@ -23,6 +26,9 @@ df_municipality = (
         'observação': 'notes'
     })
 )
+
+df_municipality['sphere'] = 'municipal'
+df_municipality['branch'] = 'executive'
 
 # concatenate both sources
 
