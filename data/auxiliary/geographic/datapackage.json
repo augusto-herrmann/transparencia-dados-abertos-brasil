@@ -1,0 +1,89 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "uf",
+      "path": "uf.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "code",
+            "type": "integer",
+            "format": "default",
+            "title": "UF code",
+            "description": "Code attributed by IBGE for the Federative Unit."
+          },
+          {
+            "name": "abbr",
+            "type": "string",
+            "format": "default",
+            "title": "UF abbreviation",
+            "description": "Official abbreviation (2 letter code) for the Federative Unit."
+          }
+        ]
+      },
+      "title": "Federative Units (UF) of Brazil and their respective codes",
+      "format": "csv",
+      "mimetype": "text/csv",
+      "encoding": "utf-8",
+      "description": "Codes for the Federative Units (UF) in Brazil, as defined by the Brazilian Institute of Geography and Statistics (IBGE)."
+    },
+    {
+      "name": "municipality",
+      "path": "municipality.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "code",
+            "type": "integer",
+            "format": "default",
+            "title": "municipality code",
+            "description": "Code attributed by IBGE for the municipality."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default",
+            "title": "municipality name"
+          },
+          {
+            "name": "uf",
+            "type": "string",
+            "format": "default",
+            "title": "UF abbreviation",
+            "description": "Official abbreviation (2 letter code) for the Federative Unit."
+          }
+        ]
+      },
+      "foreignKeys": [{
+        "fields": ["uf"],
+        "reference": {
+            "resource": "uf",
+            "fields": ["abbr"]
+        }
+      }],
+      "title": "Brazilian Municipalities and their respective codes",
+      "description": "Codes for the municipalities in Brazil, as defined by the Brazilian Institute of Geography and Statistics (IBGE).",
+      "format": "csv",
+      "mimetype": "text/csv",
+      "encoding": "utf-8"
+    }
+  ],
+  "keywords": [
+    "geography",
+    "brazil",
+    "ibge",
+    "municipality"
+  ],
+  "name": "geographic-codes-brazil",
+  "title": "Geographic codes for entities in Brazil",
+  "description": "Codes used by the Brazilian Institute of Geography and Statistics (IBGE) to describe Federative Units (UF) and municipalities in Brazil.",
+  "licenses": [
+    {
+      "title": "Public domain",
+      "path": "https://creativecommons.org/share-your-work/public-domain/pdm"
+    }
+  ]
+}
