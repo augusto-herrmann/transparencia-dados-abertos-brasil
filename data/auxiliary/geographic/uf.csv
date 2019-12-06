@@ -1,28 +1,28 @@
-code,abbr
-11,RO
-12,AC
-13,AM
-14,RR
-15,PA
-16,AP
-17,TO
-21,MA
-22,PI
-23,CE
-24,RN
-25,PB
-26,PE
-27,AL
-28,SE
-29,BA
-31,MG
-32,ES
-33,RJ
-35,SP
-41,PR
-42,SC
-43,RS
-50,MS
-51,MT
-52,GO
-53,DF
+code,abbr,name
+11,RO,Rondônia
+12,AC,Acre
+13,AM,Amazonas
+14,RR,Roraima
+15,PA,Pará
+16,AP,Amapá
+17,TO,Tocantins
+21,MA,Maranhão
+22,PI,Piauí
+23,CE,Ceará
+24,RN,Rio Grande do Norte
+25,PB,Paraíba
+26,PE,Pernambuco
+27,AL,Alagoas
+28,SE,Sergipe
+29,BA,Bahia
+31,MG,Minas Gerais
+32,ES,Espírito Santo
+33,RJ,Rio de Janeiro
+35,SP,São Paulo
+41,PR,Paraná
+42,SC,Santa Catarina
+43,RS,Rio Grande do Sul
+50,MS,Mato Grosso do Sul
+51,MT,Mato Grosso
+52,GO,Goiás
+53,DF,Distrito Federal
