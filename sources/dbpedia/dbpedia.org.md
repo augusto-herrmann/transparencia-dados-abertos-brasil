@@ -49,19 +49,20 @@ and
 
 This is query is a little more complicated compared to the Portuguese language
 DBPedia, because while the data is more structured, we cannot get
-information about the state directly. However, we can simply use the
+information about the state directly. Other cities have no state information
+assigned.
+
+At least for filtering by country we can simply use the
 `dbo:country` property to determine that a city is located in Brazil.
 
 ```sparql
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 PREFIX dbp:<http://dbpedia.org/property/>
-PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX yago:<http://dbpedia.org/class/yago/>
 
-SELECT ?city, ?name, ?state_abbr, ?link, ?external_link WHERE {
+SELECT ?city, ?name, ?state_abbr, ?state_name, ?link, ?external_link WHERE {
     ?city a dbo:City ;
         dbo:country dbr:Brazil .
     OPTIONAL {
@@ -77,6 +78,24 @@ SELECT ?city, ?name, ?state_abbr, ?link, ?external_link WHERE {
     }
     OPTIONAL {
         ?city dbo:isPartOf ?state .
+        ?state a yago:WikicatStatesOfBrazil .
+        ?state dbp:coordinatesRegion ?state_abbr .
+    }
+    OPTIONAL {
+        ?city dbo:isPartOf ?state .
+        ?state a yago:WikicatStatesOfBrazil .
+        ?state rdfs:label ?state_name .
+        FILTER(LANG(?state_name) = "" || LANGMATCHES(LANG(?state_name), "pt"))
+    }
+    OPTIONAL { # cities linked to a state whose URI has changed
+        ?city dbo:isPartOf ?state_old_page .
+        ?state_old_page dbo:wikiPageRedirects ?state .
+        ?state a yago:WikicatStatesOfBrazil .
+        ?state dbp:coordinatesRegion ?state_abbr .
+    }
+    OPTIONAL { # cities wrongfully linked to a city instead of state
+        ?city dbo:isPartOf ?other_city .
+        ?other_city dbo:isPartOf ?state .
         ?state a yago:WikicatStatesOfBrazil .
         ?state dbp:coordinatesRegion ?state_abbr .
     }
