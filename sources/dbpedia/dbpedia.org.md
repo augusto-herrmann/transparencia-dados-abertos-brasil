@@ -60,6 +60,7 @@ PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX yago:<http://dbpedia.org/class/yago/>
 
 SELECT ?city, ?name, ?state_abbr, ?state_name, ?link, ?external_link WHERE {
