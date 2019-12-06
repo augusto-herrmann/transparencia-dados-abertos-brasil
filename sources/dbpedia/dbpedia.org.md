@@ -25,21 +25,25 @@ DBPedia:
 
 ```sparql
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 
-SELECT * WHERE {
+SELECT ?city, ?name, ?state, ?link WHERE {
     ?city a dbo:City ;
         dbo:wikiPageWikiLink dbr:States_of_Brazil ;
         dbo:wikiPageExternalLink|foaf:homepage ?link .
     FILTER REGEX(STR(?link), ".gov.br")
+    OPTIONAL {?city rdfs:label ?name}
+    OPTIONAL {?city dbp:estado ?state}
 }
 ```
 
 Results in
-[HTML](http://pt.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+*+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3AwikiPageWikiLink+dbr%3AStates_of_Brazil+%3B%0D%0A++++++++dbo%3AwikiPageExternalLink%7Cfoaf%3Ahomepage+%3Flink+.%0D%0A++++FILTER+REGEX%28STR%28%3Flink%29%2C+%22.gov.br%22%29%0D%0A%7D+LIMIT+100&format=text%2Fhtml&timeout=0&debug=on)
+[HTML](http://pt.dbpedia.org/sparql?default-graph-uri=&query=PREFIX+rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbp%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fcity%2C+%3Fname%2C+%3Fstate%2C+%3Flink+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3AwikiPageWikiLink+dbr%3AStates_of_Brazil+%3B%0D%0A++++++++dbo%3AwikiPageExternalLink%7Cfoaf%3Ahomepage+%3Flink+.%0D%0A++++FILTER+REGEX%28STR%28%3Flink%29%2C+%22.gov.br%22%29%0D%0A++++OPTIONAL+%7B%3Fcity+rdfs%3Alabel+%3Fname%7D%0D%0A++++OPTIONAL+%7B%3Fcity+dbp%3Aestado+%3Fstate%7D%0D%0A%7D&should-sponge=&format=text%2Fhtml&timeout=0&debug=on)
 and
-[CSV](http://pt.dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+*+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3AwikiPageWikiLink+dbr%3AStates_of_Brazil+%3B%0D%0A++++++++dbo%3AwikiPageExternalLink%7Cfoaf%3Ahomepage+%3Flink+.%0D%0A++++FILTER+REGEX%28STR%28%3Flink%29%2C+%22.gov.br%22%29%0D%0A%7D&format=text%2Fcsv&timeout=0&debug=on).
+[CSV](http://pt.dbpedia.org/sparql?default-graph-uri=&query=PREFIX+rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbp%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0A%0D%0ASELECT+%3Fcity%2C+%3Fname%2C+%3Fstate%2C+%3Flink+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3AwikiPageWikiLink+dbr%3AStates_of_Brazil+%3B%0D%0A++++++++dbo%3AwikiPageExternalLink%7Cfoaf%3Ahomepage+%3Flink+.%0D%0A++++FILTER+REGEX%28STR%28%3Flink%29%2C+%22.gov.br%22%29%0D%0A++++OPTIONAL+%7B%3Fcity+rdfs%3Alabel+%3Fname%7D%0D%0A++++OPTIONAL+%7B%3Fcity+dbp%3Aestado+%3Fstate%7D%0D%0A%7D&should-sponge=&format=text%2Fcsv&timeout=0&debug=on).
 
 ## English language DBPedia
 
@@ -48,25 +52,37 @@ DBPedia, because the data is more structured. We can simply use the
 `dbo:country` property to determine that a city is located in Brazil.
 
 ```sparql
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
 PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX yago:<http://dbpedia.org/class/yago/>
 
-SELECT * WHERE {
+SELECT ?city, ?name, ?state_abbr, ?link, ?external_link WHERE {
     ?city a dbo:City ;
         dbo:country dbr:Brazil .
-        OPTIONAL {
-            ?city foaf:homepage ?link .
-        }
-        OPTIONAL {
-            FILTER REGEX(STR(?external_link), ".gov.br")
-            ?city dbo:wikiPageExternalLink ?external_link .
-        }
+    OPTIONAL {
+        ?city foaf:homepage ?link .
+    }
+    OPTIONAL {
+        FILTER REGEX(STR(?external_link), ".gov.br")
+        ?city dbo:wikiPageExternalLink ?external_link .
+    }
+    OPTIONAL {
+        ?city rdfs:label ?name
+        FILTER(LANG(?name) = "" || LANGMATCHES(LANG(?name), "pt"))
+    }
+    OPTIONAL {
+        ?city dbo:isPartOf ?state .
+        ?state a yago:WikicatStatesOfBrazil .
+        ?state dbp:coordinatesRegion ?state_abbr .
+    }
 }
 ```
 
 Results in
-[HTML](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A%0D%0ASELECT+*+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3Acountry+dbr%3ABrazil+.%0D%0A++++++++OPTIONAL+%7B%0D%0A++++++++++++%3Fcity+foaf%3Ahomepage+%3Flink+.%0D%0A++++++++%7D%0D%0A++++++++OPTIONAL+%7B%0D%0A++++++++++++FILTER+REGEX%28STR%28%3Fexternal_link%29%2C+%22.gov.br%22%29%0D%0A++++++++++++%3Fcity+dbo%3AwikiPageExternalLink+%3Fexternal_link+.%0D%0A++++++++%7D%0D%0A%7D+LIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+)
+[HTML](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+yago%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2F%3E%0D%0A%0D%0ASELECT+%3Fcity%2C+%3Fname%2C+%3Fstate_abbr%2C+%3Flink%2C+%3Fexternal_link+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3Acountry+dbr%3ABrazil+.%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+foaf%3Ahomepage+%3Flink+.%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++FILTER+REGEX%28STR%28%3Fexternal_link%29%2C+%22.gov.br%22%29%0D%0A++++++++%3Fcity+dbo%3AwikiPageExternalLink+%3Fexternal_link+.%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+rdfs%3Alabel+%3Fname%0D%0A++++++++FILTER%28LANG%28%3Fname%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Fname%29%2C+%22pt%22%29%29%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+dbo%3AisPartOf+%3Fstate+.%0D%0A++++++++%3Fstate+a+yago%3AWikicatStatesOfBrazil+.%0D%0A++++++++%3Fstate+dbp%3AcoordinatesRegion+%3Fstate_abbr+.%0D%0A++++%7D%0D%0A%7D&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+)
 and
-[CSV](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+foaf%3A%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E%0D%0A%0D%0ASELECT+*+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3Acountry+dbr%3ABrazil+.%0D%0A++++++++OPTIONAL+%7B%0D%0A++++++++++++%3Fcity+foaf%3Ahomepage+%3Flink+.%0D%0A++++++++%7D%0D%0A++++++++OPTIONAL+%7B%0D%0A++++++++++++FILTER+REGEX%28STR%28%3Fexternal_link%29%2C+%22.gov.br%22%29%0D%0A++++++++++++%3Fcity+dbo%3AwikiPageExternalLink+%3Fexternal_link+.%0D%0A++++++++%7D%0D%0A%7D&format=text%2Fcsv&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+).
+[CSV](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=PREFIX+rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0D%0APREFIX+dbo%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0D%0APREFIX+dbr%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fresource%2F%3E%0D%0APREFIX+dbp%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2F%3E%0D%0APREFIX+yago%3A%3Chttp%3A%2F%2Fdbpedia.org%2Fclass%2Fyago%2F%3E%0D%0A%0D%0ASELECT+%3Fcity%2C+%3Fname%2C+%3Fstate_abbr%2C+%3Flink%2C+%3Fexternal_link+WHERE+%7B%0D%0A++++%3Fcity+a+dbo%3ACity+%3B%0D%0A++++++++dbo%3Acountry+dbr%3ABrazil+.%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+foaf%3Ahomepage+%3Flink+.%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++FILTER+REGEX%28STR%28%3Fexternal_link%29%2C+%22.gov.br%22%29%0D%0A++++++++%3Fcity+dbo%3AwikiPageExternalLink+%3Fexternal_link+.%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+rdfs%3Alabel+%3Fname%0D%0A++++++++FILTER%28LANG%28%3Fname%29+%3D+%22%22+%7C%7C+LANGMATCHES%28LANG%28%3Fname%29%2C+%22pt%22%29%29%0D%0A++++%7D%0D%0A++++OPTIONAL+%7B%0D%0A++++++++%3Fcity+dbo%3AisPartOf+%3Fstate+.%0D%0A++++++++%3Fstate+a+yago%3AWikicatStatesOfBrazil+.%0D%0A++++++++%3Fstate+dbp%3AcoordinatesRegion+%3Fstate_abbr+.%0D%0A++++%7D%0D%0A%7D&format=text%2Fcsv&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+).
