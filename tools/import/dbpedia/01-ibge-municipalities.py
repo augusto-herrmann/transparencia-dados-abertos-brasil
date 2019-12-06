@@ -1,12 +1,12 @@
-# dbpedia-municipalities.py
+# 01-ibge-municipalities.py
 # 
-# This script downloads and interprets the URLs municipalities websites from
-# DBPedia. At a later stage these URLs are used to find out the respective
-# transparency portals.
+# This script downloads and stores auxiliary data from IBGE about
+# municipalities. This will be useful later for disambiguation and finding out
+# the municipality codes.
 #
-# Este script faz o download e interpreta as URLs dos sites dos municípios a
-# partir da DBPedia. Em uma etapa posterior essas URLs são usadas para
-# encontrar os respectivos portais da transparência.
+# Este script faz o download e armazena dados auxiliares do IBGE sobre os
+# municípios. Isso será útil mais tarde para desambiguação e para descobrir
+# os códigos de municípios.
 #
 
 import os, io
@@ -21,6 +21,8 @@ from datapackage import Package
 
 TEMPORARY_FOLDER = 'download-cache'
 DOWNLOAD_URL = 'ftp://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2018/DTB_2018.zip'
+OUTPUT_FOLDER = '../../../data/auxiliary/geographic'
+OUTPUT_FILE = 'municipality.csv'
 
 IBGE_FILE_NAME = os.path.basename(urllib.parse.urlparse(DOWNLOAD_URL).path)
 
@@ -91,6 +93,7 @@ package.save(storage=geographic)
 
 # adjust column names and types
 uf = geographic['uf'].rename(columns={'code': 'UF', 'abbr': 'Sigla_UF'})
+uf.drop('name', axis=1, inplace=True)
 uf['Sigla_UF'] = uf['Sigla_UF'].astype('category')
 
 # merge back into the IBGE DTB data
@@ -122,5 +125,5 @@ df.rename(
     inplace=True
 )
 
-df.to_csv('../../../data/auxiliary/geographic/municipality.csv', index=False)
+df.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
 
