@@ -20,6 +20,13 @@
             "format": "default",
             "title": "UF abbreviation",
             "description": "Official abbreviation (2 letter code) for the Federative Unit."
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "format": "default",
+            "title": "UF abbreviation",
+            "description": "Full name for the Federative Unit."
           }
         ]
       },
