@@ -47,8 +47,9 @@ and
 
 ## English language DBPedia
 
-This is query is a little bit simpler compared to the Portuguese language
-DBPedia, because the data is more structured. We can simply use the
+This is query is a little more complicated compared to the Portuguese language
+DBPedia, because while the data is more structured, we cannot get
+information about the state directly. However, we can simply use the
 `dbo:country` property to determine that a city is located in Brazil.
 
 ```sparql
