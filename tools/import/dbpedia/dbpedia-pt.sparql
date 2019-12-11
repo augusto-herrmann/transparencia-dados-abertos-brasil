@@ -1,0 +1,14 @@
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX dbr:<http://dbpedia.org/resource/>
+
+SELECT ?city, ?name, ?state, ?link WHERE {
+    ?city a dbo:City ;
+        dbo:wikiPageWikiLink dbr:States_of_Brazil ;
+        dbo:wikiPageExternalLink|foaf:homepage ?link .
+    FILTER REGEX(STR(?link), ".gov.br")
+    OPTIONAL {?city rdfs:label ?name}
+    OPTIONAL {?city dbp:estado ?state}
+}

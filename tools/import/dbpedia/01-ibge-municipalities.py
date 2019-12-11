@@ -88,7 +88,7 @@ with ZipFile(os.path.join(TEMPORARY_FOLDER, IBGE_FILE_NAME)) as pacote:
 # get the state (UF) codes as the IBGE DTB file does not contain them
 
 geographic = Storage.connect('pandas')
-package = Package('../../../data/auxiliary/geographic/datapackage.json')
+package = Package(os.path.join(OUTPUT_FOLDER,'datapackage.json'))
 package.save(storage=geographic)
 
 # adjust column names and types
