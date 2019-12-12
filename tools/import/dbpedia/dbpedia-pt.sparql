@@ -3,12 +3,18 @@ PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
 PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX ptdbp:<http://pt.dbpedia.org/property/>
 
-SELECT ?city, ?name, ?state, ?link WHERE {
+SELECT ?city, ?name, ?state, ?link, ?link_prefeitura, ?link_camara, ?external_link WHERE {
     ?city a dbo:City ;
-        dbo:wikiPageWikiLink dbr:States_of_Brazil ;
-        dbo:wikiPageExternalLink|foaf:homepage ?link .
-    FILTER REGEX(STR(?link), ".gov.br")
+        dbo:wikiPageWikiLink dbr:States_of_Brazil .
+    OPTIONAL { ?city foaf:homepage ?link }
+    OPTIONAL {
+        ?city dbo:wikiPageExternalLink ?external_link .
+        FILTER REGEX(STR(?external_link), ".gov.br")
+    }
     OPTIONAL {?city rdfs:label ?name}
     OPTIONAL {?city dbp:estado ?state}
+    OPTIONAL {?city ptdbp:siteCâmara ?link_camara}
+    OPTIONAL {?city ptdbp:sitePrefeitura ?link_prefeitura}
 }
