@@ -72,24 +72,15 @@ dbp_pt = dbp_pt.merge(mun)
 # remove duplicate rows
 dbp_pt.drop_duplicates(inplace=True)
 
-# clean unlikely links
+# melt 4 types of links into one
+dbp_pt = pd.melt(dbp_pt, id_vars=['name', 'uf', 'code'], var_name='link_type', value_name='link')
+dbp_pt.drop_duplicates(inplace=True)
 
-# remove file links
-dbp_pt = dbp_pt[~dbp_pt.link.str.contains(r'\.(?:pdf|png|jpg)$', regex=True)]
+# remove empty lines and duplicate links
+dbp_pt.dropna(subset=['link'], inplace=True)
+dbp_pt.drop_duplicates(subset=['link'], keep='first', inplace=True)
 
-# remove generic links to IBGE
-dbp_pt = dbp_pt[~dbp_pt.link.str.contains(r'ibge\.gov\.br\/?', regex=True)]
 
-# remove generic links to state website
-dbp_pt = dbp_pt[~dbp_pt.link.str.contains(r'//www\.\w{2}\.gov\.br\/?$', regex=True)]
-
-# remove Google trackers
-google_trackers = dbp_pt.link.str.contains(r'google\.com(?:\.br)?/url')
-dbp_pt.loc[google_trackers, 'link'] = dbp_pt.loc[google_trackers].link.apply(
-    lambda outer_url: urllib.parse.parse_qs(
-        urllib.parse.urlparse(outer_url).query
-    )['url'][0]
-)
 
 
 # read data frame from English DBPedia
@@ -133,24 +124,73 @@ dbp.rename(columns={'abbr': 'uf'}, inplace=True)
 
 # melt 2 types of links into one
 dbp = pd.melt(dbp, id_vars=['name', 'uf'], var_name='link_type', value_name='link')
-dbp.drop('link_type', axis=1, inplace=True) # link type doesn't matter
 dbp.drop_duplicates(inplace=True)
 
 # merge with municipalities data frame to get the code based on name and uf
 dbp = dbp.merge(mun, on=['name', 'uf'], how='left')
+
+
+
+
+# combine data: concatenate the results
+dbp_links = pd.concat([dbp, dbp_pt], sort=True)
+
+# remove garbage links
+
+# remove links to files
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'\.(?:pdf|png|jpg)$', na=False, regex=True)
+]
+
+# remove generic links to IBGE
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'ibge\.gov\.br\/?', na=False, regex=True)
+]
+
+# remove generic links to Blogspot
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'blogspot\.com\/?', na=False, regex=True)
+]
+
+# remove generic links to Facebook
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'facebook\.com\/?', na=False, regex=True)
+]
+
+# remove generic links to Yahoo
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'yahoo\.com\/?', na=False, regex=True)
+]
+
+# remove generic links to state website
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'//www\.\w{2}\.gov\.br\/?$', na=False, regex=True)
+]
+
+# remove Google trackers
+google_trackers = dbp_links.link.str.contains(
+    r'google\.com(?:\.br)?/url',
+    na=False,
+    regex=True
+)
+dbp_links.loc[google_trackers, 'link'] = dbp_links.loc[google_trackers].link.apply(
+    lambda outer_url: urllib.parse.parse_qs(
+        urllib.parse.urlparse(outer_url).query
+    )['url'][0]
+)
+
+# remove empty links and duplicates
+dbp_links.dropna(subset=['link'], inplace=True)
+dbp_links.drop_duplicates(inplace=True)
+
+
+# prepare output
 
 # check if the output folder alredy does exist and, if not, create it
 if not os.path.exists(OUTPUT_FOLDER):
     print(f'Output folder does not yet exist. Creating "{OUTPUT_FOLDER}"...')
     os.mkdir(OUTPUT_FOLDER)
 
-# concatenate the results
-dbp_links = pd.concat([dbp, dbp_pt], sort=True)
-
-# remove duplicates
-dbp_links.drop_duplicates(inplace=True)
-
-# prepare output
 output = os.path.join(OUTPUT_FOLDER, OUTPUT_FILE)
 generated_df = dbp_links
 # check whether if there is an existing file to merge
