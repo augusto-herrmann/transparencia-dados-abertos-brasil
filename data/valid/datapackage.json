@@ -87,6 +87,86 @@
       },
       "title": "Brazilian Transparency and Open Data Portals",
       "description": "A listing of known transparency and open data portals of Brazilian public administration top level entities (e.g. states, municipalities, etc.)."
+    },
+    {
+      "name": "brazilian-municipality-and-state-websites",
+      "path": "brazilian-municipality-and-state-websites.csv",
+      "profile": "tabular-data-resource",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "state_code",
+            "type": "string",
+            "format": "default",
+            "title": "State code",
+            "description": "Brazilian state abbreviation"
+          },
+          {
+            "name": "municipality_code",
+            "type": "integer",
+            "format": "default",
+            "title": "Municipality code",
+            "description": "Municipality code, according to IBGE"
+          },
+          {
+            "name": "municipality",
+            "type": "string",
+            "format": "default",
+            "title": "Municipality",
+            "description": "Municipality name"
+          },
+          {
+            "name": "sphere",
+            "type": "string",
+            "format": "default",
+            "title": "Sphere",
+            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality."
+          },
+          {
+            "name": "branch",
+            "type": "string",
+            "format": "default",
+            "title": "branch",
+            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp."
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "format": "uri",
+            "title": "URL",
+            "description": "Website's URL"
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "format": "default",
+            "title": "notes",
+            "description": "Notes on the surveying of information, e.g., what is the scope of the portal, type categorization, etc."
+          },
+          {
+            "name": "last-verified-auto",
+            "type": "datetime",
+            "format": "default",
+            "title": "Last verified (auto)",
+            "description": "Last time the site was automatically verified to be in working order"
+          },
+          {
+            "name": "last-verified-manual",
+            "type": "datetime",
+            "format": "default",
+            "title": "Last verified (manual)",
+            "description": "Last time the site was manually verified to be in working order"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      },
+      "title": "Brazilian Municipality and State Websites",
+      "description": "A listing of known websites of Brazilian public administration top level local entities (e.g. states, municipalities, etc.)."
     }
   ],
   "keywords": [
