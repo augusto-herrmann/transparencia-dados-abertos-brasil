@@ -189,6 +189,16 @@ dbp_links.loc[google_trackers, 'link'] = dbp_links.loc[google_trackers].link.app
     )['url'][0]
 )
 
+# remove parenthesis over URLs (WTF?)
+parenthesis_things = dbp_links.link.str.contains(
+    r'^\(.+\)$',
+    na=False,
+    regex=True
+)
+dbp_links.loc[parenthesis_things, 'link'] = dbp_links.loc[parenthesis_things].link.apply(
+    lambda thing: thing[1:-1]
+)
+
 # fix malformed URLs
 malformed_urls = dbp_links.link.str.contains(
     r'^\w+(?:\.\w+)+\.(?:br|com|net)[\w/]*$', # URLs without a schema part
