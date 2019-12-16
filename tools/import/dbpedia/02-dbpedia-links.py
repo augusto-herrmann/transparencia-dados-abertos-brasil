@@ -139,7 +139,7 @@ dbp_links = pd.concat([dbp, dbp_pt], sort=True)
 
 # remove links to files
 dbp_links = dbp_links[
-    ~dbp_links.link.str.contains(r'\.(?:pdf|png|jpg)$', na=False, regex=True)
+    ~dbp_links.link.str.contains(r'\.(?:pdf|png|jpg|gif)$', na=False, regex=True)
 ]
 
 # remove generic links to IBGE
@@ -162,6 +162,16 @@ dbp_links = dbp_links[
     ~dbp_links.link.str.contains(r'yahoo\.com\/?', na=False, regex=True)
 ]
 
+# remove generic links to Google
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'(?:googleusercontent\.com|google\.com\.br)\/?', na=False, regex=True)
+]
+
+# remove generic links to Wikimedia
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'wiki(?:media|pedia|source)\.org\/?', na=False, regex=True)
+]
+
 # remove generic links to state website
 dbp_links = dbp_links[
     ~dbp_links.link.str.contains(r'//www\.\w{2}\.gov\.br\/?$', na=False, regex=True)
@@ -177,6 +187,17 @@ dbp_links.loc[google_trackers, 'link'] = dbp_links.loc[google_trackers].link.app
     lambda outer_url: urllib.parse.parse_qs(
         urllib.parse.urlparse(outer_url).query
     )['url'][0]
+)
+
+# fix malformed URLs
+malformed_urls = dbp_links.link.str.contains(
+    r'^\w+(?:\.\w+)+\.(?:br|com|net)[\w/]*$', # URLs without a schema part
+    na=False,
+    regex=True
+)
+dbp_links.loc[malformed_urls, 'link'] = dbp_links.loc[malformed_urls].link.apply(
+    # default to http, should at least have a redirect to https
+    lambda url: f'http://{url}'
 )
 
 # remove empty links and duplicates
