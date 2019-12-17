@@ -20,6 +20,7 @@ INPUT_MUNICIPAL = 'portais-municipais.csv'
 INPUT_STATE = 'portais-estaduais.csv'
 OUTPUT_PATH = '../../data/valid'
 OUTPUT_FILE = 'brazilian-transparency-and-open-data-portals.csv'
+IBGE_CODE_PATH = '../../data/auxiliary/geographic'
 
 # state portals
 df_state = (
@@ -59,6 +60,33 @@ df = pd.concat([
         df_municipality
 ], sort=False)
 
+# look up municipal codes
+
+geo_package = Package(os.path.join(IBGE_CODE_PATH, 'datapackage.json'))
+municipalities = pd.DataFrame(
+    geo_package.get_resource('municipality')
+    .read(keyed=True)
+)
+
+municipalities.rename( # line up column names in preparation for merge
+    columns={
+        'uf': 'state_code',
+        'name': 'municipality',
+        'code': 'municipality_code'
+    },
+    inplace=True
+)
+
+df = (
+    df.drop('municipality_code', axis=1) # discard original column
+    .merge( 
+        municipalities, 
+        how='left', 
+    )
+)
+df.municipality_code = df.municipality_code.astype('Int64') # keep as int
+df = df[columns] # reorder columns
+
 # merge existing data, if present
 
 df.set_index('url', inplace=True)
@@ -73,7 +101,7 @@ if os.path.exists(os.path.join(OUTPUT_PATH,OUTPUT_FILE)):
 else:
     df_new = df
 df.reset_index(inplace=True)
-df = df[columns]
+df = df[columns] # reorder columns
 
 df.to_csv(os.path.join(OUTPUT_PATH,OUTPUT_FILE), index=False)
 
