@@ -214,6 +214,11 @@ dbp_links.loc[malformed_urls, 'link'] = dbp_links.loc[malformed_urls].link.apply
 dbp_links.dropna(subset=['link'], inplace=True)
 dbp_links.drop_duplicates(inplace=True)
 
+# final adjustments to link types
+dbp_links.link_type.replace('link_camara', 'camara', inplace=True)
+dbp_links.link_type.replace('link_prefeitura', 'prefeitura', inplace=True)
+dbp_links.link_type.replace('external_link', 'external', inplace=True)
+
 
 # prepare output
 
