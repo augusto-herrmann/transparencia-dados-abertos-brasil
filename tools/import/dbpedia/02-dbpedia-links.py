@@ -172,6 +172,11 @@ dbp_links = dbp_links[
     ~dbp_links.link.str.contains(r'wiki(?:media|pedia|source)\.org\/?', na=False, regex=True)
 ]
 
+# remove recursive links to DBPedia
+dbp_links = dbp_links[
+    ~dbp_links.link.str.contains(r'dbpedia\.org\/?', na=False, regex=True)
+]
+
 # remove generic links to state website
 dbp_links = dbp_links[
     ~dbp_links.link.str.contains(r'//www\.\w{2}\.gov\.br\/?$', na=False, regex=True)
@@ -187,6 +192,16 @@ dbp_links.loc[google_trackers, 'link'] = dbp_links.loc[google_trackers].link.app
     lambda outer_url: urllib.parse.parse_qs(
         urllib.parse.urlparse(outer_url).query
     )['url'][0]
+)
+
+# remove white spaces after URLs (WTF?)
+parenthesis_things = dbp_links.link.str.contains(
+    r'^[^\s]+\s',
+    na=False,
+    regex=True
+)
+dbp_links.loc[parenthesis_things, 'link'] = dbp_links.loc[parenthesis_things].link.apply(
+    lambda thing: thing.split()[0]
 )
 
 # remove parenthesis over URLs (WTF?)
@@ -218,6 +233,8 @@ dbp_links.drop_duplicates(inplace=True)
 dbp_links.link_type.replace('link_camara', 'camara', inplace=True)
 dbp_links.link_type.replace('link_prefeitura', 'prefeitura', inplace=True)
 dbp_links.link_type.replace('external_link', 'external', inplace=True)
+dbp_links.link_type.replace('link_site', 'link', inplace=True)
+dbp_links.link_type.replace('link_site_oficial', 'prefeitura', inplace=True)
 
 
 # prepare output
