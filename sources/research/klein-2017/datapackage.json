@@ -1,10 +1,10 @@
 {
-  "profile": "tabular-data-package",
+  "profile": "data-package",
   "resources": [
     {
       "name": "portais_estaduais",
       "path": "portais-estaduais-rodrigo-klein.pdf",
-      "profile": "tabular-data-resource",
+      "profile": "data-resource",
       "format": "pdf",
       "mimetype": "application/pdf"
     },
