@@ -1,0 +1,29 @@
+{
+  "profile": "data-package",
+  "resources": [
+    {
+      "name": "dbpedia-query-brazilian-cities",
+      "path": "../../tools/import/dbpedia/dbpedia.sparql",
+      "profile": "data-resource",
+      "format": "sparql",
+      "mimetype": "application/sparql-query"
+    },
+    {
+      "name": "pt-dbpedia-query-brazilian-cities",
+      "path": "../../tools/import/dbpedia/dbpedia-pt.sparql",
+      "profile": "data-resource",
+      "format": "sparql",
+      "mimetype": "application/sparql-query"
+    }
+  ],
+  "name": "dbpedia-brazilian-cities",
+  "title": "Brazilian Cities in DBPedia",
+  "description": "SPARQL queries to obtain links to websites of Brazilian cities from DBPedia and Portuguese DBPedia.",
+  "homepage": "https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil",
+  "contributors": [
+    {
+      "title": "Augusto Herrmann",
+      "role": "author"
+    }
+  ]
+}
