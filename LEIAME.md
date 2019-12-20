@@ -6,7 +6,8 @@ estados e 5.570 municípios brasileiros pode ser uma tarefa descomunal.
 Este repositório contém planilhas obtidas a partir de diversas fontes de dados
 públicas e validadads:
 
-* tabela dos quadros 31 e 32 da [tese de doutorado de Rodrigo Klein (2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
+* [tabela dos quadros 31 e 32](sources/research/klein-2017) da tese de doutorado de Rodrigo Klein (2017)
+* [DBPedia](sources/dbpedia)
 
 O objetivo é colaborar no monitoramento da transparência de estados e municípios 
 em projetos como o [Colaboradados](http://colaboradados.github.io/) e a [lista

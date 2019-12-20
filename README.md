@@ -12,7 +12,8 @@ reference information.
 This repository contains spreadsheets obtained from several public data
 sources and then validated:
 
-* tables 31 and 32 from [the PhD thesis of Rodrigo Klein (2017)](http://tede2.pucrs.br/tede2/handle/tede/7724).
+* [tables 31 and 32](sources/research/klein-2017) from the PhD thesis of Rodrigo Klein (2017)/tede/7724)
+* [DBPedia](sources/dbpedia)
 
 The objective is to collaborate on the monitoring of transparency of Brazilian
 states and municipalities in projects such as
