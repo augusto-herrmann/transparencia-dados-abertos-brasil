@@ -1,4 +1,4 @@
-# 03-auto-verify-links.py
+# auto-verify-links.py
 #
 # This script crawls candidate URLs for municipalities websites and
 # checks if they are active and likely to be the city hall or
@@ -12,26 +12,35 @@
 import re
 import os
 import urllib
+import multiprocessing
+from functools import partial
+import random
+import warnings
+from datetime import datetime
+
 import pandas as pd
 from tqdm import tqdm
 import requests
-import random
 from bs4 import BeautifulSoup
 from unidecode import unidecode
 
+USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
+MAX_SIMULTANEOUS = 4
+OUTPUT_FOLDER = '../../data/valid'
+OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
 
 candidates = pd.read_csv(os.path.join(INPUT_FOLDER, INPUT_FILE))
 codes = candidates.code.unique()
-random.shuffle(codes) # for testing
-codes = codes[:4] # for testing
+random.shuffle(codes) # randomize sequence
+#codes = codes[:12] # take a subsample for testing purposes
 goodlinks = pd.DataFrame(columns=candidates.columns)
 
 def healthy_link(link):
     'Check whether the link is healthy or not.'
     try:
-        r = requests.get(link)
+        r = requests.get(link, headers={'user-agent': USER_AGENT})
     except requests.exceptions.ConnectionError:
         r = None
     if r and r.status_code == 200:
@@ -39,9 +48,12 @@ def healthy_link(link):
     return False
 
 def check_type(r, candidates):
-    'Try to infer the type of site this is'
+    'Try to infer the type of site this is.'
     soup = BeautifulSoup(r.text, 'html.parser')
-    title = unidecode(soup.find('title').text.lower())
+    title_tag = soup.find('title')
+    if title_tag is None:
+        return None
+    title = unidecode(title_tag.text.lower())
     link_types = candidates.link_type
     if 'prefeitura' in link_types:
         link_type = 'prefeitura'
@@ -49,30 +61,80 @@ def check_type(r, candidates):
         link_type = 'camara'
     elif 'prefeitura' in title:
         link_type = 'prefeitura'
+    elif 'municipio' in title:
+        link_type = 'prefeitura'
     elif 'camara municipal' in title:
         link_type = 'camara'
     elif 'camara de' in title:
         link_type = 'camara'
+    else:
+        warnings.warn(f'Unable to determine site type from title: “{title}”.')
+        link_type = None
     return link_type
 
-with tqdm(total=len(codes)) as pbar:
-    print (f'Cralwing candidate URLs for {len(codes)} cities...')
-    for code in codes:
-        city_links = candidates[candidates.code == code]
-        for link in city_links.link.unique():
-            working_link = healthy_link(link)
-            if working_link:
-                link_type = check_type(
-                    working_link,
-                    candidates[candidates.link==link]
-                )
-                goodlinks = goodlinks.append({
+def verify_city_links(candidates, code):
+    'Verify links for a city with a given code.'
+    verified_links = []
+    city_links = candidates[candidates.code == code]
+    for link in city_links.link.unique():
+        working_link = healthy_link(link)
+        if working_link:
+            link_type = check_type(
+                working_link,
+                candidates[candidates.link==link]
+            )
+            if link_type is not None:
+                verified_link = {
                     'code': code,
-                    'link': link,
+                    'link': working_link.url, # update if redirected
                     'link_type': link_type,
                     'name': city_links.name.iloc[0],
                     'uf': city_links.uf.iloc[0],
-                }, ignore_index=True)
-    pbar.update(1)
+                    'last_checked': datetime.utcnow().isoformat(timespec='seconds')
+                }
+                verified_links.append(verified_link)
+    return verified_links
 
-print(goodlinks)
+def in_chunks(seq, size):
+    return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+
+pool = multiprocessing.Pool(processes=MAX_SIMULTANEOUS)
+
+with tqdm(total=len(codes)) as pbar:
+    print (f'Cralwing candidate URLs for {len(codes)} cities...')
+    for chunk in in_chunks(codes, MAX_SIMULTANEOUS):
+        results = pool.map(partial(verify_city_links, candidates), codes)
+        for result in results:
+            for verified_link in result:
+                goodlinks = goodlinks.append(verified_link, ignore_index=True)
+        pbar.update(MAX_SIMULTANEOUS)
+
+# record validated
+
+# prepare columns
+goodlinks.rename(columns={
+    'uf': 'state_code',
+    'code': 'municipality_code',
+    'name': 'municipality',
+    'link_type': 'branch',
+    'link': 'url',
+    'last_checked': 'last-verified-auto'
+}, inplace=True)
+
+goodlinks.branch = goodlinks.branch.str.replace('prefeitura', 'executive')
+goodlinks.branch = goodlinks.branch.str.replace('camara', 'legislative')
+goodlinks['sphere'] = 'municipal'
+
+output = os.path.join(OUTPUT_FOLDER, OUTPUT_FILE)
+generated_df = goodlinks
+# check whether if there is an existing file to merge
+if os.path.exists(output):
+    recorded_df = pd.read_csv(output)
+    new_df = pd.concat([recorded_df, generated_df], sort=True)
+else:
+    new_df = generated_df.copy()
+# remove duplicate entries
+new_df.drop_duplicates(inplace=True)
+# store the results
+new_df.to_csv(output, index=False)
+

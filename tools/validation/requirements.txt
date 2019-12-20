@@ -2,4 +2,3 @@ requests==2.22.0
 pandas==0.25.3
 tqdm==4.40.0
 beautifulsoup4-4.8.1
-
