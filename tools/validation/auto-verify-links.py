@@ -23,18 +23,19 @@ from tqdm import tqdm
 import requests
 from bs4 import BeautifulSoup
 from unidecode import unidecode
+from datapackage import Package
 
 USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
-MAX_SIMULTANEOUS = 4
+MAX_SIMULTANEOUS = 10
 OUTPUT_FOLDER = '../../data/valid'
 OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
 
 candidates = pd.read_csv(os.path.join(INPUT_FOLDER, INPUT_FILE))
 codes = candidates.code.unique()
 random.shuffle(codes) # randomize sequence
-#codes = codes[:12] # take a subsample for testing purposes
+codes = codes[:120] # take a subsample for quicker processing
 goodlinks = pd.DataFrame(columns=candidates.columns)
 
 def healthy_link(link):
@@ -103,7 +104,7 @@ pool = multiprocessing.Pool(processes=MAX_SIMULTANEOUS)
 with tqdm(total=len(codes)) as pbar:
     print (f'Cralwing candidate URLs for {len(codes)} cities...')
     for chunk in in_chunks(codes, MAX_SIMULTANEOUS):
-        results = pool.map(partial(verify_city_links, candidates), codes)
+        results = pool.map(partial(verify_city_links, candidates), chunk)
         for result in results:
             for verified_link in result:
                 goodlinks = goodlinks.append(verified_link, ignore_index=True)
@@ -111,7 +112,12 @@ with tqdm(total=len(codes)) as pbar:
 
 # record validated
 
-# prepare columns
+# read schema
+package = Package(os.path.join(OUTPUT_FOLDER, 'datapackage.json'))
+r = package.get_resource('brazilian-transparency-and-open-data-portals')
+columns = r.schema.field_names
+
+# prepare column names
 goodlinks.rename(columns={
     'uf': 'state_code',
     'code': 'municipality_code',
@@ -133,8 +139,13 @@ if os.path.exists(output):
     new_df = pd.concat([recorded_df, generated_df], sort=True)
 else:
     new_df = generated_df.copy()
-# remove duplicate entries
-new_df.drop_duplicates(inplace=True)
+# remove duplicate entries,
+# take into account only url column,
+# keep last entry to preserve the last-verified-auto timestamp
+# TODO: merge last-verified-manual from file so as not to override field
+new_df.drop_duplicates(subset='url', keep='last', inplace=True)
+# TODO: reorder columns
+# new_df = new_df[columns]
 # store the results
 new_df.to_csv(output, index=False)
 
