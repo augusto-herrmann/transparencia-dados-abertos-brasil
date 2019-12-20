@@ -35,14 +35,17 @@ OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
 candidates = pd.read_csv(os.path.join(INPUT_FOLDER, INPUT_FILE))
 codes = candidates.code.unique()
 random.shuffle(codes) # randomize sequence
-codes = codes[:120] # take a subsample for quicker processing
+codes = codes[:20] # take a subsample for quicker processing
 goodlinks = pd.DataFrame(columns=candidates.columns)
 
 def healthy_link(link):
     'Check whether the link is healthy or not.'
     try:
         r = requests.get(link, headers={'user-agent': USER_AGENT})
-    except requests.exceptions.ConnectionError:
+    except (
+        requests.exceptions.ConnectionError,
+        requests.exceptions.InvalidURL
+    ):
         r = None
     if r and r.status_code == 200:
         return r
@@ -114,7 +117,7 @@ with tqdm(total=len(codes)) as pbar:
 
 # read schema
 package = Package(os.path.join(OUTPUT_FOLDER, 'datapackage.json'))
-r = package.get_resource('brazilian-transparency-and-open-data-portals')
+r = package.get_resource('brazilian-municipality-and-state-websites')
 columns = r.schema.field_names
 
 # prepare column names
@@ -144,8 +147,8 @@ else:
 # keep last entry to preserve the last-verified-auto timestamp
 # TODO: merge last-verified-manual from file so as not to override field
 new_df.drop_duplicates(subset='url', keep='last', inplace=True)
-# TODO: reorder columns
-# new_df = new_df[columns]
+# reorder columns
+new_df = new_df[columns]
 # store the results
 new_df.to_csv(output, index=False)
 
