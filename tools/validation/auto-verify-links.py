@@ -16,7 +16,7 @@ import multiprocessing
 from functools import partial
 import random
 import warnings
-from datetime import datetime
+from datetime import datetime, timezone
 
 import pandas as pd
 from tqdm import tqdm
@@ -94,7 +94,11 @@ def verify_city_links(candidates, code):
                     'link_type': link_type,
                     'name': city_links.name.iloc[0],
                     'uf': city_links.uf.iloc[0],
-                    'last_checked': datetime.utcnow().isoformat(timespec='seconds')
+                    'last_checked': (
+                        datetime.now(timezone.utc)
+                        .isoformat(timespec='seconds')
+                        .replace('+00:00', 'Z')
+                    )
                 }
                 verified_links.append(verified_link)
     return verified_links
