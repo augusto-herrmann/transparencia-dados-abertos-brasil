@@ -9,6 +9,7 @@
 # e câmaras municipais.
 #
 
+import argparse
 import re
 import os
 import urllib
@@ -29,13 +30,54 @@ USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
 MAX_SIMULTANEOUS = 10
+MAX_QUANTITY = 0
 OUTPUT_FOLDER = '../../data/valid'
 OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
 
+# Command line interface
+parser = argparse.ArgumentParser(
+    description='''Crawls candidate URLs for municipalities websites and checks
+if they are active and likely to be the city hall or city council portals.'''
+    )
+
+parser.add_argument('input',
+                    help='input file in CSV format',
+                    default='',
+                    nargs='?',
+                    )
+parser.add_argument('output',
+                    help='output file in CSV (must have a schema in datapackage.json)',
+                    default=OUTPUT_FILE,
+                    nargs='?',
+                    )
+parser.add_argument('-q', '--quantity',
+                    metavar='int', type=int,
+                    help='maximum quantity of cities to process',
+                    default=0,
+                    )
+parser.add_argument('-p', '--processes',
+                    metavar='int', type=int,
+                    help='number of processes (parallel downloads) to use',
+                    default=8,
+                    )
+args = parser.parse_args()
+if args.input:
+    INPUT_FOLDER = os.path.dirname(args.input)
+    INPUT_FILE = os.path.basename(args.input)
+if args.output:
+    OUTPUT_FOLDER = os.path.dirname(args.output)
+    OUTPUT_FILE = os.path.basename(args.output)
+if args.quantity:
+    MAX_QUANTITY = args.quantity
+if args.processes:
+    MAX_SIMULTANEOUS = args.processes
+
 candidates = pd.read_csv(os.path.join(INPUT_FOLDER, INPUT_FILE))
+print (f'Found {len(candidates)} cities in {os.path.join(INPUT_FOLDER, INPUT_FILE)}.')
 codes = candidates.code.unique()
 random.shuffle(codes) # randomize sequence
-codes = codes[:20] # take a subsample for quicker processing
+if MAX_QUANTITY:
+    codes = codes[:MAX_QUANTITY] # take a subsample for quicker processing
 goodlinks = pd.DataFrame(columns=candidates.columns)
 
 def healthy_link(link):
