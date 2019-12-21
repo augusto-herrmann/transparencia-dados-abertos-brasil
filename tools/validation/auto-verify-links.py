@@ -47,7 +47,7 @@ parser.add_argument('input',
                     )
 parser.add_argument('output',
                     help='output file in CSV (must have a schema in datapackage.json)',
-                    default=OUTPUT_FILE,
+                    default='',
                     nargs='?',
                     )
 parser.add_argument('-q', '--quantity',
