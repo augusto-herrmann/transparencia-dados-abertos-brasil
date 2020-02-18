@@ -39,10 +39,27 @@ in the [data/unverified](data/unverified) directory. Data stored here is
 expected to still contain a lot of garbage and **should not be committed
 to the repository**.
 
+##### Validation
+
 The next step is link validation. This is done automatically, by a bot, and
 manually, with the help of a script. The code for those are in the
 [tools/validation](tools/validation) directory. The output, with validated
 data, goes to the [data/valid](data/valid) directory.
+
+We also apply the concept of
+[continuous data integration](http://okfnlabs.org/blog/2016/05/17/automated-data-validation.html)
+to keep the integrity of data already validated. It's like
+[continuous integration](https://en.wikipedia.org/wiki/Continuous_integration),
+but for data instead of software. It helps keep the incorrect data out of the
+repository, as every commit and pull request gets automatically verified,
+thanks to a hook on Github and the [goodtables.io](https://goodtables.io/)
+service.
+
+Metadata is maintained using the
+[Data Package specification](https://frictionlessdata.io/specs/data-package/),
+which also removes the friction out of the process of reusing the data. For
+more information, see the [Frictionless Data](https://frictionlessdata.io/)
+website.
 
 #### Finding transparency and open data portals in institutional websites
 

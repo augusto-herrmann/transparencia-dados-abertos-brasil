@@ -36,10 +36,26 @@ são armazenados no diretório [data/unverified](data/unverified) (dados/não
 verificados). Espera-se que os dados guardados aqui ainda contenham muito
 lixo e **não devem ser incluídos (commit) no repositório**.
 
+##### Validação
+
 O próximo passo é a validação de links. Isso é feito automaticamente, por um
 bot, e manualmente, com a ajuda de um script. O código desses está no
 diretório [tools/validation](tools/validation) (ferramentas/validação). A
 saída, com dados validados, vai para o diretório [data/valid](data/valid).
+
+Nós também aplicamos o conceito de
+[integração contínua de dados](http://okfnlabs.org/blog/2016/05/17/automated-data-validation.html)
+para manter a integridade dos dados já validados. É como a
+[integração contínua](https://en.wikipedia.org/wiki/Continuous_integration),
+mas para dados em vez de software. Ela ajuda a manter dados incorretos fora do
+repositório, já que todo *commit* e *pull request* é automaticamente
+verificado, graças a um *hook* no Github e o serviço
+[goodtables.io](https://goodtables.io/).
+
+Os metadados são mantidos usando a
+[especificação Data Package](https://frictionlessdata.io/specs/data-package/),
+o que também remove a fricção do processo de reutilizar os dados. Para mais
+informações, veja o site do [Frictionless Data](https://frictionlessdata.io/).
 
 #### Encontrando portais da transparência e dados abertos nos sites oficiais
 
