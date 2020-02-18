@@ -1,3 +1,5 @@
+[![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
+
 ## Portais de Transparência e Dados Abertos de estados e municípios do Brasil
 
 Obter uma lista dos portais da transparência e de dados abertos de todos os 27
