@@ -28,7 +28,8 @@ These data sources are in the [sources](sources) directory. Check each
 individual data source directory for more information. Some examples of
 sources that are already implemented are:
 
-* [tables 31 and 32](sources/research/klein-2017) from the PhD thesis of Rodrigo Klein (2017)/tede/7724)
+* [tables 31 and 32](sources/research/klein-2017) from the PhD thesis of
+  Rodrigo Klein (2017)
 * [DBPedia](sources/dbpedia), the semantic web tool that extracts structured
   data from [Wikipedia](https://www.wikipedia.org/)
 
