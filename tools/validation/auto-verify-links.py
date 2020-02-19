@@ -86,7 +86,8 @@ def healthy_link(link):
         r = requests.get(link, headers={'user-agent': USER_AGENT})
     except (
         requests.exceptions.ConnectionError,
-        requests.exceptions.InvalidURL
+        requests.exceptions.InvalidURL,
+        requests.exceptions.TooManyRedirects
     ):
         r = None
     if r and r.status_code == 200:
