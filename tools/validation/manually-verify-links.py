@@ -63,6 +63,7 @@ if args.input:
 if args.output:
     OUTPUT_FOLDER = os.path.dirname(args.output)
     OUTPUT_FILE = os.path.basename(args.output)
+if args.quantity:
     MAX_QUANTITY = args.quantity
 else:
     MAX_QUANTITY = None
@@ -220,6 +221,7 @@ else:
 new_df.drop_duplicates(subset='url', keep='last', inplace=True)
 # reorder columns
 new_df = new_df[columns]
+new_df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
 new_df.to_csv(output, index=False)
 

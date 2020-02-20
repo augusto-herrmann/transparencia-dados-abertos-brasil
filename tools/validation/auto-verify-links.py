@@ -196,6 +196,7 @@ else:
 new_df.drop_duplicates(subset='url', keep='last', inplace=True)
 # reorder columns
 new_df = new_df[columns]
+new_df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
 new_df.to_csv(output, index=False)
 
