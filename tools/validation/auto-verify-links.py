@@ -106,6 +106,10 @@ def check_type(r, candidates):
         link_type = 'prefeitura'
     elif 'camara' in link_types:
         link_type = 'camara'
+    elif 'hino' in title:
+        link_type = None
+    elif 'brasao' in title:
+        link_type = None
     elif 'prefeitura' in title:
         link_type = 'prefeitura'
     elif 'municipio' in title:
@@ -137,10 +141,7 @@ def verify_city_links(candidates, code):
                     'link_type': link_type,
                     'name': city_links.name.iloc[0],
                     'uf': city_links.uf.iloc[0],
-                    'last_checked': (
-                        datetime.now(timezone.utc)
-                        .isoformat(timespec='seconds')
-                        .replace('+00:00', 'Z')
+                    'last_checked': datetime.utcnow()
                     )
                 }
                 verified_links.append(verified_link)
@@ -198,5 +199,5 @@ new_df.drop_duplicates(subset='url', keep='last', inplace=True)
 new_df = new_df[columns]
 new_df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
-new_df.to_csv(output, index=False)
+new_df.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
 
