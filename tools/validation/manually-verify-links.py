@@ -138,7 +138,7 @@ def verify_city_links(candidates, code):
         print(f'  Checking link "{link}"...')
         working_link = healthy_link(link)
         if working_link:
-            print(f'  Returned stats code {working_link.status_code}')
+            print(f'  Returned status code {working_link.status_code}')
             title, link_type = title_and_type(
                 working_link,
                 candidates[candidates.link==link]
