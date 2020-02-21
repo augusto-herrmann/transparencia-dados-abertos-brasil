@@ -106,8 +106,9 @@ def title_and_type(r, candidates):
     soup = BeautifulSoup(r.text, 'html.parser')
     title_tag = soup.find('title')
     if title_tag is None:
-        return None
-    title = unidecode(title_tag.text)
+        title = ''
+    else:
+        title = unidecode(title_tag.text)
     link_types = candidates.link_type
     if 'prefeitura' in link_types:
         link_type = 'prefeitura'
@@ -212,7 +213,7 @@ for result in results:
         df = df.append(row, ignore_index=True)
     else:
         df = df.append(result, ignore_index=True)
-import pdb; pdb.set_trace()
+
 output = r.source # filename of csv to write
 print(f'Recording {output}...')
 # remove duplicate entries,
