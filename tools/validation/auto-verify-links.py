@@ -142,7 +142,6 @@ def verify_city_links(candidates, code):
                     'name': city_links.name.iloc[0],
                     'uf': city_links.uf.iloc[0],
                     'last_checked': datetime.utcnow()
-                    )
                 }
                 verified_links.append(verified_link)
     return verified_links
