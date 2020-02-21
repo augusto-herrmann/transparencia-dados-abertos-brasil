@@ -139,7 +139,7 @@ dbp_links = pd.concat([dbp, dbp_pt], sort=True)
 
 # remove links to files
 dbp_links = dbp_links[
-    ~dbp_links.link.str.contains(r'\.(?:pdf|png|jpg|gif)$', na=False, regex=True)
+    ~dbp_links.link.str.contains(r'\.(?:pdf|png|jpg|gif|bmp)$', na=False, regex=True)
 ]
 
 # remove generic links to IBGE
