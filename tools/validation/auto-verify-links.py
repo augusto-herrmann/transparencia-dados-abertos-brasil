@@ -9,15 +9,15 @@
 # e câmaras municipais.
 #
 
+import os
 import argparse
 import re
-import os
 import urllib
-import multiprocessing
-from functools import partial
+from datetime import datetime, timezone
 import random
 import warnings
-from datetime import datetime, timezone
+import multiprocessing
+from functools import partial
 
 import pandas as pd
 from tqdm import tqdm
@@ -25,6 +25,7 @@ import requests
 from bs4 import BeautifulSoup
 from unidecode import unidecode
 from datapackage import Package
+from tableschema import Storage
 
 USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
 INPUT_FOLDER = '../../data/unverified'
@@ -165,7 +166,9 @@ with tqdm(total=len(codes)) as pbar:
 # read schema
 package = Package(os.path.join(OUTPUT_FOLDER, 'datapackage.json'))
 r = package.get_resource('brazilian-municipality-and-state-websites')
-columns = r.schema.field_names
+valid_data = Storage.connect('pandas')
+package.save(storage=valid_data)
+df = valid_data[r.name.replace('-','_')] # bucket names use _ instead of -
 
 # prepare column names
 goodlinks.rename(columns={
@@ -177,26 +180,33 @@ goodlinks.rename(columns={
     'last_checked': 'last-verified-auto'
 }, inplace=True)
 
+# map values
 goodlinks.branch = goodlinks.branch.str.replace('prefeitura', 'executive')
 goodlinks.branch = goodlinks.branch.str.replace('camara', 'legislative')
 goodlinks['sphere'] = 'municipal'
 
-output = os.path.join(OUTPUT_FOLDER, OUTPUT_FILE)
-generated_df = goodlinks
-# check whether if there is an existing file to merge
-if os.path.exists(output):
-    recorded_df = pd.read_csv(output)
-    new_df = pd.concat([recorded_df, generated_df], sort=True)
-else:
-    new_df = generated_df.copy()
+print('Updating values...')
+for index, result in goodlinks.iterrows():
+    # get existing data in file to be updated
+    existing_data = df.loc[
+            (df.municipality_code == result['municipality_code']) &
+            (df.branch == result['branch'])
+        ]
+    if len(existing_data) > 0:
+        row = existing_data.iloc[0].copy()
+        for key in ['sphere', 'branch', 'url', 'last-verified-auto']:
+            row[key] = result[key] # update the values
+        df = df.append(row, ignore_index=True)
+    else:
+        df = df.append(result, ignore_index=True)
+
+output = r.source # filename of csv to write
+print(f'Recording {output}...')
 # remove duplicate entries,
 # take into account only url column,
 # keep last entry to preserve the last-verified-auto timestamp
-# TODO: merge last-verified-manual from file so as not to override field
-new_df.drop_duplicates(subset='url', keep='last', inplace=True)
-# reorder columns
-new_df = new_df[columns]
-new_df.sort_values(by=['state_code', 'municipality'], inplace=True)
+df.drop_duplicates(subset='url', keep='last', inplace=True)
+df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
-new_df.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
+df.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
 
