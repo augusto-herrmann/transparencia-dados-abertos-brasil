@@ -61,6 +61,13 @@
             "format": "default",
             "title": "UF abbreviation",
             "description": "Official abbreviation (2 letter code) for the Federative Unit."
+          },
+          {
+            "name": "URI",
+            "type": "string",
+            "format": "uri",
+            "title": "DBPedia URI",
+            "description": "The URI in DBPedia for representing this municipality."
           }
         ]
       },

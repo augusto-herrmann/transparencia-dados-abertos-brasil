@@ -1,4 +1,4 @@
-# 02-dbpedia-links.py
+# 03-dbpedia-website-links.py
 #
 # This script interprets the URLs municipalities websites from
 # DBPedia. At a later stage these URLs are used to find out the respective
