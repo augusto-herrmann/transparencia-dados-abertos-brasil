@@ -1,7 +1,11 @@
+How to contribute to this project.
+
+Este texto também está disponível em português: 🇧🇷[CONTRIBUIR.md](CONTRIBUIR.md).
+
 ## Intro
 
 Thank you for your interest in contributing to this project. In order for us
-to keep everyone's contributions organized, please follow these guidelines
+to keep everyone's contributions organised, please follow these guidelines
 before you start hacking away.
 
 ## Language
@@ -23,7 +27,7 @@ We follow a workflow that is pretty common to other open source projects.
    directly in Github's interface, but by cloning the project into your own
    computer gives a lot more flexibility. To clone, type:
    
-   `$ git clone http://github.com/<YOUR-GITHUB-USERNAME>/brasil.io.git`
+   `$ git clone http://github.com/<YOUR-GITHUB-USERNAME>/transparencia-dados-abertos-brasil.git`
 3. Start a new branch:
    
    `$ git checkout -b issue-nn`
@@ -40,8 +44,12 @@ We follow a workflow that is pretty common to other open source projects.
 
    ```
    $ git add files-I-changed
-   $ git commit -am 'My nifty contribution'
+   $ git commit -m 'My nifty contribution'
    ```
+   
+   Use verbs in the infinitive tense and write your commit message in English
+   if you can. Try to keep the message descriptive, but succinct, representing
+   what you did.
 6. Push your changes to your fork
 
    `$ git push --set-upstream origin issue-nn`
@@ -51,7 +59,7 @@ We follow a workflow that is pretty common to other open source projects.
    to open a new pull request to offer your code for review before being
    incorporated back into the main repository.
    
-   Make sure to add a meaningul title and description.
+   Make sure to add a meaningful title and description.
 
 ## Types of contributions
 
@@ -81,15 +89,53 @@ $ goodtables data/.../datapackage.json
 on the data you're working on, before committing to the repository. That
 ensures that only valid data comes in.
 
+Make sure you have `goodtables` command available on your command line, by
+following the instructions on our [README](README.md) or Goodtable's own
+[installation instructions](https://github.com/frictionlessdata/goodtables-py#installing).
+
 ### Code
 
-Scripts to move data around and validate it.
+This repository contains not only data, but also the scripts required to move
+data around and validate it. Scripts live in the [tools](tools/) directory.
+
+When adding a new script, make sure you include also proper documentation (a
+README.md file is enough), with instructions on how to use it. Also include
+any setup required, such as a registry of dependencies. If it's a Python
+script, include a `requirements.txt` file pinning the version numbers of
+libraries used.
+
+#### Import scripts
+
+[These](tools/import/) are scripts that import data from external
+[sources](#sources) into the project. Data output from import scripts usually
+goes into the [data/unverified](data/unverified/) directory.
+
+#### Export scripts
+
+[These](tools/export/) are scripts that export data from this project to other
+projects that we contribute to.
+
+#### Validation scripts
+
+[These](tools/export/) scripts do validation of data in the
+[data/unverified](data/unverified/) directory and output to
+[data/valid](data/valid/). Data can be validated either automatically or
+manually. In that case, it's usually a script that take input from the user in
+order to help them manually validate data in a way.
 
 ### Sources
 
-Documentation on data sources.
+Documentation on data sources. Use text in markdown and
+[data packages](https://frictionlessdata.io/specs/data-package/) to do it.
 
 ### Documentation
 
-Markdown files such as this one that document the project.
+Markdown files such as this one that document the overall project. Improvement
+proposals on those are also quite welcome.
+
+### Issues
+
+If you have an idea on how to improve something, but are not quite sure on how
+to implement it, or want to discuss it beforehand, please open an
+[issue](/augusto-herrmann/transparencia-dados-abertos-brasil/issues) about it.
 
