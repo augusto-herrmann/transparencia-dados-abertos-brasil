@@ -85,7 +85,7 @@ executivo, contendo os seguintes dados sobre cada um deles:
 
 Contribuições ao projeto são bem vindas. Se você tem uma ideia ou quer
 melhorar algo, por favor confira o nosso
-[guia para contribuições](CONTRIBUTING.md).
+[guia para contribuições](CONTRIBUIR.md).
 
 Também pretendemos colaborar no monitoramento da transparência de estados e
 municípios em projetos como o [Colaboradados](http://colaboradados.github.io/)
