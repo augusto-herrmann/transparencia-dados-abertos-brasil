@@ -143,5 +143,5 @@ melhorias nestes também são muito bem vindas.
 
 Se você tem uma ideia sobre como melhorar alguma coisa, mas não tem certeza de
 como implementá-la, ou se quer discuti-la antes, por favor abra uma
-[issue](/augusto-herrmann/transparencia-dados-abertos-brasil/issues) sobre ela.
+[issue](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/issues) sobre ela.
 

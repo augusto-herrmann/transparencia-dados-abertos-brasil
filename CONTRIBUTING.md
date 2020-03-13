@@ -137,5 +137,5 @@ proposals on those are also quite welcome.
 
 If you have an idea on how to improve something, but are not quite sure on how
 to implement it, or want to discuss it beforehand, please open an
-[issue](/augusto-herrmann/transparencia-dados-abertos-brasil/issues) about it.
+[issue](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/issues) about it.
 
