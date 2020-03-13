@@ -1,3 +1,7 @@
+Levantamento de portais estaduais e municipais de transparência e dados abertos, bem como os portais institucionais, obtido a partir de diversas fontes públicas de dados.
+
+This text is also available in English: 🇬🇧[README.md](README.md).
+
 [![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
 
 ## Portais de Transparência e Dados Abertos de estados e municípios do Brasil
@@ -76,6 +80,12 @@ executivo, contendo os seguintes dados sobre cada um deles:
 * site oficial
 * portal da transparência
 * portal de dados abertos
+
+### Como contribuir
+
+Contribuições ao projeto são bem vindas. Se você tem uma ideia ou quer
+melhorar algo, por favor confira o nosso
+[guia para contribuições](CONTRIBUTING.md).
 
 Também pretendemos colaborar no monitoramento da transparência de estados e
 municípios em projetos como o [Colaboradados](http://colaboradados.github.io/)

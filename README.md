@@ -1,4 +1,6 @@
-Para uma descrição em português, veja o arquivo 🇧🇷[LEIAME.md](LEIAME.md).
+A survey of Brazilian states' and municipalities' transparency and open data portals, as well as institutional websites, obtained from several public data sources.
+
+Este texto também está disponível em português: 🇧🇷[LEIAME.md](LEIAME.md).
 
 [![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
 
@@ -79,6 +81,11 @@ branches, containing the following data on each one of them:
 * official website
 * transparency portal
 * open data portal
+
+### Contributing
+
+We welcome contributions to the project. If you have an idea or want to
+improve something, please check out the [contributing guide](CONTRIBUTING.md).
 
 We also intend to collaborate on the monitoring of transparency of Brazilian
 states and municipalities in projects such as
