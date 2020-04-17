@@ -1,0 +1,22 @@
+{
+  "profile": "data-package",
+  "resources": [
+    {
+      "name": "ibge-brazilian-municipality-codes",
+      "path": "ftp://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2018/DTB_2018.zip",
+      "profile": "data-resource",
+      "format": "ods+zip",
+      "mimetype": "application/zip"
+    }
+  ],
+  "name": "ibge-brazilian-municipality-codes",
+  "title": "Brazilian Municipality Codes by IBGE",
+  "description": "Lists of codes for Brazilian Municipalities, States, Meso-Regions and Micro-Regions, as assigned by the Brazilian Institute of Geography and Statistics – IBGE.",
+  "homepage": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/divisao-regional/23701-divisao-territorial-brasileira.html?=&t=o-que-e",
+  "contributors": [
+    {
+      "title": "Brazilian Institute of Geography and Statistics – IBGE",
+      "role": "author"
+    }
+  ]
+}
