@@ -115,10 +115,14 @@ def check_type(r, candidates):
         link_type = 'prefeitura'
     elif 'municipio' in title:
         link_type = 'prefeitura'
-    elif 'camara municipal' in title:
+    elif re.match(r'c.{0,3}mara', title, re.IGNORECASE):
         link_type = 'camara'
-    elif 'camara de' in title:
-        link_type = 'camara'
+    elif 'poder executivo' in title:
+        link_type = 'prefeitura'
+    elif 'governo municipal' in title:
+        link_type = 'prefeitura'
+    elif 'pref.' in title:
+        link_type = 'prefeitura'
     else:
         warnings.warn(f'Unable to determine site type from title: “{title}”.')
         link_type = None
