@@ -93,7 +93,8 @@ def healthy_link(link):
     except (
         requests.exceptions.ConnectionError,
         requests.exceptions.InvalidURL,
-        requests.exceptions.TooManyRedirects
+        requests.exceptions.TooManyRedirects,
+        requests.exceptions.ReadTimeout
     ):
         r = None
     if r and r.status_code == 200:
