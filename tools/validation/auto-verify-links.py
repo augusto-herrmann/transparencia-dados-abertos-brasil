@@ -27,7 +27,8 @@ from unidecode import unidecode
 from datapackage import Package
 from tableschema import Storage
 
-USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
+USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.2'
+TIMEOUT = 20
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
 MAX_SIMULTANEOUS = 10
@@ -84,7 +85,11 @@ goodlinks = pd.DataFrame(columns=candidates.columns)
 def healthy_link(link):
     'Check whether the link is healthy or not.'
     try:
-        r = requests.get(link, headers={'user-agent': USER_AGENT})
+        r = requests.get(
+            link,
+            headers={'user-agent': USER_AGENT},
+            timeout=TIMEOUT
+            )
     except (
         requests.exceptions.ConnectionError,
         requests.exceptions.InvalidURL,
