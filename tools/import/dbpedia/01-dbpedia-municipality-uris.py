@@ -9,8 +9,7 @@ import re
 import os
 import urllib
 import pandas as pd
-from tableschema import Storage
-from datapackage import Package
+from frictionless import Package
 
 GEO_FOLDER = '../../../data/auxiliary/geographic'
 GEO_FILE = 'municipality.csv'
@@ -41,12 +40,11 @@ dbp_pt['name'] = dbp_pt.name.apply(
 
 
 # get the state (UF) abbreviations as the DBPedia data does not contain them
-geographic = Storage.connect('pandas')
 package = Package(os.path.join(GEO_FOLDER,'datapackage.json'))
-package.save(storage=geographic)
+uf = package.get_resource('uf').to_pandas()
 
 # adjust column names and types
-uf = geographic['uf'].rename(columns={'name': 'state'})
+uf.rename(columns={'name': 'state'}, inplace=True)
 uf.drop('code', axis=1, inplace=True)
 uf['state'] = uf['state'].astype('category')
 
@@ -57,7 +55,7 @@ dbp_pt.rename(columns={'abbr': 'uf'}, inplace=True)
 
 
 # get the municipality codes as the DBPedia data does not contain them
-mun = geographic['municipality']
+mun = package.get_resource('municipality').to_pandas()
 
 # merge the data
 mun_URI =  mun.merge( 
