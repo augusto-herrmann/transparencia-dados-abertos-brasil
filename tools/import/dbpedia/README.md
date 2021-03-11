@@ -17,7 +17,7 @@ and process, see the
    First, gather the DBPedia identifier URI for each municipality:
    
    ```
-   python 01-dbpedia-uris.py
+   python 01-dbpedia-municipality-uris.py
    ```
    
    Then, try to find the official website property for each one of them:
