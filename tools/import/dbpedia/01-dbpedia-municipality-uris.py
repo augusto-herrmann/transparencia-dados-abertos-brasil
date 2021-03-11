@@ -1,9 +1,9 @@
-# 02-dbpedia-uris.py
-#
-# This script fetches the municipalities URIs from DBPedia.
-# 
-# Este script traz as URIs de municípios da DBPedia.
-#
+# 01-dbpedia-municipality-uris.py
+"""
+ This script fetches the municipalities URIs from DBPedia.
+ 
+ Este script traz as URIs de municípios da DBPedia.
+"""
 
 import re
 import os
