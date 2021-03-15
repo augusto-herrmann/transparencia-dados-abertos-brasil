@@ -29,15 +29,10 @@ DBPEDIA_URL = f'http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia
 # read data frame from Portuguese DBPedia
 dbp_pt = pd.read_csv(DBPEDIA_PT_URL)
 
-
-# remove links column
-dbp_pt.drop('link', axis=1, inplace=True)
-
 # remove parenthesis in city names
 dbp_pt['name'] = dbp_pt.name.apply(
     lambda s: remove_parenthesis.match(s).group().strip()
 )
-
 
 # get the state (UF) abbreviations as the DBPedia data does not contain them
 package = Package(os.path.join(GEO_FOLDER,'datapackage.json'))
@@ -48,26 +43,71 @@ uf.rename(columns={'name': 'state'}, inplace=True)
 uf.drop('code', axis=1, inplace=True)
 uf['state'] = uf['state'].astype('category')
 
-# merge back into the DBPedia data
+# handle the different types of URIs – main DBPedia or pt DBPedia
+dbp_pt['URI_type'] = dbp_pt.city.apply(
+    lambda s: 'dbpedia' \
+        if s.startswith('http://dbpedia.org/') \
+        else 'dbpedia_pt' \
+            if s.startswith('http://pt.dbpedia.org/') \
+                else None
+)
+
+# format the dataframe like the municipality table
 dbp_pt = dbp_pt.merge(uf)
 dbp_pt.drop('state', axis=1, inplace=True)
 dbp_pt.rename(columns={'abbr': 'uf'}, inplace=True)
+dbp_pt.rename(columns={'city': 'URI'}, inplace=True)
+dbp_pt = dbp_pt.loc[:, ['name', 'uf', 'URI', 'URI_type']] # discard all other columns
+dbp_pt.sort_values(by=['uf', 'name', 'URI'], inplace=True)
+dbp_pt.drop_duplicates(subset=['name', 'uf', 'URI_type'], keep='first', inplace=True)
 
+# create dbpedia and dbpedia_pt columns depending on the value of URI
+dbp_pt = (
+    dbp_pt
+    .merge(
+        (
+            dbp_pt
+            .pivot(index=['name', 'uf'], columns='URI_type', values='URI')
+            .reindex()
+        ), on=['name', 'uf'], how='left'
+    )
+    .drop(['URI', 'URI_type'], axis=1)
+    .drop_duplicates()
+)
 
 # get the municipality codes as the DBPedia data does not contain them
 mun = package.get_resource('municipality').to_pandas()
 
-# merge the data
-mun_URI =  mun.merge( 
-    dbp_pt.loc[:, dbp_pt.columns.isin(['city', 'name', 'uf'])] 
-    .rename(columns={'city': 'URI'}), # proper column name
+# just add the municipality codes to the dataframe
+dbp_pt = dbp_pt.merge( 
+    mun.loc[:, ['code', 'name', 'uf']], # use just those columns for merge
     on=['name', 'uf'], # keys for the join operation
-    how='left' # keep the keys from mun dataframe even if not found on dbp_pt
-).drop_duplicates(subset=['code'], keep='first') # remove duplicate rows
+    how='right', # keep the keys from mun dataframe even if not found on dbp_pt
+).reindex(columns=['code', 'name', 'uf', 'dbpedia', 'dbpedia_pt'])
 
-# do some cleaning
+# sort both dataframes to align them
+assert len(dbp_pt) == len(mun) # must be the same size
+dbp_pt.sort_values(by='code', inplace=True)
+mun.sort_values(by='code', inplace=True)
+dbp_pt.set_index(dbp_pt.code, inplace=True) # make the index be the code
+mun.set_index(mun.code, inplace=True) # make the index be the code
 
+# update the URIs, if present. Otherwise, preserve the old ones
+mun['dbpedia'] = (
+    mun['dbpedia'].combine(
+        dbp_pt['dbpedia'],
+        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
+    ) if 'dbpedia' in mun.columns \
+    else dbp_pt['dbpedia']
+)
+mun['dbpedia_pt'] = (
+    mun['dbpedia_pt'].combine(
+        dbp_pt['dbpedia_pt'],
+        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
+    ) if 'dbpedia_pt' in mun.columns \
+    else dbp_pt['dbpedia_pt']
+)
 
 # write back the csv
-mun_URI.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
+mun.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
 
