@@ -1,11 +1,12 @@
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX dbo:<http://dbpedia.org/ontology/>
 PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 PREFIX ptdbp:<http://pt.dbpedia.org/property/>
 
-SELECT ?city, ?name, ?state, ?link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial WHERE {
+SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial WHERE {
     
     # select by classes
     {
@@ -32,6 +33,10 @@ SELECT ?city, ?name, ?state, ?link, ?link_prefeitura, ?link_camara, ?external_li
     OPTIONAL {?city rdfs:label ?name}
     OPTIONAL {?city dbp:estado ?state}
     OPTIONAL {?city dbo:state/rdfs:label ?state}
+    OPTIONAL {
+        ?city owl:sameAs ?wikidata .
+        FILTER REGEX(STR(?wikidata), "wikidata.org")
+    }
     OPTIONAL {?city ptdbp:siteCâmara ?link_camara}
     OPTIONAL {?city ptdbp:sitePrefeitura ?link_prefeitura}
     OPTIONAL {?city ptdbp:site ?link_site}
