@@ -63,11 +63,18 @@
             "description": "Official abbreviation (2 letter code) for the Federative Unit."
           },
           {
-            "name": "URI",
+            "name": "dbpedia",
             "type": "string",
             "format": "uri",
             "title": "DBPedia URI",
             "description": "The URI in DBPedia for representing this municipality."
+          },
+          {
+            "name": "dbpedia_pt",
+            "type": "string",
+            "format": "uri",
+            "title": "Portuguese DBPedia URI",
+            "description": "The URI in Portuguese language DBPedia for representing this municipality."
           }
         ]
       },
