@@ -75,6 +75,13 @@
             "format": "uri",
             "title": "Portuguese DBPedia URI",
             "description": "The URI in Portuguese language DBPedia for representing this municipality."
+          },
+          {
+            "name": "wikidata",
+            "type": "string",
+            "format": "uri",
+            "title": "WikiData URI",
+            "description": "The URI in WikiData for representing this municipality."
           }
         ]
       },

@@ -34,6 +34,16 @@ dbp_pt['name'] = dbp_pt.name.apply(
     lambda s: remove_parenthesis.match(s).group().strip()
 )
 
+# get WikiData URIs for later
+wikidata = (
+    dbp_pt
+    .loc[:, ['name', 'state', 'wikidata']]
+    .loc[dbp_pt.state.notna()]
+    .loc[dbp_pt.wikidata.notna()]
+    .drop_duplicates()
+    .copy()
+)
+
 # get the state (UF) abbreviations as the DBPedia data does not contain them
 package = Package(os.path.join(GEO_FOLDER,'datapackage.json'))
 uf = package.get_resource('uf').to_pandas()
@@ -42,6 +52,14 @@ uf = package.get_resource('uf').to_pandas()
 uf.rename(columns={'name': 'state'}, inplace=True)
 uf.drop('code', axis=1, inplace=True)
 uf['state'] = uf['state'].astype('category')
+
+# get state abbreviations for wikidata df
+wikidata = (
+    wikidata
+    .merge(uf)
+    .loc[:, ['name', 'abbr', 'wikidata']]
+    .rename(columns={'abbr': 'uf'})
+)
 
 # handle the different types of URIs – main DBPedia or pt DBPedia
 dbp_pt['URI_type'] = dbp_pt.city.apply(
@@ -85,6 +103,12 @@ dbp_pt = dbp_pt.merge(
     how='right', # keep the keys from mun dataframe even if not found on dbp_pt
 ).reindex(columns=['code', 'name', 'uf', 'dbpedia', 'dbpedia_pt'])
 
+# add wikidata column to dbp_pt again
+dbp_pt = (
+    dbp_pt
+    .merge(wikidata, on=['name', 'uf'], how='left')
+)
+
 # sort both dataframes to align them
 assert len(dbp_pt) == len(mun) # must be the same size
 dbp_pt.sort_values(by='code', inplace=True)
@@ -92,21 +116,22 @@ mun.sort_values(by='code', inplace=True)
 dbp_pt.set_index(dbp_pt.code, inplace=True) # make the index be the code
 mun.set_index(mun.code, inplace=True) # make the index be the code
 
+def update_column(
+    old_df: pd.DataFrame,
+    new_df:pd.DataFrame,
+    column: str
+    ) -> pd.DataFrame:
+    "Update the column in the old dataframe with data from the same column in the new dataframe"
+    
+    return old_df[column].combine(
+        new_df[column],
+        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
+    ) if column in old_df.columns else new_df[column]
+
 # update the URIs, if present. Otherwise, preserve the old ones
-mun['dbpedia'] = (
-    mun['dbpedia'].combine(
-        dbp_pt['dbpedia'],
-        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
-    ) if 'dbpedia' in mun.columns \
-    else dbp_pt['dbpedia']
-)
-mun['dbpedia_pt'] = (
-    mun['dbpedia_pt'].combine(
-        dbp_pt['dbpedia_pt'],
-        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
-    ) if 'dbpedia_pt' in mun.columns \
-    else dbp_pt['dbpedia_pt']
-)
+mun['dbpedia'] = update_column(mun, dbp_pt, 'dbpedia')
+mun['dbpedia_pt'] = update_column(mun, dbp_pt, 'dbpedia_pt')
+mun['wikidata'] = update_column(mun, dbp_pt, 'wikidata')
 
 # write back the csv
 mun.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
