@@ -16,6 +16,7 @@ SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?
     
     # select by properties
     UNION { ?city dbp:prefeito ?mayor }
+    UNION { ?city dbo:wikiPageWikiLink dbr:Mayor }
     UNION { ?thing dbp:cidade ?city }
     
     # restrict query to make sure those are cities in Brazil

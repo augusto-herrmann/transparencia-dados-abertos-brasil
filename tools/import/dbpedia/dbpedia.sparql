@@ -6,8 +6,23 @@ PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX yago:<http://dbpedia.org/class/yago/>
 
 SELECT ?city, ?name, ?state_abbr, ?state_name, ?link, ?external_link WHERE {
-    ?city a dbo:City ;
-        dbo:country dbr:Brazil .
+
+    # select by classes
+    {
+        ?city a ?city_type .
+        FILTER (?city_type IN (dbo:City, dbo:Settlement))
+    }
+
+    # select by properties
+    UNION { ?city dbo:wikiPageWikiLink dbr:Mayor }
+
+    # restrict query to make sure those are cities in Brazil
+    FILTER (
+        EXISTS { ?city a dbr:Municipalities_of_Brazil } ||
+        EXISTS { ?city dbo:wikiPageWikiLink dbr:States_of_Brazil } ||
+        EXISTS { ?city dbo:country dbr:Brazil }
+    )
+
     OPTIONAL {
         ?city foaf:homepage ?link .
     }
