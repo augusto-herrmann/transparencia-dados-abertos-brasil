@@ -21,7 +21,8 @@ SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?
     # restrict query to make sure those are cities in Brazil
     FILTER (
         EXISTS { ?city dbo:wikiPageWikiLink dbr:States_of_Brazil } ||
-        EXISTS { ?city ptdbp:wikiPageUsesTemplate <http://pt.dbpedia.org/resource/Predefinição:Info/Município_do_Brasil> }
+        EXISTS { ?city ptdbp:wikiPageUsesTemplate <http://pt.dbpedia.org/resource/Predefinição:Info/Município_do_Brasil> } ||
+        EXISTS { ?city dbo:country dbr:Brazil }
     )
     
     # get the properties likely to contain links
