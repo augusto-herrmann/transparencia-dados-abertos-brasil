@@ -6,7 +6,9 @@ PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 PREFIX ptdbp:<http://pt.dbpedia.org/property/>
 
-SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial WHERE {
+SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial
+
+WHERE {
     
     # select by classes
     {
