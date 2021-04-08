@@ -5,7 +5,9 @@ PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX yago:<http://dbpedia.org/class/yago/>
 
-SELECT ?city, ?name, ?state_abbr, ?state_name, ?link, ?external_link WHERE {
+SELECT ?city, ?name, ?state, ?link, ?external_link
+
+WHERE {
 
     # select by classes
     {
@@ -15,46 +17,47 @@ SELECT ?city, ?name, ?state_abbr, ?state_name, ?link, ?external_link WHERE {
 
     # select by properties
     UNION { ?city dbo:wikiPageWikiLink dbr:Mayor }
+    UNION { ?city dbp:leaderTitle dbr:Mayor }
+    UNION { ?thing dbp:city ?city }
 
     # restrict query to make sure those are cities in Brazil
     FILTER (
         EXISTS { ?city a dbr:Municipalities_of_Brazil } ||
         EXISTS { ?city dbo:wikiPageWikiLink dbr:States_of_Brazil } ||
-        EXISTS { ?city dbo:country dbr:Brazil }
+        EXISTS { ?city dbo:country dbr:Brazil } ||
+        EXISTS { ?city dbp:settlementType dbr:Municipalities_of_Brazil } ||
+        EXISTS { dbr:List_of_municipalities_of_Brazil dbo:wikiPageWikiLink ?city }
     )
 
-    OPTIONAL {
-        ?city foaf:homepage ?link .
-    }
-    OPTIONAL {
-        FILTER REGEX(STR(?external_link), ".gov.br")
-        ?city dbo:wikiPageExternalLink ?external_link .
-    }
+    # get municipality name and state
     OPTIONAL {
         ?city rdfs:label ?name
         FILTER(LANG(?name) = "" || LANGMATCHES(LANG(?name), "pt") || LANGMATCHES(LANG(?name), "en"))
     }
     OPTIONAL {
-        ?city dbo:isPartOf ?state .
-        ?state a yago:WikicatStatesOfBrazil .
-        ?state dbp:coordinatesRegion ?state_abbr .
-    }
-    OPTIONAL {
-        ?city dbo:isPartOf ?state .
-        ?state a yago:WikicatStatesOfBrazil .
-        ?state rdfs:label ?state_name .
-        FILTER(LANG(?state_name) = "" || LANGMATCHES(LANG(?state_name), "pt"))
+        ?city dbo:isPartOf ?state_node .
+        ?state_node a yago:WikicatStatesOfBrazil .
+        ?state_node rdfs:label ?state .
+        FILTER(LANG(?state) = "" || LANGMATCHES(LANG(?state), "pt"))
     }
     OPTIONAL { # cities linked to a state whose URI has changed
-        ?city dbo:isPartOf ?state_old_page .
-        ?state_old_page dbo:wikiPageRedirects ?state .
-        ?state a yago:WikicatStatesOfBrazil .
-        ?state dbp:coordinatesRegion ?state_abbr .
+        ?city dbo:isPartOf ?state_old .
+        ?state_old dbo:wikiPageRedirects ?state_node .
+        ?state_node a yago:WikicatStatesOfBrazil .
+        ?state_node rdfs:label ?state .
     }
     OPTIONAL { # cities wrongfully linked to a city instead of state
         ?city dbo:isPartOf ?other_city .
-        ?other_city dbo:isPartOf ?state .
-        ?state a yago:WikicatStatesOfBrazil .
-        ?state dbp:coordinatesRegion ?state_abbr .
+        ?other_city dbo:isPartOf ?state_node .
+        ?state_node a yago:WikicatStatesOfBrazil .
+        ?state_node rdfs:label ?state .
     }
+
+    # get the properties likely to contain links
+    OPTIONAL { ?city foaf:homepage ?link }
+    OPTIONAL {
+        ?city dbo:wikiPageExternalLink ?external_link .
+        FILTER REGEX(STR(?external_link), ".gov.br")
+    }
+
 }
