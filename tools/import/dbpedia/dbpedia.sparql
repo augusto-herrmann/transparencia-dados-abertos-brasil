@@ -38,7 +38,7 @@ WHERE {
         ?city dbo:isPartOf ?state_node .
         ?state_node a yago:WikicatStatesOfBrazil .
         ?state_node rdfs:label ?state .
-        FILTER(LANG(?state) = "" || LANGMATCHES(LANG(?state), "pt"))
+        FILTER(LANG(?state) = "" || LANGMATCHES(LANG(?state), "pt") || LANGMATCHES(LANG(?state), "en"))
     }
     OPTIONAL { # cities linked to a state whose URI has changed
         ?city dbo:isPartOf ?state_old .
