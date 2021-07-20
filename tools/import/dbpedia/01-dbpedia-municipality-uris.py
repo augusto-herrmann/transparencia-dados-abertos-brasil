@@ -21,7 +21,7 @@ remove_parenthesis = re.compile(r'[^(,]+')
 DBPEDIA_PT_SPARQL = 'dbpedia-pt.sparql'
 DBPEDIA_SPARQL = 'dbpedia.sparql'
 DBPEDIA_PT_URL = 'http://pt.dbpedia.org/sparql?default-graph-uri=&{}&should-sponge=&format=text%2Fcsv&timeout=0&debug=on'
-DBPEDIA_URL = 'http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&&format=text%2Fcsv&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+'
+DBPEDIA_URL = 'https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
 
 
 def update_column(
@@ -33,7 +33,7 @@ def update_column(
     
     return old_df[column].combine(
         new_df[column],
-        lambda old_URI, new_URI: old_URI if new_URI is None else new_URI
+        lambda old_URI, new_URI: old_URI if not new_URI or pd.isna(new_URI) else new_URI,
     ) if column in old_df.columns else new_df[column]
 
 def update_from_dbpedia(
@@ -138,6 +138,13 @@ def update_from_dbpedia(
         .merge(wikidata, on=['name', 'uf'], how='left')
     )
 
+    # TODO: figure out what to do with extra/duplicated Wikidata URIs
+    # dbp_pt[dbp_pt.duplicated(subset=['name', 'uf'], keep=False)].to_csv('duplicated.csv', index=False)
+
+    # if dataframe has more than one wikidata entry, consider only
+    # the first one
+    dbp_pt.drop_duplicates(subset=['name', 'uf'], keep='first', inplace=True)
+
     # sort both dataframes to align them
     assert len(dbp_pt) == len(mun) # must be the same size
     dbp_pt.sort_values(by='code', inplace=True)
@@ -162,9 +169,9 @@ if __name__ == '__main__':
         DBPEDIA_PT_URL
     )
     # from English DBPedia
-    # update_from_dbpedia(
-    #     os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
-    #     os.path.join(GEO_FOLDER, GEO_FILE),
-    #     DBPEDIA_SPARQL,
-    #     DBPEDIA_URL
-    # )
+    update_from_dbpedia(
+        os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
+        os.path.join(GEO_FOLDER, GEO_FILE),
+        DBPEDIA_SPARQL,
+        DBPEDIA_URL
+    )
