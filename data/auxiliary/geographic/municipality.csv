@@ -1,8 +1,8 @@
 code,name,uf,dbpedia,dbpedia_pt,wikidata
 1100015,Alta Floresta D'Oeste,RO,,,
 1100023,Ariquemes,RO,http://dbpedia.org/resource/Ariquemes,http://pt.dbpedia.org/resource/Ariquemes,http://www.wikidata.org/entity/Q1646975
-1100031,Cabixi,RO,,http://pt.dbpedia.org/resource/Cabixi,http://www.wikidata.org/entity/Q940433
-1100049,Cacoal,RO,,http://pt.dbpedia.org/resource/Cacoal,http://www.wikidata.org/entity/Q1761637
+1100031,Cabixi,RO,http://dbpedia.org/resource/Cabixi,http://pt.dbpedia.org/resource/Cabixi,http://www.wikidata.org/entity/Q940433
+1100049,Cacoal,RO,http://dbpedia.org/resource/Cacoal,http://pt.dbpedia.org/resource/Cacoal,http://www.wikidata.org/entity/Q1761637
 1100056,Cerejeiras,RO,,http://pt.dbpedia.org/resource/Cerejeiras,http://www.wikidata.org/entity/Q1803210
 1100064,Colorado do Oeste,RO,,http://pt.dbpedia.org/resource/Colorado_do_Oeste,http://www.wikidata.org/entity/Q1785819
 1100072,Corumbiara,RO,http://dbpedia.org/resource/Corumbiara,http://pt.dbpedia.org/resource/Corumbiara,http://www.wikidata.org/entity/Q927349
@@ -46,7 +46,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1101484,São Felipe D'Oeste,RO,,,
 1101492,São Francisco do Guaporé,RO,,http://pt.dbpedia.org/resource/São_Francisco_do_Guaporé,http://www.wikidata.org/entity/Q1802095
 1101500,Seringueiras,RO,,http://pt.dbpedia.org/resource/Seringueiras,http://www.wikidata.org/entity/Q727950
-1101559,Teixeirópolis,RO,,http://pt.dbpedia.org/resource/Teixeirópolis,http://www.wikidata.org/entity/Q1802088
+1101559,Teixeirópolis,RO,http://dbpedia.org/resource/Teixeirópolis,http://pt.dbpedia.org/resource/Teixeirópolis,http://www.wikidata.org/entity/Q1802088
 1101609,Theobroma,RO,,http://pt.dbpedia.org/resource/Theobroma,http://www.wikidata.org/entity/Q647208
 1101708,Urupá,RO,http://dbpedia.org/resource/Urupá,http://pt.dbpedia.org/resource/Urupá,http://www.wikidata.org/entity/Q2089326
 1101757,Vale do Anari,RO,http://dbpedia.org/resource/Vale_do_Anari,http://pt.dbpedia.org/resource/Vale_do_Anari,http://www.wikidata.org/entity/Q1807445
@@ -138,18 +138,18 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1400027,Amajari,RR,,http://pt.dbpedia.org/resource/Amajari,http://www.wikidata.org/entity/Q1646965
 1400050,Alto Alegre,RR,,http://pt.dbpedia.org/resource/Alto_Alegre_(Roraima),http://www.wikidata.org/entity/Q1763240
 1400100,Boa Vista,RR,"http://dbpedia.org/resource/Boa_Vista,_Roraima",http://pt.dbpedia.org/resource/Boa_Vista_(Roraima),http://www.wikidata.org/entity/Q181056
-1400159,Bonfim,RR,,http://pt.dbpedia.org/resource/Bonfim_(Roraima),http://www.wikidata.org/entity/Q1763254
+1400159,Bonfim,RR,"http://dbpedia.org/resource/Bonfim,_Roraima",http://pt.dbpedia.org/resource/Bonfim_(Roraima),http://www.wikidata.org/entity/Q1763254
 1400175,Cantá,RR,http://dbpedia.org/resource/Cantá,http://pt.dbpedia.org/resource/Cantá,http://www.wikidata.org/entity/Q1646914
 1400209,Caracaraí,RR,http://dbpedia.org/resource/Caracaraí,http://pt.dbpedia.org/resource/Caracaraí,http://www.wikidata.org/entity/Q772563
 1400233,Caroebe,RR,http://dbpedia.org/resource/Caroebe,http://pt.dbpedia.org/resource/Caroebe,http://www.wikidata.org/entity/Q748315
 1400282,Iracema,RR,"http://dbpedia.org/resource/Iracema,_Roraima",http://pt.dbpedia.org/resource/Iracema_(Roraima),http://www.wikidata.org/entity/Q1786374
 1400308,Mucajaí,RR,http://dbpedia.org/resource/Mucajaí,http://pt.dbpedia.org/resource/Mucajaí,http://www.wikidata.org/entity/Q1637423
-1400407,Normandia,RR,,http://pt.dbpedia.org/resource/Normandia_(Roraima),http://www.wikidata.org/entity/Q1750038
+1400407,Normandia,RR,"http://dbpedia.org/resource/Normandia,_Roraima",http://pt.dbpedia.org/resource/Normandia_(Roraima),http://www.wikidata.org/entity/Q1750038
 1400456,Pacaraima,RR,http://dbpedia.org/resource/Pacaraima,http://pt.dbpedia.org/resource/Pacaraima,http://www.wikidata.org/entity/Q1647045
 1400472,Rorainópolis,RR,http://dbpedia.org/resource/Rorainópolis,http://pt.dbpedia.org/resource/Rorainópolis,http://www.wikidata.org/entity/Q1646932
 1400506,São João da Baliza,RR,http://dbpedia.org/resource/São_João_da_Baliza,http://pt.dbpedia.org/resource/São_João_da_Baliza,http://www.wikidata.org/entity/Q1646960
 1400605,São Luiz,RR,,,
-1400704,Uiramutã,RR,,http://pt.dbpedia.org/resource/Uiramutã,http://www.wikidata.org/entity/Q1637434
+1400704,Uiramutã,RR,http://dbpedia.org/resource/Uiramutã,http://pt.dbpedia.org/resource/Uiramutã,http://www.wikidata.org/entity/Q1637434
 1500107,Abaetetuba,PA,http://dbpedia.org/resource/Abaetetuba,http://pt.dbpedia.org/resource/Abaetetuba,http://www.wikidata.org/entity/Q1615298
 1500131,Abel Figueiredo,PA,,http://pt.dbpedia.org/resource/Abel_Figueiredo,http://www.wikidata.org/entity/Q942803
 1500206,Acará,PA,http://dbpedia.org/resource/Acará,http://pt.dbpedia.org/resource/Acará_(Pará),http://www.wikidata.org/entity/Q1804839
@@ -187,11 +187,11 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1502301,Capitão Poço,PA,http://dbpedia.org/resource/Capitão_Poço,http://pt.dbpedia.org/resource/Capitão_Poço,http://www.wikidata.org/entity/Q955914
 1502400,Castanhal,PA,"http://dbpedia.org/resource/Castanhal,_Pará",http://pt.dbpedia.org/resource/Castanhal,http://www.wikidata.org/entity/Q984581
 1502509,Chaves,PA,"http://dbpedia.org/resource/Chaves,_Pará",http://pt.dbpedia.org/resource/Chaves_(Pará),http://www.wikidata.org/entity/Q1899080
-1502608,Colares,PA,,http://pt.dbpedia.org/resource/Colares_(Pará),http://www.wikidata.org/entity/Q2008619
+1502608,Colares,PA,"http://dbpedia.org/resource/Colares,_Pará",http://pt.dbpedia.org/resource/Colares_(Pará),http://www.wikidata.org/entity/Q2008619
 1502707,Conceição do Araguaia,PA,http://dbpedia.org/resource/Conceição_do_Araguaia,http://pt.dbpedia.org/resource/Conceição_do_Araguaia,http://www.wikidata.org/entity/Q1788037
 1502756,Concórdia do Pará,PA,http://dbpedia.org/resource/Concórdia_do_Pará,http://pt.dbpedia.org/resource/Concórdia_do_Pará,http://www.wikidata.org/entity/Q2008125
 1502764,Cumaru do Norte,PA,http://dbpedia.org/resource/Cumaru_do_Norte,http://pt.dbpedia.org/resource/Cumaru_do_Norte,http://www.wikidata.org/entity/Q2008271
-1502772,Curionópolis,PA,,http://pt.dbpedia.org/resource/Curionópolis,http://www.wikidata.org/entity/Q2008449
+1502772,Curionópolis,PA,http://dbpedia.org/resource/Curionópolis,http://pt.dbpedia.org/resource/Curionópolis,http://www.wikidata.org/entity/Q2008449
 1502806,Curralinho,PA,http://dbpedia.org/resource/Curralinho,http://pt.dbpedia.org/resource/Curralinho,http://www.wikidata.org/entity/Q2011907
 1502855,Curuá,PA,http://dbpedia.org/resource/Curuá,http://pt.dbpedia.org/resource/Curuá_(Pará),http://www.wikidata.org/entity/Q2008226
 1502905,Curuçá,PA,http://dbpedia.org/resource/Curuçá,http://pt.dbpedia.org/resource/Curuçá,http://www.wikidata.org/entity/Q1814514
@@ -218,7 +218,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1504208,Marabá,PA,"http://dbpedia.org/resource/Marabá,_Pará",http://pt.dbpedia.org/resource/Marabá,http://www.wikidata.org/entity/Q509818
 1504307,Maracanã,PA,"http://dbpedia.org/resource/Maracanã,_Pará",http://pt.dbpedia.org/resource/Maracanã_(Pará),http://www.wikidata.org/entity/Q2089279
 1504406,Marapanim,PA,http://dbpedia.org/resource/Marapanim,http://pt.dbpedia.org/resource/Marapanim,http://www.wikidata.org/entity/Q1990477
-1504422,Marituba,PA,,http://pt.dbpedia.org/resource/Marituba,http://www.wikidata.org/entity/Q1805166
+1504422,Marituba,PA,http://dbpedia.org/resource/Marituba,http://pt.dbpedia.org/resource/Marituba,http://www.wikidata.org/entity/Q1805166
 1504455,Medicilândia,PA,http://dbpedia.org/resource/Medicilândia,http://pt.dbpedia.org/resource/Medicilândia,http://www.wikidata.org/entity/Q2009048
 1504505,Melgaço,PA,"http://dbpedia.org/resource/Melgaço,_Pará",http://pt.dbpedia.org/resource/Melgaço_(Pará),http://www.wikidata.org/entity/Q2011923
 1504604,Mocajuba,PA,http://dbpedia.org/resource/Mocajuba,http://pt.dbpedia.org/resource/Mocajuba,http://www.wikidata.org/entity/Q2008596
@@ -296,7 +296,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1508407,Xinguara,PA,http://dbpedia.org/resource/Xinguara,http://pt.dbpedia.org/resource/Xinguara,http://www.wikidata.org/entity/Q2008249
 1600055,Serra do Navio,AP,http://dbpedia.org/resource/Serra_do_Navio,http://pt.dbpedia.org/resource/Serra_do_Navio,http://www.wikidata.org/entity/Q1754413
 1600105,Amapá,AP,,,
-1600154,Pedra Branca do Amapari,AP,,http://pt.dbpedia.org/resource/Pedra_Branca_do_Amapari,http://www.wikidata.org/entity/Q1772647
+1600154,Pedra Branca do Amapari,AP,http://dbpedia.org/resource/Pedra_Branca_do_Amapari,http://pt.dbpedia.org/resource/Pedra_Branca_do_Amapari,http://www.wikidata.org/entity/Q1772647
 1600204,Calçoene,AP,,,
 1600212,Cutias,AP,,,
 1600238,Ferreira Gomes,AP,http://dbpedia.org/resource/Ferreira_Gomes,http://pt.dbpedia.org/resource/Ferreira_Gomes,http://www.wikidata.org/entity/Q1647054
@@ -309,7 +309,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1600550,Pracuúba,AP,,,
 1600600,Santana,AP,"http://dbpedia.org/resource/Santana,_Amapá",http://pt.dbpedia.org/resource/Santana_(Amapá),http://www.wikidata.org/entity/Q1994845
 1600709,Tartarugalzinho,AP,,,
-1600808,Vitória do Jari,AP,,http://pt.dbpedia.org/resource/Vitória_do_Jari,http://www.wikidata.org/entity/Q1772675
+1600808,Vitória do Jari,AP,http://dbpedia.org/resource/Vitória_do_Jari,http://pt.dbpedia.org/resource/Vitória_do_Jari,http://www.wikidata.org/entity/Q1772675
 1700251,Abreulândia,TO,http://dbpedia.org/resource/Abreulândia,http://pt.dbpedia.org/resource/Abreulândia,http://www.wikidata.org/entity/Q1784836
 1700301,Aguiarnópolis,TO,http://dbpedia.org/resource/Aguiarnópolis,http://pt.dbpedia.org/resource/Aguiarnópolis,http://www.wikidata.org/entity/Q1802133
 1700350,Aliança do Tocantins,TO,http://dbpedia.org/resource/Aliança_do_Tocantins,http://pt.dbpedia.org/resource/Aliança_do_Tocantins,http://www.wikidata.org/entity/Q1802116
@@ -547,7 +547,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2105500,João Lisboa,MA,http://dbpedia.org/resource/João_Lisboa,http://pt.dbpedia.org/resource/João_Lisboa,http://www.wikidata.org/entity/Q1875142
 2105609,Joselândia,MA,http://dbpedia.org/resource/Joselândia,http://pt.dbpedia.org/resource/Joselândia,http://www.wikidata.org/entity/Q2068225
 2105658,Junco do Maranhão,MA,http://dbpedia.org/resource/Junco_do_Maranhão,http://pt.dbpedia.org/resource/Junco_do_Maranhão,http://www.wikidata.org/entity/Q2068232
-2105708,Lago da Pedra,MA,,http://pt.dbpedia.org/resource/Lago_da_Pedra,http://www.wikidata.org/entity/Q1008300
+2105708,Lago da Pedra,MA,http://dbpedia.org/resource/Lago_da_Pedra,http://pt.dbpedia.org/resource/Lago_da_Pedra,http://www.wikidata.org/entity/Q1008300
 2105807,Lago do Junco,MA,http://dbpedia.org/resource/Lago_do_Junco,http://pt.dbpedia.org/resource/Lago_do_Junco,http://www.wikidata.org/entity/Q927111
 2105906,Lago Verde,MA,"http://dbpedia.org/resource/Lago_Verde,_Maranhão",http://pt.dbpedia.org/resource/Lago_Verde,http://www.wikidata.org/entity/Q2105837
 2105922,Lagoa do Mato,MA,"http://dbpedia.org/resource/Lagoa_do_Mato,_Maranhão",http://pt.dbpedia.org/resource/Lagoa_do_Mato,http://www.wikidata.org/entity/Q2012976
@@ -637,7 +637,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2111300,São Luís,MA,"http://dbpedia.org/resource/São_Luís,_Maranhão",http://pt.dbpedia.org/resource/São_Luís_(Maranhão),http://www.wikidata.org/entity/Q28441
 2111409,São Luís Gonzaga do Maranhão,MA,http://dbpedia.org/resource/São_Luís_Gonzaga_do_Maranhão,http://pt.dbpedia.org/resource/São_Luís_Gonzaga_do_Maranhão,http://www.wikidata.org/entity/Q2066188
 2111508,São Mateus do Maranhão,MA,http://dbpedia.org/resource/São_Mateus_do_Maranhão,http://pt.dbpedia.org/resource/São_Mateus_do_Maranhão,http://www.wikidata.org/entity/Q2065276
-2111532,São Pedro da Água Branca,MA,,http://pt.dbpedia.org/resource/São_Pedro_da_Água_Branca,http://www.wikidata.org/entity/Q2065266
+2111532,São Pedro da Água Branca,MA,http://dbpedia.org/resource/São_Pedro_da_Água_Branca,http://pt.dbpedia.org/resource/São_Pedro_da_Água_Branca,http://www.wikidata.org/entity/Q2065266
 2111573,São Pedro dos Crentes,MA,http://dbpedia.org/resource/São_Pedro_dos_Crentes,http://pt.dbpedia.org/resource/São_Pedro_dos_Crentes,http://www.wikidata.org/entity/Q693685
 2111607,São Raimundo das Mangabeiras,MA,http://dbpedia.org/resource/São_Raimundo_das_Mangabeiras,http://pt.dbpedia.org/resource/São_Raimundo_das_Mangabeiras,http://www.wikidata.org/entity/Q2065231
 2111631,São Raimundo do Doca Bezerra,MA,http://dbpedia.org/resource/São_Raimundo_do_Doca_Bezerra,http://pt.dbpedia.org/resource/São_Raimundo_do_Doca_Bezerra,http://www.wikidata.org/entity/Q1947813
@@ -816,7 +816,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2207504,Palmeirais,PI,http://dbpedia.org/resource/Palmeirais,http://pt.dbpedia.org/resource/Palmeirais,http://www.wikidata.org/entity/Q2064013
 2207553,Paquetá,PI,http://dbpedia.org/resource/Paquetá,http://pt.dbpedia.org/resource/Paquetá,http://www.wikidata.org/entity/Q2065325
 2207603,Parnaguá,PI,http://dbpedia.org/resource/Parnaguá,http://pt.dbpedia.org/resource/Parnaguá,http://www.wikidata.org/entity/Q2089339
-2207702,Parnaíba,PI,,http://pt.dbpedia.org/resource/Parnaíba,http://www.wikidata.org/entity/Q1643864
+2207702,Parnaíba,PI,http://dbpedia.org/resource/Parnaíba,http://pt.dbpedia.org/resource/Parnaíba,http://www.wikidata.org/entity/Q1643864
 2207751,Passagem Franca do Piauí,PI,,http://pt.dbpedia.org/resource/Passagem_Franca_do_Piauí,http://www.wikidata.org/entity/Q1937308
 2207777,Patos do Piauí,PI,http://dbpedia.org/resource/Patos_do_Piauí,http://pt.dbpedia.org/resource/Patos_do_Piauí,http://www.wikidata.org/entity/Q1940449
 2207793,Pau D'Arco do Piauí,PI,,,
@@ -914,12 +914,12 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2301851,Banabuiú,CE,http://dbpedia.org/resource/Banabuiú,http://pt.dbpedia.org/resource/Banabuiú,http://www.wikidata.org/entity/Q1945041
 2301901,Barbalha,CE,http://dbpedia.org/resource/Barbalha,http://pt.dbpedia.org/resource/Barbalha,http://www.wikidata.org/entity/Q602143
 2301950,Barreira,CE,http://dbpedia.org/resource/Barreira,http://pt.dbpedia.org/resource/Barreira_(Ceará),http://www.wikidata.org/entity/Q2013899
-2302008,Barro,CE,,http://pt.dbpedia.org/resource/Barro_(Ceará),http://www.wikidata.org/entity/Q2028645
+2302008,Barro,CE,"http://dbpedia.org/resource/Barro,_Ceará",http://pt.dbpedia.org/resource/Barro_(Ceará),http://www.wikidata.org/entity/Q2028645
 2302057,Barroquinha,CE,http://dbpedia.org/resource/Barroquinha,http://pt.dbpedia.org/resource/Barroquinha,http://www.wikidata.org/entity/Q2020987
 2302107,Baturité,CE,http://dbpedia.org/resource/Baturité,http://pt.dbpedia.org/resource/Baturité,http://www.wikidata.org/entity/Q2021082
 2302206,Beberibe,CE,http://dbpedia.org/resource/Beberibe,http://pt.dbpedia.org/resource/Beberibe_(Ceará),http://www.wikidata.org/entity/Q2028035
 2302305,Bela Cruz,CE,http://dbpedia.org/resource/Bela_Cruz,http://pt.dbpedia.org/resource/Bela_Cruz,http://www.wikidata.org/entity/Q2021089
-2302404,Boa Viagem,CE,,http://pt.dbpedia.org/resource/Boa_Viagem_(Ceará),http://www.wikidata.org/entity/Q1808337
+2302404,Boa Viagem,CE,"http://dbpedia.org/resource/Boa_Viagem,_Ceará",http://pt.dbpedia.org/resource/Boa_Viagem_(Ceará),http://www.wikidata.org/entity/Q1808337
 2302503,Brejo Santo,CE,http://dbpedia.org/resource/Brejo_Santo,http://pt.dbpedia.org/resource/Brejo_Santo,http://www.wikidata.org/entity/Q2027070
 2302602,Camocim,CE,,http://pt.dbpedia.org/resource/Camocim,http://www.wikidata.org/entity/Q1807057
 2302701,Campos Sales,CE,,http://pt.dbpedia.org/resource/Campos_Sales_(Ceará),http://www.wikidata.org/entity/Q1811948
@@ -936,13 +936,13 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2303709,Caucaia,CE,http://dbpedia.org/resource/Caucaia,http://pt.dbpedia.org/resource/Caucaia,http://www.wikidata.org/entity/Q817233
 2303808,Cedro,CE,http://dbpedia.org/resource/Cedro,http://pt.dbpedia.org/resource/Cedro_(Ceará),http://www.wikidata.org/entity/Q2027857
 2303907,Chaval,CE,http://dbpedia.org/resource/Chaval,http://pt.dbpedia.org/resource/Chaval,http://www.wikidata.org/entity/Q2028829
-2303931,Choró,CE,,http://pt.dbpedia.org/resource/Choró,http://www.wikidata.org/entity/Q2047506
+2303931,Choró,CE,http://dbpedia.org/resource/Choró,http://pt.dbpedia.org/resource/Choró,http://www.wikidata.org/entity/Q2047506
 2303956,Chorozinho,CE,http://dbpedia.org/resource/Chorozinho,http://pt.dbpedia.org/resource/Chorozinho,http://www.wikidata.org/entity/Q251350
 2304004,Coreaú,CE,http://dbpedia.org/resource/Coreaú,http://pt.dbpedia.org/resource/Coreaú,http://www.wikidata.org/entity/Q2027322
 2304103,Crateús,CE,http://dbpedia.org/resource/Crateús,http://pt.dbpedia.org/resource/Crateús,http://www.wikidata.org/entity/Q2021123
 2304202,Crato,CE,"http://dbpedia.org/resource/Crato,_Ceará",http://pt.dbpedia.org/resource/Crato_(Ceará),http://www.wikidata.org/entity/Q1004897
 2304236,Croatá,CE,http://dbpedia.org/resource/Croatá,http://pt.dbpedia.org/resource/Croatá,http://www.wikidata.org/entity/Q1816979
-2304251,Cruz,CE,,http://pt.dbpedia.org/resource/Cruz_(Ceará),http://www.wikidata.org/entity/Q986510
+2304251,Cruz,CE,"http://dbpedia.org/resource/Cruz,_Ceará",http://pt.dbpedia.org/resource/Cruz_(Ceará),http://www.wikidata.org/entity/Q986510
 2304269,Deputado Irapuan Pinheiro,CE,http://dbpedia.org/resource/Deputado_Irapuan_Pinheiro,http://pt.dbpedia.org/resource/Deputado_Irapuan_Pinheiro,http://www.wikidata.org/entity/Q2027304
 2304277,Ererê,CE,http://dbpedia.org/resource/Ererê,http://pt.dbpedia.org/resource/Ererê,http://www.wikidata.org/entity/Q2021415
 2304285,Eusébio,CE,"http://dbpedia.org/resource/Eusébio,_Ceará",http://pt.dbpedia.org/resource/Eusébio_(Ceará),http://www.wikidata.org/entity/Q2027112
@@ -967,7 +967,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2305357,Icapuí,CE,http://dbpedia.org/resource/Icapuí,http://pt.dbpedia.org/resource/Icapuí,http://www.wikidata.org/entity/Q734002
 2305407,Icó,CE,http://dbpedia.org/resource/Icó,http://pt.dbpedia.org/resource/Icó,http://www.wikidata.org/entity/Q1807902
 2305506,Iguatu,CE,http://dbpedia.org/resource/Iguatu,http://pt.dbpedia.org/resource/Iguatu_(Ceará),http://www.wikidata.org/entity/Q931326
-2305605,Independência,CE,,http://pt.dbpedia.org/resource/Independência_(Ceará),http://www.wikidata.org/entity/Q284334
+2305605,Independência,CE,"http://dbpedia.org/resource/Independência,_Ceará",http://pt.dbpedia.org/resource/Independência_(Ceará),http://www.wikidata.org/entity/Q284334
 2305654,Ipaporanga,CE,http://dbpedia.org/resource/Ipaporanga,http://pt.dbpedia.org/resource/Ipaporanga,http://www.wikidata.org/entity/Q2028044
 2305704,Ipaumirim,CE,http://dbpedia.org/resource/Ipaumirim,http://pt.dbpedia.org/resource/Ipaumirim,http://www.wikidata.org/entity/Q1807006
 2305803,Ipu,CE,,http://pt.dbpedia.org/resource/Ipu,http://www.wikidata.org/entity/Q2026922
@@ -1008,16 +1008,16 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2308609,Monsenhor Tabosa,CE,http://dbpedia.org/resource/Monsenhor_Tabosa,http://pt.dbpedia.org/resource/Monsenhor_Tabosa,http://www.wikidata.org/entity/Q526892
 2308708,Morada Nova,CE,http://dbpedia.org/resource/Morada_Nova,http://pt.dbpedia.org/resource/Morada_Nova,http://www.wikidata.org/entity/Q1807869
 2308807,Moraújo,CE,http://dbpedia.org/resource/Moraújo,http://pt.dbpedia.org/resource/Moraújo,http://www.wikidata.org/entity/Q2027657
-2308906,Morrinhos,CE,,http://pt.dbpedia.org/resource/Morrinhos_(Ceará),http://www.wikidata.org/entity/Q2028310
+2308906,Morrinhos,CE,"http://dbpedia.org/resource/Morrinhos,_Ceará",http://pt.dbpedia.org/resource/Morrinhos_(Ceará),http://www.wikidata.org/entity/Q2028310
 2309003,Mucambo,CE,,http://pt.dbpedia.org/resource/Mucambo_(Ceará),http://www.wikidata.org/entity/Q2027361
 2309102,Mulungu,CE,"http://dbpedia.org/resource/Mulungu,_Ceará",http://pt.dbpedia.org/resource/Mulungu_(Ceará),http://www.wikidata.org/entity/Q2289857
-2309201,Nova Olinda,CE,,http://pt.dbpedia.org/resource/Nova_Olinda_(Ceará),http://www.wikidata.org/entity/Q1913711
+2309201,Nova Olinda,CE,"http://dbpedia.org/resource/Nova_Olinda,_Ceará",http://pt.dbpedia.org/resource/Nova_Olinda_(Ceará),http://www.wikidata.org/entity/Q1913711
 2309300,Nova Russas,CE,,http://pt.dbpedia.org/resource/Nova_Russas,http://www.wikidata.org/entity/Q1824152
 2309409,Novo Oriente,CE,http://dbpedia.org/resource/Novo_Oriente,http://pt.dbpedia.org/resource/Novo_Oriente,http://www.wikidata.org/entity/Q2028019
 2309458,Ocara,CE,http://dbpedia.org/resource/Ocara,http://pt.dbpedia.org/resource/Ocara_(Ceará),http://www.wikidata.org/entity/Q2028371
 2309508,Orós,CE,http://dbpedia.org/resource/Orós,http://pt.dbpedia.org/resource/Orós,http://www.wikidata.org/entity/Q526215
 2309607,Pacajus,CE,http://dbpedia.org/resource/Pacajús,http://pt.dbpedia.org/resource/Pacajus,http://www.wikidata.org/entity/Q2021230
-2309706,Pacatuba,CE,,http://pt.dbpedia.org/resource/Pacatuba_(Ceará),http://www.wikidata.org/entity/Q2026817
+2309706,Pacatuba,CE,"http://dbpedia.org/resource/Pacatuba,_Ceará",http://pt.dbpedia.org/resource/Pacatuba_(Ceará),http://www.wikidata.org/entity/Q2026817
 2309805,Pacoti,CE,http://dbpedia.org/resource/Pacoti,http://pt.dbpedia.org/resource/Pacoti,http://www.wikidata.org/entity/Q2013474
 2309904,Pacujá,CE,,http://pt.dbpedia.org/resource/Pacujá,http://www.wikidata.org/entity/Q2028383
 2310001,Palhano,CE,http://dbpedia.org/resource/Palhano,http://pt.dbpedia.org/resource/Palhano,http://www.wikidata.org/entity/Q2028077
@@ -1038,7 +1038,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2311207,Potengi,CE,http://dbpedia.org/resource/Potengi,http://pt.dbpedia.org/resource/Potengi,http://www.wikidata.org/entity/Q1112312
 2311231,Potiretama,CE,,http://pt.dbpedia.org/resource/Potiretama,http://www.wikidata.org/entity/Q2028629
 2311264,Quiterianópolis,CE,http://dbpedia.org/resource/Quiterianópolis,http://pt.dbpedia.org/resource/Quiterianópolis,http://www.wikidata.org/entity/Q2026870
-2311306,Quixadá,CE,,http://pt.dbpedia.org/resource/Quixadá,http://www.wikidata.org/entity/Q2013932
+2311306,Quixadá,CE,http://dbpedia.org/resource/Quixadá,http://pt.dbpedia.org/resource/Quixadá,http://www.wikidata.org/entity/Q2013932
 2311355,Quixelô,CE,,,
 2311405,Quixeramobim,CE,"http://dbpedia.org/resource/Quixeramobim,_Ceará",http://pt.dbpedia.org/resource/Quixeramobim,http://www.wikidata.org/entity/Q999088
 2311504,Quixeré,CE,,http://pt.dbpedia.org/resource/Quixeré,http://www.wikidata.org/entity/Q2028061
@@ -1104,7 +1104,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2402501,Carnaubais,RN,,http://pt.dbpedia.org/resource/Carnaubais,http://www.wikidata.org/entity/Q1788271
 2402600,Ceará-Mirim,RN,http://dbpedia.org/resource/Ceará-Mirim,http://pt.dbpedia.org/resource/Ceará-Mirim,http://www.wikidata.org/entity/Q1759622
 2402709,Cerro Corá,RN,,http://pt.dbpedia.org/resource/Cerro_Corá_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1802687
-2402808,Coronel Ezequiel,RN,,http://pt.dbpedia.org/resource/Coronel_Ezequiel,http://www.wikidata.org/entity/Q1802414
+2402808,Coronel Ezequiel,RN,http://dbpedia.org/resource/Coronel_Ezequiel,http://pt.dbpedia.org/resource/Coronel_Ezequiel,http://www.wikidata.org/entity/Q1802414
 2402907,Coronel João Pessoa,RN,http://dbpedia.org/resource/Coronel_João_Pessoa,http://pt.dbpedia.org/resource/Coronel_João_Pessoa,http://www.wikidata.org/entity/Q1802324
 2403004,Cruzeta,RN,http://dbpedia.org/resource/Cruzeta,http://pt.dbpedia.org/resource/Cruzeta,http://www.wikidata.org/entity/Q1787064
 2403103,Currais Novos,RN,http://dbpedia.org/resource/Currais_Novos,http://pt.dbpedia.org/resource/Currais_Novos,http://www.wikidata.org/entity/Q1759405
@@ -1112,7 +1112,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2403251,Parnamirim,RN,http://dbpedia.org/resource/Parnamirim,http://pt.dbpedia.org/resource/Parnamirim_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q986261
 2403301,Encanto,RN,"http://dbpedia.org/resource/Encanto,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Encanto_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2089248
 2403400,Equador,RN,,http://pt.dbpedia.org/resource/Equador_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2002138
-2403509,Espírito Santo,RN,,http://pt.dbpedia.org/resource/Espírito_Santo_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2064219
+2403509,Espírito Santo,RN,"http://dbpedia.org/resource/Espírito_Santo,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Espírito_Santo_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2064219
 2403608,Extremoz,RN,http://dbpedia.org/resource/Extremoz,http://pt.dbpedia.org/resource/Extremoz,http://www.wikidata.org/entity/Q591577
 2403707,Felipe Guerra,RN,,http://pt.dbpedia.org/resource/Felipe_Guerra,http://www.wikidata.org/entity/Q1787530
 2403756,Fernando Pedroza,RN,,http://pt.dbpedia.org/resource/Fernando_Pedroza,http://www.wikidata.org/entity/Q588380
@@ -1121,7 +1121,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2404002,Frutuoso Gomes,RN,,http://pt.dbpedia.org/resource/Frutuoso_Gomes,http://www.wikidata.org/entity/Q786174
 2404101,Galinhos,RN,,http://pt.dbpedia.org/resource/Galinhos,http://www.wikidata.org/entity/Q1788257
 2404200,Goianinha,RN,,http://pt.dbpedia.org/resource/Goianinha,http://www.wikidata.org/entity/Q1802289
-2404309,Governador Dix-Sept Rosado,RN,,http://pt.dbpedia.org/resource/Governador_Dix-Sept_Rosado,http://www.wikidata.org/entity/Q1787040
+2404309,Governador Dix-Sept Rosado,RN,http://dbpedia.org/resource/Governador_Dix-Sept_Rosado,http://pt.dbpedia.org/resource/Governador_Dix-Sept_Rosado,http://www.wikidata.org/entity/Q1787040
 2404408,Grossos,RN,,http://pt.dbpedia.org/resource/Grossos,http://www.wikidata.org/entity/Q1802633
 2404507,Guamaré,RN,http://dbpedia.org/resource/Guamaré,http://pt.dbpedia.org/resource/Guamaré,http://www.wikidata.org/entity/Q1786961
 2404606,Ielmo Marinho,RN,http://dbpedia.org/resource/Ielmo_Marinho,http://pt.dbpedia.org/resource/Ielmo_Marinho,http://www.wikidata.org/entity/Q649314
@@ -1159,7 +1159,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2407500,Maxaranguape,RN,,http://pt.dbpedia.org/resource/Maxaranguape,http://www.wikidata.org/entity/Q1802383
 2407609,Messias Targino,RN,http://dbpedia.org/resource/Messias_Targino,http://pt.dbpedia.org/resource/Messias_Targino,http://www.wikidata.org/entity/Q521491
 2407708,Montanhas,RN,http://dbpedia.org/resource/Montanhas,http://pt.dbpedia.org/resource/Montanhas_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q548971
-2407807,Monte Alegre,RN,,http://pt.dbpedia.org/resource/Monte_Alegre_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2078937
+2407807,Monte Alegre,RN,"http://dbpedia.org/resource/Monte_Alegre,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Monte_Alegre_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2078937
 2407906,Monte das Gameleiras,RN,http://dbpedia.org/resource/Monte_das_Gameleiras,http://pt.dbpedia.org/resource/Monte_das_Gameleiras,http://www.wikidata.org/entity/Q1802831
 2408003,Mossoró,RN,http://dbpedia.org/resource/Mossoró,http://pt.dbpedia.org/resource/Mossoró,http://www.wikidata.org/entity/Q694845
 2408102,Natal,RN,"http://dbpedia.org/resource/Natal,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Natal_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q131620
@@ -1175,7 +1175,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2409100,Passa e Fica,RN,,,
 2409209,Passagem,RN,,http://pt.dbpedia.org/resource/Passagem_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2309743
 2409308,Patu,RN,,http://pt.dbpedia.org/resource/Patu,http://www.wikidata.org/entity/Q2078782
-2409332,Santa Maria,RN,,http://pt.dbpedia.org/resource/Santa_Maria_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1954847
+2409332,Santa Maria,RN,"http://dbpedia.org/resource/Santa_Maria,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Santa_Maria_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1954847
 2409407,Pau dos Ferros,RN,http://dbpedia.org/resource/Pau_dos_Ferros,http://pt.dbpedia.org/resource/Pau_dos_Ferros,http://www.wikidata.org/entity/Q1759093
 2409506,Pedra Grande,RN,,http://pt.dbpedia.org/resource/Pedra_Grande,http://www.wikidata.org/entity/Q1802585
 2409605,Pedra Preta,RN,,http://pt.dbpedia.org/resource/Pedra_Preta_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1857718
@@ -1187,7 +1187,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2410207,Portalegre,RN,,http://pt.dbpedia.org/resource/Portalegre_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2079757
 2410256,Porto do Mangue,RN,http://dbpedia.org/resource/Porto_do_Mangue,http://pt.dbpedia.org/resource/Porto_do_Mangue,http://www.wikidata.org/entity/Q390276
 2410306,Serra Caiada,RN,,http://pt.dbpedia.org/resource/Serra_Caiada,http://www.wikidata.org/entity/Q2298053
-2410405,Pureza,RN,,http://pt.dbpedia.org/resource/Pureza,http://www.wikidata.org/entity/Q1802616
+2410405,Pureza,RN,"http://dbpedia.org/resource/Pureza,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/Pureza,http://www.wikidata.org/entity/Q1802616
 2410504,Rafael Fernandes,RN,http://dbpedia.org/resource/Rafael_Fernandes,http://pt.dbpedia.org/resource/Rafael_Fernandes,http://www.wikidata.org/entity/Q1786863
 2410603,Rafael Godeiro,RN,,http://pt.dbpedia.org/resource/Rafael_Godeiro,http://www.wikidata.org/entity/Q1802391
 2410702,Riacho da Cruz,RN,http://dbpedia.org/resource/Riacho_da_Cruz,http://pt.dbpedia.org/resource/Riacho_da_Cruz,http://www.wikidata.org/entity/Q1802639
@@ -1202,7 +1202,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2411502,Santo Antônio,RN,,,
 2411601,São Bento do Norte,RN,,http://pt.dbpedia.org/resource/São_Bento_do_Norte,http://www.wikidata.org/entity/Q1786782
 2411700,São Bento do Trairí,RN,,,
-2411809,São Fernando,RN,,http://pt.dbpedia.org/resource/São_Fernando_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1786710
+2411809,São Fernando,RN,http://dbpedia.org/resource/São_Fernando,http://pt.dbpedia.org/resource/São_Fernando_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1786710
 2411908,São Francisco do Oeste,RN,http://dbpedia.org/resource/São_Francisco_do_Oeste,http://pt.dbpedia.org/resource/São_Francisco_do_Oeste,http://www.wikidata.org/entity/Q1802806
 2412005,São Gonçalo do Amarante,RN,"http://dbpedia.org/resource/São_Gonçalo_do_Amarante,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/São_Gonçalo_do_Amarante_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2088944
 2412104,São João do Sabugi,RN,http://dbpedia.org/resource/São_João_do_Sabugi,http://pt.dbpedia.org/resource/São_João_do_Sabugi,http://www.wikidata.org/entity/Q1786769
@@ -1212,9 +1212,9 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2412500,São Miguel,RN,"http://dbpedia.org/resource/São_Miguel,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/São_Miguel_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2090942
 2412559,São Miguel do Gostoso,RN,http://dbpedia.org/resource/São_Miguel_do_Gostoso,http://pt.dbpedia.org/resource/São_Miguel_do_Gostoso,http://www.wikidata.org/entity/Q988901
 2412609,São Paulo do Potengi,RN,,http://pt.dbpedia.org/resource/São_Paulo_do_Potengi,http://www.wikidata.org/entity/Q1802399
-2412708,São Pedro,RN,,http://pt.dbpedia.org/resource/São_Pedro_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2068898
+2412708,São Pedro,RN,"http://dbpedia.org/resource/São_Pedro,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/São_Pedro_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2068898
 2412807,São Rafael,RN,,http://pt.dbpedia.org/resource/São_Rafael_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1812846
-2412906,São Tomé,RN,,http://pt.dbpedia.org/resource/São_Tomé_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2016592
+2412906,São Tomé,RN,"http://dbpedia.org/resource/São_Tomé,_Rio_Grande_do_Norte",http://pt.dbpedia.org/resource/São_Tomé_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2016592
 2413003,São Vicente,RN,,http://pt.dbpedia.org/resource/São_Vicente_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q2021824
 2413102,Senador Elói de Souza,RN,http://dbpedia.org/resource/Senador_Elói_de_Souza,http://pt.dbpedia.org/resource/Senador_Elói_de_Souza,http://www.wikidata.org/entity/Q1786778
 2413201,Senador Georgino Avelino,RN,,http://pt.dbpedia.org/resource/Senador_Georgino_Avelino,http://www.wikidata.org/entity/Q428496
@@ -1223,7 +1223,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2413409,Serra Negra do Norte,RN,http://dbpedia.org/resource/Serra_Negra_do_Norte,http://pt.dbpedia.org/resource/Serra_Negra_do_Norte,http://www.wikidata.org/entity/Q1786695
 2413508,Serrinha,RN,,http://pt.dbpedia.org/resource/Serrinha_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q589586
 2413557,Serrinha dos Pintos,RN,http://dbpedia.org/resource/Serrinha_dos_Pintos,http://pt.dbpedia.org/resource/Serrinha_dos_Pintos,http://www.wikidata.org/entity/Q1802272
-2413607,Severiano Melo,RN,,http://pt.dbpedia.org/resource/Severiano_Melo,http://www.wikidata.org/entity/Q1802204
+2413607,Severiano Melo,RN,http://dbpedia.org/resource/Severiano_Melo,http://pt.dbpedia.org/resource/Severiano_Melo,http://www.wikidata.org/entity/Q1802204
 2413706,Sítio Novo,RN,,http://pt.dbpedia.org/resource/Sítio_Novo_(Rio_Grande_do_Norte),http://www.wikidata.org/entity/Q1125401
 2413805,Taboleiro Grande,RN,,http://pt.dbpedia.org/resource/Taboleiro_Grande,http://www.wikidata.org/entity/Q1802579
 2413904,Taipu,RN,,http://pt.dbpedia.org/resource/Taipu,http://www.wikidata.org/entity/Q1802310
@@ -1273,12 +1273,12 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2502102,Boa Ventura,PB,,http://pt.dbpedia.org/resource/Boa_Ventura_(Paraíba),http://www.wikidata.org/entity/Q677612
 2502151,Boa Vista,PB,"http://dbpedia.org/resource/Boa_Vista,_Paraíba",http://pt.dbpedia.org/resource/Boa_Vista_(Paraíba),http://www.wikidata.org/entity/Q2065971
 2502201,Bom Jesus,PB,,http://pt.dbpedia.org/resource/Bom_Jesus_(Paraíba),http://www.wikidata.org/entity/Q2066065
-2502300,Bom Sucesso,PB,,http://pt.dbpedia.org/resource/Bom_Sucesso_(Paraíba),http://www.wikidata.org/entity/Q2087575
+2502300,Bom Sucesso,PB,"http://dbpedia.org/resource/Bom_Sucesso,_Paraíba",http://pt.dbpedia.org/resource/Bom_Sucesso_(Paraíba),http://www.wikidata.org/entity/Q2087575
 2502409,Bonito de Santa Fé,PB,http://dbpedia.org/resource/Bonito_de_Santa_Fé,http://pt.dbpedia.org/resource/Bonito_de_Santa_Fé,http://www.wikidata.org/entity/Q776733
 2502508,Boqueirão,PB,http://dbpedia.org/resource/Boqueirão,http://pt.dbpedia.org/resource/Boqueirão,http://www.wikidata.org/entity/Q1808935
 2502607,Igaracy,PB,,http://pt.dbpedia.org/resource/Igaracy,http://www.wikidata.org/entity/Q2010961
 2502706,Borborema,PB,,http://pt.dbpedia.org/resource/Borborema_(Paraíba),http://www.wikidata.org/entity/Q338286
-2502805,Brejo do Cruz,PB,,http://pt.dbpedia.org/resource/Brejo_do_Cruz,http://www.wikidata.org/entity/Q1808002
+2502805,Brejo do Cruz,PB,http://dbpedia.org/resource/Brejo_do_Cruz,http://pt.dbpedia.org/resource/Brejo_do_Cruz,http://www.wikidata.org/entity/Q1808002
 2502904,Brejo dos Santos,PB,,http://pt.dbpedia.org/resource/Brejo_dos_Santos,http://www.wikidata.org/entity/Q1808661
 2503001,Caaporã,PB,http://dbpedia.org/resource/Caaporã,http://pt.dbpedia.org/resource/Caaporã,http://www.wikidata.org/entity/Q1816118
 2503100,Cabaceiras,PB,,http://pt.dbpedia.org/resource/Cabaceiras,http://www.wikidata.org/entity/Q606068
@@ -1291,7 +1291,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2503704,Cajazeiras,PB,http://dbpedia.org/resource/Cajazeiras,http://pt.dbpedia.org/resource/Cajazeiras,http://www.wikidata.org/entity/Q1808637
 2503753,Cajazeirinhas,PB,http://dbpedia.org/resource/Cajazeirinhas,http://pt.dbpedia.org/resource/Cajazeirinhas,http://www.wikidata.org/entity/Q1808910
 2503803,Caldas Brandão,PB,,http://pt.dbpedia.org/resource/Caldas_Brandão,http://www.wikidata.org/entity/Q1808745
-2503902,Camalaú,PB,,http://pt.dbpedia.org/resource/Camalaú,http://www.wikidata.org/entity/Q1816125
+2503902,Camalaú,PB,http://dbpedia.org/resource/Camalaú,http://pt.dbpedia.org/resource/Camalaú,http://www.wikidata.org/entity/Q1816125
 2504009,Campina Grande,PB,http://dbpedia.org/resource/Campina_Grande,http://pt.dbpedia.org/resource/Campina_Grande,http://www.wikidata.org/entity/Q193016
 2504033,Capim,PB,http://dbpedia.org/resource/Capim,http://pt.dbpedia.org/resource/Capim_(Paraíba),http://www.wikidata.org/entity/Q1808017
 2504074,Caraúbas,PB,,http://pt.dbpedia.org/resource/Caraúbas_(Paraíba),http://www.wikidata.org/entity/Q284134
@@ -1304,7 +1304,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2504504,Condado,PB,,http://pt.dbpedia.org/resource/Condado_(Paraíba),http://www.wikidata.org/entity/Q635267
 2504603,Conde,PB,"http://dbpedia.org/resource/Conde,_Paraíba",http://pt.dbpedia.org/resource/Conde_(Paraíba),http://www.wikidata.org/entity/Q1999780
 2504702,Congo,PB,"http://dbpedia.org/resource/Congo,_Paraíba",http://pt.dbpedia.org/resource/Congo_(Paraíba),http://www.wikidata.org/entity/Q2009615
-2504801,Coremas,PB,,http://pt.dbpedia.org/resource/Coremas,http://www.wikidata.org/entity/Q1843416
+2504801,Coremas,PB,http://dbpedia.org/resource/Coremas,http://pt.dbpedia.org/resource/Coremas,http://www.wikidata.org/entity/Q1843416
 2504850,Coxixola,PB,http://dbpedia.org/resource/Coxixola,http://pt.dbpedia.org/resource/Coxixola,http://www.wikidata.org/entity/Q2009254
 2504900,Cruz do Espírito Santo,PB,http://dbpedia.org/resource/Cruz_do_Espírito_Santo,http://pt.dbpedia.org/resource/Cruz_do_Espírito_Santo,http://www.wikidata.org/entity/Q512810
 2505006,Cubati,PB,,http://pt.dbpedia.org/resource/Cubati,http://www.wikidata.org/entity/Q2009277
@@ -1316,11 +1316,11 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2505352,Damião,PB,,http://pt.dbpedia.org/resource/Damião,http://www.wikidata.org/entity/Q663661
 2505402,Desterro,PB,,,
 2505501,Vista Serrana,PB,http://dbpedia.org/resource/Vista_Serrana,http://pt.dbpedia.org/resource/Vista_Serrana,http://www.wikidata.org/entity/Q2010563
-2505600,Diamante,PB,,http://pt.dbpedia.org/resource/Diamante_(Paraíba),http://www.wikidata.org/entity/Q644558
+2505600,Diamante,PB,"http://dbpedia.org/resource/Diamante,_Paraíba",http://pt.dbpedia.org/resource/Diamante_(Paraíba),http://www.wikidata.org/entity/Q644558
 2505709,Dona Inês,PB,,http://pt.dbpedia.org/resource/Dona_Inês,http://www.wikidata.org/entity/Q1814531
 2505808,Duas Estradas,PB,,http://pt.dbpedia.org/resource/Duas_Estradas,http://www.wikidata.org/entity/Q2006072
-2505907,Emas,PB,,http://pt.dbpedia.org/resource/Emas_(Paraíba),http://www.wikidata.org/entity/Q2040548
-2506004,Esperança,PB,,http://pt.dbpedia.org/resource/Esperança_(Paraíba),http://www.wikidata.org/entity/Q1816186
+2505907,Emas,PB,"http://dbpedia.org/resource/Emas,_Paraíba",http://pt.dbpedia.org/resource/Emas_(Paraíba),http://www.wikidata.org/entity/Q2040548
+2506004,Esperança,PB,"http://dbpedia.org/resource/Esperança,_Paraíba",http://pt.dbpedia.org/resource/Esperança_(Paraíba),http://www.wikidata.org/entity/Q1816186
 2506103,Fagundes,PB,"http://dbpedia.org/resource/Fagundes,_Paraíba",http://pt.dbpedia.org/resource/Fagundes,http://www.wikidata.org/entity/Q2011192
 2506202,Frei Martinho,PB,,http://pt.dbpedia.org/resource/Frei_Martinho,http://www.wikidata.org/entity/Q2008657
 2506251,Gado Bravo,PB,http://dbpedia.org/resource/Gado_Bravo,http://pt.dbpedia.org/resource/Gado_Bravo,http://www.wikidata.org/entity/Q674753
@@ -1401,9 +1401,9 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2512721,Pedro Régis,PB,,http://pt.dbpedia.org/resource/Pedro_Régis,http://www.wikidata.org/entity/Q2064424
 2512747,Riachão,PB,"http://dbpedia.org/resource/Riachão,_Paraíba",http://pt.dbpedia.org/resource/Riachão_(Paraíba),http://www.wikidata.org/entity/Q2329696
 2512754,Riachão do Bacamarte,PB,http://dbpedia.org/resource/Riachão_do_Bacamarte,http://pt.dbpedia.org/resource/Riachão_do_Bacamarte,http://www.wikidata.org/entity/Q2008384
-2512762,Riachão do Poço,PB,,http://pt.dbpedia.org/resource/Riachão_do_Poço,http://www.wikidata.org/entity/Q969630
+2512762,Riachão do Poço,PB,http://dbpedia.org/resource/Riachão_do_Poço,http://pt.dbpedia.org/resource/Riachão_do_Poço,http://www.wikidata.org/entity/Q969630
 2512788,Riacho de Santo Antônio,PB,,http://pt.dbpedia.org/resource/Riacho_de_Santo_Antônio,http://www.wikidata.org/entity/Q2009287
-2512804,Riacho dos Cavalos,PB,,http://pt.dbpedia.org/resource/Riacho_dos_Cavalos,http://www.wikidata.org/entity/Q1897689
+2512804,Riacho dos Cavalos,PB,http://dbpedia.org/resource/Riacho_dos_Cavalos,http://pt.dbpedia.org/resource/Riacho_dos_Cavalos,http://www.wikidata.org/entity/Q1897689
 2512903,Rio Tinto,PB,"http://dbpedia.org/resource/Rio_Tinto,_Paraíba",http://pt.dbpedia.org/resource/Rio_Tinto_(Paraíba),http://www.wikidata.org/entity/Q2085541
 2513000,Salgadinho,PB,,http://pt.dbpedia.org/resource/Salgadinho_(Paraíba),http://www.wikidata.org/entity/Q2065031
 2513109,Salgado de São Félix,PB,http://dbpedia.org/resource/Salgado_de_São_Félix,http://pt.dbpedia.org/resource/Salgado_de_São_Félix,http://www.wikidata.org/entity/Q2009391
@@ -1420,7 +1420,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2513851,Santo André,PB,,http://pt.dbpedia.org/resource/Santo_André_(Paraíba),http://www.wikidata.org/entity/Q2078761
 2513901,São Bento,PB,,http://pt.dbpedia.org/resource/São_Bento_(Paraíba),http://www.wikidata.org/entity/Q767395
 2513927,São Bentinho,PB,http://dbpedia.org/resource/São_Bentinho,http://pt.dbpedia.org/resource/São_Bentinho,http://www.wikidata.org/entity/Q2009398
-2513943,São Domingos do Cariri,PB,,http://pt.dbpedia.org/resource/São_Domingos_do_Cariri,http://www.wikidata.org/entity/Q377255
+2513943,São Domingos do Cariri,PB,http://dbpedia.org/resource/São_Domingos_do_Cariri,http://pt.dbpedia.org/resource/São_Domingos_do_Cariri,http://www.wikidata.org/entity/Q377255
 2513968,São Domingos,PB,,http://pt.dbpedia.org/resource/São_Domingos_(Paraíba),http://www.wikidata.org/entity/Q224967
 2513984,São Francisco,PB,"http://dbpedia.org/resource/São_Francisco,_Paraíba",http://pt.dbpedia.org/resource/São_Francisco_(Paraíba),http://www.wikidata.org/entity/Q375711
 2514008,São João do Cariri,PB,,http://pt.dbpedia.org/resource/São_João_do_Cariri,http://www.wikidata.org/entity/Q2008734
@@ -1455,7 +1455,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2516300,Sumé,PB,,http://pt.dbpedia.org/resource/Sumé_(Paraíba),http://www.wikidata.org/entity/Q2008324
 2516409,Tacima,PB,,http://pt.dbpedia.org/resource/Tacima,http://www.wikidata.org/entity/Q1816133
 2516508,Taperoá,PB,,http://pt.dbpedia.org/resource/Taperoá_(Paraíba),http://www.wikidata.org/entity/Q2329707
-2516607,Tavares,PB,,http://pt.dbpedia.org/resource/Tavares_(Paraíba),http://www.wikidata.org/entity/Q2099625
+2516607,Tavares,PB,"http://dbpedia.org/resource/Tavares,_Paraíba",http://pt.dbpedia.org/resource/Tavares_(Paraíba),http://www.wikidata.org/entity/Q2099625
 2516706,Teixeira,PB,"http://dbpedia.org/resource/Teixeira,_Paraíba",http://pt.dbpedia.org/resource/Teixeira_(Paraíba),http://www.wikidata.org/entity/Q1004229
 2516755,Tenório,PB,,http://pt.dbpedia.org/resource/Tenório,http://www.wikidata.org/entity/Q16291428
 2516805,Triunfo,PB,,http://pt.dbpedia.org/resource/Triunfo_(Paraíba),http://www.wikidata.org/entity/Q2097715
@@ -1464,21 +1464,21 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2517100,Várzea,PB,,http://pt.dbpedia.org/resource/Várzea_(Paraíba),http://www.wikidata.org/entity/Q2065255
 2517209,Vieirópolis,PB,http://dbpedia.org/resource/Vieirópolis,http://pt.dbpedia.org/resource/Vieirópolis,http://www.wikidata.org/entity/Q2009892
 2517407,Zabelê,PB,http://dbpedia.org/resource/Zabelê,http://pt.dbpedia.org/resource/Zabelê_(Paraíba),http://www.wikidata.org/entity/Q1808686
-2600054,Abreu e Lima,PE,,http://pt.dbpedia.org/resource/Abreu_e_Lima,http://www.wikidata.org/entity/Q536569
+2600054,Abreu e Lima,PE,"http://dbpedia.org/resource/Abreu_e_Lima,_Pernambuco",http://pt.dbpedia.org/resource/Abreu_e_Lima,http://www.wikidata.org/entity/Q536569
 2600104,Afogados da Ingazeira,PE,http://dbpedia.org/resource/Afogados_da_Ingazeira,http://pt.dbpedia.org/resource/Afogados_da_Ingazeira,http://www.wikidata.org/entity/Q1761348
-2600203,Afrânio,PE,,http://pt.dbpedia.org/resource/Afrânio,http://www.wikidata.org/entity/Q2065815
-2600302,Agrestina,PE,,http://pt.dbpedia.org/resource/Agrestina,http://www.wikidata.org/entity/Q1787629
-2600401,Água Preta,PE,,http://pt.dbpedia.org/resource/Água_Preta,http://www.wikidata.org/entity/Q1804038
+2600203,Afrânio,PE,http://dbpedia.org/resource/Afrânio,http://pt.dbpedia.org/resource/Afrânio,http://www.wikidata.org/entity/Q2065815
+2600302,Agrestina,PE,http://dbpedia.org/resource/Agrestina,http://pt.dbpedia.org/resource/Agrestina,http://www.wikidata.org/entity/Q1787629
+2600401,Água Preta,PE,http://dbpedia.org/resource/Água_Preta,http://pt.dbpedia.org/resource/Água_Preta,http://www.wikidata.org/entity/Q1804038
 2600500,Águas Belas,PE,,http://pt.dbpedia.org/resource/Águas_Belas_(Pernambuco),http://www.wikidata.org/entity/Q2013722
 2600609,Alagoinha,PE,http://dbpedia.org/resource/Alagoinha,http://pt.dbpedia.org/resource/Alagoinha_(Pernambuco),http://www.wikidata.org/entity/Q938278
 2600708,Aliança,PE,http://dbpedia.org/resource/Aliança,http://pt.dbpedia.org/resource/Aliança_(Pernambuco),http://www.wikidata.org/entity/Q2010570
 2600807,Altinho,PE,,http://pt.dbpedia.org/resource/Altinho,http://www.wikidata.org/entity/Q1844246
-2600906,Amaraji,PE,,http://pt.dbpedia.org/resource/Amaraji,http://www.wikidata.org/entity/Q1839783
-2601003,Angelim,PE,,http://pt.dbpedia.org/resource/Angelim,http://www.wikidata.org/entity/Q1987808
+2600906,Amaraji,PE,http://dbpedia.org/resource/Amaraji,http://pt.dbpedia.org/resource/Amaraji,http://www.wikidata.org/entity/Q1839783
+2601003,Angelim,PE,http://dbpedia.org/resource/Angelim,http://pt.dbpedia.org/resource/Angelim,http://www.wikidata.org/entity/Q1987808
 2601052,Araçoiaba,PE,http://dbpedia.org/resource/Araçoiaba,http://pt.dbpedia.org/resource/Araçoiaba,http://www.wikidata.org/entity/Q2010873
 2601102,Araripina,PE,http://dbpedia.org/resource/Araripina,http://pt.dbpedia.org/resource/Araripina,http://www.wikidata.org/entity/Q626344
 2601201,Arcoverde,PE,http://dbpedia.org/resource/Arcoverde,http://pt.dbpedia.org/resource/Arcoverde,http://www.wikidata.org/entity/Q637902
-2601300,Barra de Guabiraba,PE,,http://pt.dbpedia.org/resource/Barra_de_Guabiraba,http://www.wikidata.org/entity/Q1811106
+2601300,Barra de Guabiraba,PE,http://dbpedia.org/resource/Barra_de_Guabiraba,http://pt.dbpedia.org/resource/Barra_de_Guabiraba,http://www.wikidata.org/entity/Q1811106
 2601409,Barreiros,PE,,http://pt.dbpedia.org/resource/Barreiros_(Pernambuco),http://www.wikidata.org/entity/Q2102404
 2601508,Belém de Maria,PE,,http://pt.dbpedia.org/resource/Belém_de_Maria,http://www.wikidata.org/entity/Q746519
 2601607,Belém do São Francisco,PE,,http://pt.dbpedia.org/resource/Belém_do_São_Francisco,http://www.wikidata.org/entity/Q1811159
@@ -1512,7 +1512,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2604155,Casinhas,PE,,http://pt.dbpedia.org/resource/Casinhas,http://www.wikidata.org/entity/Q923741
 2604205,Catende,PE,,http://pt.dbpedia.org/resource/Catende,http://www.wikidata.org/entity/Q2011032
 2604304,Cedro,PE,"http://dbpedia.org/resource/Cedro,_Pernambuco",http://pt.dbpedia.org/resource/Cedro_(Pernambuco),http://www.wikidata.org/entity/Q716874
-2604403,Chã de Alegria,PE,,http://pt.dbpedia.org/resource/Chã_de_Alegria,http://www.wikidata.org/entity/Q1811142
+2604403,Chã de Alegria,PE,http://dbpedia.org/resource/Chã_de_Alegria,http://pt.dbpedia.org/resource/Chã_de_Alegria,http://www.wikidata.org/entity/Q1811142
 2604502,Chã Grande,PE,,http://pt.dbpedia.org/resource/Chã_Grande,http://www.wikidata.org/entity/Q2010970
 2604601,Condado,PE,,http://pt.dbpedia.org/resource/Condado_(Pernambuco),http://www.wikidata.org/entity/Q507095
 2604700,Correntes,PE,,http://pt.dbpedia.org/resource/Correntes,http://www.wikidata.org/entity/Q776802
@@ -1522,10 +1522,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2605103,Custódia,PE,,,
 2605152,Dormentes,PE,,,
 2605202,Escada,PE,"http://dbpedia.org/resource/Escada,_Pernambuco",http://pt.dbpedia.org/resource/Escada_(Pernambuco),http://www.wikidata.org/entity/Q2102479
-2605301,Exu,PE,,http://pt.dbpedia.org/resource/Exu_(Pernambuco),http://www.wikidata.org/entity/Q2064727
-2605400,Feira Nova,PE,,http://pt.dbpedia.org/resource/Feira_Nova_(Pernambuco),http://www.wikidata.org/entity/Q1869240
+2605301,Exu,PE,"http://dbpedia.org/resource/Exu,_Pernambuco",http://pt.dbpedia.org/resource/Exu_(Pernambuco),http://www.wikidata.org/entity/Q2064727
+2605400,Feira Nova,PE,"http://dbpedia.org/resource/Feira_Nova,_Pernambuco",http://pt.dbpedia.org/resource/Feira_Nova_(Pernambuco),http://www.wikidata.org/entity/Q1869240
 2605459,Fernando de Noronha,PE,http://dbpedia.org/resource/Fernando_de_Noronha,http://pt.dbpedia.org/resource/Fernando_de_Noronha,http://www.wikidata.org/entity/Q175057
-2605509,Ferreiros,PE,,http://pt.dbpedia.org/resource/Ferreiros_(Pernambuco),http://www.wikidata.org/entity/Q2078233
+2605509,Ferreiros,PE,"http://dbpedia.org/resource/Ferreiros,_Pernambuco",http://pt.dbpedia.org/resource/Ferreiros_(Pernambuco),http://www.wikidata.org/entity/Q2078233
 2605608,Flores,PE,,http://pt.dbpedia.org/resource/Flores_(Pernambuco),http://www.wikidata.org/entity/Q2105990
 2605707,Floresta,PE,,http://pt.dbpedia.org/resource/Floresta_(Pernambuco),http://www.wikidata.org/entity/Q2464842
 2605806,Frei Miguelinho,PE,http://dbpedia.org/resource/Frei_Miguelinho,http://pt.dbpedia.org/resource/Frei_Miguelinho,http://www.wikidata.org/entity/Q2011848
@@ -1533,7 +1533,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2606002,Garanhuns,PE,http://dbpedia.org/resource/Garanhuns,http://pt.dbpedia.org/resource/Garanhuns,http://www.wikidata.org/entity/Q771575
 2606101,Glória do Goitá,PE,http://dbpedia.org/resource/Glória_do_Goitá,http://pt.dbpedia.org/resource/Glória_do_Goitá,http://www.wikidata.org/entity/Q1804101
 2606200,Goiana,PE,http://dbpedia.org/resource/Goiana,http://pt.dbpedia.org/resource/Goiana,http://www.wikidata.org/entity/Q1767210
-2606309,Granito,PE,,http://pt.dbpedia.org/resource/Granito_(Pernambuco),http://www.wikidata.org/entity/Q2102421
+2606309,Granito,PE,http://dbpedia.org/resource/Granito,http://pt.dbpedia.org/resource/Granito_(Pernambuco),http://www.wikidata.org/entity/Q2102421
 2606408,Gravatá,PE,,http://pt.dbpedia.org/resource/Gravatá_(Pernambuco),http://www.wikidata.org/entity/Q535373
 2606507,Iati,PE,,http://pt.dbpedia.org/resource/Iati,http://www.wikidata.org/entity/Q2011836
 2606606,Ibimirim,PE,http://dbpedia.org/resource/Ibimirim,http://pt.dbpedia.org/resource/Ibimirim,http://www.wikidata.org/entity/Q1804109
@@ -1549,7 +1549,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2607604,Ilha de Itamaracá,PE,,http://pt.dbpedia.org/resource/Ilha_de_Itamaracá,http://www.wikidata.org/entity/Q587114
 2607653,Itambé,PE,"http://dbpedia.org/resource/Itambé,_Pernambuco",http://pt.dbpedia.org/resource/Itambé_(Pernambuco),http://www.wikidata.org/entity/Q2433604
 2607703,Itapetim,PE,,http://pt.dbpedia.org/resource/Itapetim,http://www.wikidata.org/entity/Q2010880
-2607752,Itapissuma,PE,,http://pt.dbpedia.org/resource/Itapissuma,http://www.wikidata.org/entity/Q1804093
+2607752,Itapissuma,PE,http://dbpedia.org/resource/Itapissuma,http://pt.dbpedia.org/resource/Itapissuma,http://www.wikidata.org/entity/Q1804093
 2607802,Itaquitinga,PE,,http://pt.dbpedia.org/resource/Itaquitinga,http://www.wikidata.org/entity/Q2010908
 2607901,Jaboatão dos Guararapes,PE,http://dbpedia.org/resource/Jaboatão_dos_Guararapes,http://pt.dbpedia.org/resource/Jaboatão_dos_Guararapes,http://www.wikidata.org/entity/Q271393
 2607950,Jaqueira,PE,,http://pt.dbpedia.org/resource/Jaqueira_(Pernambuco),http://www.wikidata.org/entity/Q2011203
@@ -1566,17 +1566,17 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2608701,Lagoa dos Gatos,PE,,http://pt.dbpedia.org/resource/Lagoa_dos_Gatos,http://www.wikidata.org/entity/Q2013715
 2608750,Lagoa Grande,PE,"http://dbpedia.org/resource/Lagoa_Grande,_Pernambuco",http://pt.dbpedia.org/resource/Lagoa_Grande_(Pernambuco),http://www.wikidata.org/entity/Q2103088
 2608800,Lajedo,PE,,http://pt.dbpedia.org/resource/Lajedo_(Pernambuco),http://www.wikidata.org/entity/Q2078213
-2608909,Limoeiro,PE,,http://pt.dbpedia.org/resource/Limoeiro_(Pernambuco),http://www.wikidata.org/entity/Q2064902
+2608909,Limoeiro,PE,http://dbpedia.org/resource/Limoeiro,http://pt.dbpedia.org/resource/Limoeiro_(Pernambuco),http://www.wikidata.org/entity/Q2064902
 2609006,Macaparana,PE,,http://pt.dbpedia.org/resource/Macaparana,http://www.wikidata.org/entity/Q2077831
-2609105,Machados,PE,,http://pt.dbpedia.org/resource/Machados,http://www.wikidata.org/entity/Q2064965
-2609154,Manari,PE,,http://pt.dbpedia.org/resource/Manari,http://www.wikidata.org/entity/Q1895257
+2609105,Machados,PE,http://dbpedia.org/resource/Machados,http://pt.dbpedia.org/resource/Machados,http://www.wikidata.org/entity/Q2064965
+2609154,Manari,PE,"http://dbpedia.org/resource/Manari,_Pernambuco",http://pt.dbpedia.org/resource/Manari,http://www.wikidata.org/entity/Q1895257
 2609204,Maraial,PE,http://dbpedia.org/resource/Maraial,http://pt.dbpedia.org/resource/Maraial,http://www.wikidata.org/entity/Q2011013
 2609303,Mirandiba,PE,,http://pt.dbpedia.org/resource/Mirandiba,http://www.wikidata.org/entity/Q2011780
 2609402,Moreno,PE,,http://pt.dbpedia.org/resource/Moreno,http://www.wikidata.org/entity/Q2012258
 2609501,Nazaré da Mata,PE,,http://pt.dbpedia.org/resource/Nazaré_da_Mata,http://www.wikidata.org/entity/Q1811182
 2609600,Olinda,PE,http://dbpedia.org/resource/Olinda,http://pt.dbpedia.org/resource/Olinda,http://www.wikidata.org/entity/Q28301
 2609709,Orobó,PE,,http://pt.dbpedia.org/resource/Orobó,http://www.wikidata.org/entity/Q2013693
-2609808,Orocó,PE,,http://pt.dbpedia.org/resource/Orocó,http://www.wikidata.org/entity/Q2010863
+2609808,Orocó,PE,http://dbpedia.org/resource/Orocó,http://pt.dbpedia.org/resource/Orocó,http://www.wikidata.org/entity/Q2010863
 2609907,Ouricuri,PE,http://dbpedia.org/resource/Ouricuri,http://pt.dbpedia.org/resource/Ouricuri,http://www.wikidata.org/entity/Q2064430
 2610004,Palmares,PE,,http://pt.dbpedia.org/resource/Palmares,http://www.wikidata.org/entity/Q547095
 2610103,Palmeirina,PE,,http://pt.dbpedia.org/resource/Palmeirina,http://www.wikidata.org/entity/Q2011342
@@ -1587,7 +1587,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2610608,Paudalho,PE,http://dbpedia.org/resource/Paudalho,http://pt.dbpedia.org/resource/Paudalho,http://www.wikidata.org/entity/Q674432
 2610707,Paulista,PE,http://dbpedia.org/resource/Paulista,http://pt.dbpedia.org/resource/Paulista_(Pernambuco),http://www.wikidata.org/entity/Q949833
 2610806,Pedra,PE,"http://dbpedia.org/resource/Pedra,_Pernambuco",http://pt.dbpedia.org/resource/Pedra_(Pernambuco),http://www.wikidata.org/entity/Q2013605
-2610905,Pesqueira,PE,,http://pt.dbpedia.org/resource/Pesqueira,http://www.wikidata.org/entity/Q1008230
+2610905,Pesqueira,PE,"http://dbpedia.org/resource/Pesqueira,_Pernambuco",http://pt.dbpedia.org/resource/Pesqueira,http://www.wikidata.org/entity/Q1008230
 2611002,Petrolândia,PE,,http://pt.dbpedia.org/resource/Petrolândia_(Pernambuco),http://www.wikidata.org/entity/Q2106455
 2611101,Petrolina,PE,http://dbpedia.org/resource/Petrolina,http://pt.dbpedia.org/resource/Petrolina,http://www.wikidata.org/entity/Q842143
 2611200,Poção,PE,http://dbpedia.org/resource/Poção,http://pt.dbpedia.org/resource/Poção_(Pernambuco),http://www.wikidata.org/entity/Q1809609
@@ -1596,9 +1596,9 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2611507,Quipapá,PE,,http://pt.dbpedia.org/resource/Quipapá,http://www.wikidata.org/entity/Q2011039
 2611533,Quixaba,PE,,http://pt.dbpedia.org/resource/Quixaba_(Pernambuco),http://www.wikidata.org/entity/Q2034566
 2611606,Recife,PE,http://dbpedia.org/resource/Recife,http://pt.dbpedia.org/resource/Recife,http://www.wikidata.org/entity/Q48344
-2611705,Riacho das Almas,PE,,http://pt.dbpedia.org/resource/Riacho_das_Almas,http://www.wikidata.org/entity/Q1964406
+2611705,Riacho das Almas,PE,http://dbpedia.org/resource/Riacho_das_Almas,http://pt.dbpedia.org/resource/Riacho_das_Almas,http://www.wikidata.org/entity/Q1964406
 2611804,Ribeirão,PE,,http://pt.dbpedia.org/resource/Ribeirão_(Pernambuco),http://www.wikidata.org/entity/Q2088935
-2611903,Rio Formoso,PE,,http://pt.dbpedia.org/resource/Rio_Formoso,http://www.wikidata.org/entity/Q2011054
+2611903,Rio Formoso,PE,http://dbpedia.org/resource/Rio_Formoso,http://pt.dbpedia.org/resource/Rio_Formoso,http://www.wikidata.org/entity/Q2011054
 2612000,Sairé,PE,,http://pt.dbpedia.org/resource/Sairé,http://www.wikidata.org/entity/Q257236
 2612109,Salgadinho,PE,,http://pt.dbpedia.org/resource/Salgadinho_(Pernambuco),http://www.wikidata.org/entity/Q2278378
 2612208,Salgueiro,PE,,http://pt.dbpedia.org/resource/Salgueiro_(Pernambuco),http://www.wikidata.org/entity/Q2102772
@@ -1627,30 +1627,30 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2614204,Sirinhaém,PE,,http://pt.dbpedia.org/resource/Sirinhaém,http://www.wikidata.org/entity/Q929655
 2614303,Moreilândia,PE,,http://pt.dbpedia.org/resource/Moreilândia,http://www.wikidata.org/entity/Q2011296
 2614402,Solidão,PE,,http://pt.dbpedia.org/resource/Solidão_(Pernambuco),http://www.wikidata.org/entity/Q2064859
-2614501,Surubim,PE,,http://pt.dbpedia.org/resource/Surubim,http://www.wikidata.org/entity/Q2064701
+2614501,Surubim,PE,http://dbpedia.org/resource/Surubim,http://pt.dbpedia.org/resource/Surubim,http://www.wikidata.org/entity/Q2064701
 2614600,Tabira,PE,,http://pt.dbpedia.org/resource/Tabira,http://www.wikidata.org/entity/Q2078322
 2614709,Tacaimbó,PE,,http://pt.dbpedia.org/resource/Tacaimbó,http://www.wikidata.org/entity/Q2013728
 2614808,Tacaratu,PE,,http://pt.dbpedia.org/resource/Tacaratu,http://www.wikidata.org/entity/Q2011003
-2614857,Tamandaré,PE,,http://pt.dbpedia.org/resource/Tamandaré_(Pernambuco),http://www.wikidata.org/entity/Q2011531
+2614857,Tamandaré,PE,http://dbpedia.org/resource/Tamandaré,http://pt.dbpedia.org/resource/Tamandaré_(Pernambuco),http://www.wikidata.org/entity/Q2011531
 2615003,Taquaritinga do Norte,PE,http://dbpedia.org/resource/Taquaritinga_do_Norte,http://pt.dbpedia.org/resource/Taquaritinga_do_Norte,http://www.wikidata.org/entity/Q2011859
 2615102,Terezinha,PE,,http://pt.dbpedia.org/resource/Terezinha,http://www.wikidata.org/entity/Q2064935
 2615201,Terra Nova,PE,,http://pt.dbpedia.org/resource/Terra_Nova_(Pernambuco),http://www.wikidata.org/entity/Q2604168
-2615300,Timbaúba,PE,,http://pt.dbpedia.org/resource/Timbaúba,http://www.wikidata.org/entity/Q929867
+2615300,Timbaúba,PE,http://dbpedia.org/resource/Timbaúba,http://pt.dbpedia.org/resource/Timbaúba,http://www.wikidata.org/entity/Q929867
 2615409,Toritama,PE,http://dbpedia.org/resource/Toritama,http://pt.dbpedia.org/resource/Toritama,http://www.wikidata.org/entity/Q2013594
 2615508,Tracunhaém,PE,,http://pt.dbpedia.org/resource/Tracunhaém,http://www.wikidata.org/entity/Q1870479
 2615607,Trindade,PE,,http://pt.dbpedia.org/resource/Trindade_(Pernambuco),http://www.wikidata.org/entity/Q2355756
 2615706,Triunfo,PE,,http://pt.dbpedia.org/resource/Triunfo_(Pernambuco),http://www.wikidata.org/entity/Q679786
 2615805,Tupanatinga,PE,,http://pt.dbpedia.org/resource/Tupanatinga,http://www.wikidata.org/entity/Q1804078
 2615904,Tuparetama,PE,,http://pt.dbpedia.org/resource/Tuparetama,http://www.wikidata.org/entity/Q2077835
-2616001,Venturosa,PE,,http://pt.dbpedia.org/resource/Venturosa,http://www.wikidata.org/entity/Q1804048
+2616001,Venturosa,PE,http://dbpedia.org/resource/Venturosa,http://pt.dbpedia.org/resource/Venturosa,http://www.wikidata.org/entity/Q1804048
 2616100,Verdejante,PE,,http://pt.dbpedia.org/resource/Verdejante,http://www.wikidata.org/entity/Q2013582
 2616183,Vertente do Lério,PE,,http://pt.dbpedia.org/resource/Vertente_do_Lério,http://www.wikidata.org/entity/Q2013655
 2616209,Vertentes,PE,,http://pt.dbpedia.org/resource/Vertentes,http://www.wikidata.org/entity/Q2065306
 2616308,Vicência,PE,,http://pt.dbpedia.org/resource/Vicência,http://www.wikidata.org/entity/Q2010783
 2616407,Vitória de Santo Antão,PE,,http://pt.dbpedia.org/resource/Vitória_de_Santo_Antão,http://www.wikidata.org/entity/Q985685
 2616506,Xexéu,PE,http://dbpedia.org/resource/Xexéu,http://pt.dbpedia.org/resource/Xexéu,http://www.wikidata.org/entity/Q1111243
-2700102,Água Branca,AL,,http://pt.dbpedia.org/resource/Água_Branca_(Alagoas),http://www.wikidata.org/entity/Q1808899
-2700201,Anadia,AL,,http://pt.dbpedia.org/resource/Anadia_(Alagoas),http://www.wikidata.org/entity/Q2028005
+2700102,Água Branca,AL,"http://dbpedia.org/resource/Água_Branca,_Alagoas",http://pt.dbpedia.org/resource/Água_Branca_(Alagoas),http://www.wikidata.org/entity/Q1808899
+2700201,Anadia,AL,"http://dbpedia.org/resource/Anadia,_Alagoas",http://pt.dbpedia.org/resource/Anadia_(Alagoas),http://www.wikidata.org/entity/Q2028005
 2700300,Arapiraca,AL,http://dbpedia.org/resource/Arapiraca,http://pt.dbpedia.org/resource/Arapiraca,http://www.wikidata.org/entity/Q626175
 2700409,Atalaia,AL,"http://dbpedia.org/resource/Atalaia,_Alagoas",http://pt.dbpedia.org/resource/Atalaia_(Alagoas),http://www.wikidata.org/entity/Q928274
 2700508,Barra de Santo Antônio,AL,http://dbpedia.org/resource/Barra_de_Santo_Antônio,http://pt.dbpedia.org/resource/Barra_de_Santo_Antônio,http://www.wikidata.org/entity/Q1795908
@@ -1664,15 +1664,15 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2701308,Cajueiro,AL,,http://pt.dbpedia.org/resource/Cajueiro_(Alagoas),http://www.wikidata.org/entity/Q2019063
 2701357,Campestre,AL,,http://pt.dbpedia.org/resource/Campestre_(Alagoas),http://www.wikidata.org/entity/Q2028637
 2701407,Campo Alegre,AL,,http://pt.dbpedia.org/resource/Campo_Alegre_(Alagoas),http://www.wikidata.org/entity/Q2028275
-2701506,Campo Grande,AL,,http://pt.dbpedia.org/resource/Campo_Grande_(Alagoas),http://www.wikidata.org/entity/Q1814259
+2701506,Campo Grande,AL,"http://dbpedia.org/resource/Campo_Grande,_Alagoas",http://pt.dbpedia.org/resource/Campo_Grande_(Alagoas),http://www.wikidata.org/entity/Q1814259
 2701605,Canapi,AL,,http://pt.dbpedia.org/resource/Canapi,http://www.wikidata.org/entity/Q1796020
 2701704,Capela,AL,,http://pt.dbpedia.org/resource/Capela_(Alagoas),http://www.wikidata.org/entity/Q1955261
 2701803,Carneiros,AL,,http://pt.dbpedia.org/resource/Carneiros,http://www.wikidata.org/entity/Q1808880
 2701902,Chã Preta,AL,,http://pt.dbpedia.org/resource/Chã_Preta,http://www.wikidata.org/entity/Q2021044
 2702009,Coité do Nóia,AL,,,
 2702108,Colônia Leopoldina,AL,,,
-2702207,Coqueiro Seco,AL,,http://pt.dbpedia.org/resource/Coqueiro_Seco,http://www.wikidata.org/entity/Q1816094
-2702306,Coruripe,AL,,http://pt.dbpedia.org/resource/Coruripe,http://www.wikidata.org/entity/Q1796426
+2702207,Coqueiro Seco,AL,http://dbpedia.org/resource/Coqueiro_Seco,http://pt.dbpedia.org/resource/Coqueiro_Seco,http://www.wikidata.org/entity/Q1816094
+2702306,Coruripe,AL,http://dbpedia.org/resource/Coruripe,http://pt.dbpedia.org/resource/Coruripe,http://www.wikidata.org/entity/Q1796426
 2702355,Craíbas,AL,,http://pt.dbpedia.org/resource/Craíbas,http://www.wikidata.org/entity/Q1795950
 2702405,Delmiro Gouveia,AL,,http://pt.dbpedia.org/resource/Delmiro_Gouveia,http://www.wikidata.org/entity/Q1808849
 2702504,Dois Riachos,AL,,http://pt.dbpedia.org/resource/Dois_Riachos,http://www.wikidata.org/entity/Q988800
@@ -1707,10 +1707,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2705200,Messias,AL,"http://dbpedia.org/resource/Messias,_Alagoas",http://pt.dbpedia.org/resource/Messias_(Alagoas),http://www.wikidata.org/entity/Q2028160
 2705309,Minador do Negrão,AL,,http://pt.dbpedia.org/resource/Minador_do_Negrão,http://www.wikidata.org/entity/Q767029
 2705408,Monteirópolis,AL,,http://pt.dbpedia.org/resource/Monteirópolis,http://www.wikidata.org/entity/Q2013634
-2705507,Murici,AL,,http://pt.dbpedia.org/resource/Murici_(Alagoas),http://www.wikidata.org/entity/Q1795628
+2705507,Murici,AL,http://dbpedia.org/resource/Murici,http://pt.dbpedia.org/resource/Murici_(Alagoas),http://www.wikidata.org/entity/Q1795628
 2705606,Novo Lino,AL,,http://pt.dbpedia.org/resource/Novo_Lino,http://www.wikidata.org/entity/Q1816167
 2705705,Olho d'Água das Flores,AL,,http://pt.dbpedia.org/resource/Olho_d'Água_das_Flores,http://www.wikidata.org/entity/Q1815966
-2705804,Olho d'Água do Casado,AL,,http://pt.dbpedia.org/resource/Olho_d'Água_do_Casado,http://www.wikidata.org/entity/Q1808294
+2705804,Olho d'Água do Casado,AL,http://dbpedia.org/resource/Olho_d'Água_do_Casado,http://pt.dbpedia.org/resource/Olho_d'Água_do_Casado,http://www.wikidata.org/entity/Q1808294
 2705903,Olho d'Água Grande,AL,,http://pt.dbpedia.org/resource/Olho_d'Água_Grande,http://www.wikidata.org/entity/Q1795548
 2706000,Olivença,AL,,http://pt.dbpedia.org/resource/Olivença_(Alagoas),http://www.wikidata.org/entity/Q950712
 2706109,Ouro Branco,AL,,http://pt.dbpedia.org/resource/Ouro_Branco_(Alagoas),http://www.wikidata.org/entity/Q2355814
@@ -1725,11 +1725,11 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2706802,Piaçabuçu,AL,http://dbpedia.org/resource/Piaçabuçu,http://pt.dbpedia.org/resource/Piaçabuçu,http://www.wikidata.org/entity/Q1772595
 2706901,Pilar,AL,"http://dbpedia.org/resource/Pilar,_Alagoas",http://pt.dbpedia.org/resource/Pilar_(Alagoas),http://www.wikidata.org/entity/Q2013557
 2707008,Pindoba,AL,http://dbpedia.org/resource/Pindoba,http://pt.dbpedia.org/resource/Pindoba,http://www.wikidata.org/entity/Q1800867
-2707107,Piranhas,AL,,http://pt.dbpedia.org/resource/Piranhas_(Alagoas),http://www.wikidata.org/entity/Q1998967
+2707107,Piranhas,AL,http://dbpedia.org/resource/Piranhas,http://pt.dbpedia.org/resource/Piranhas_(Alagoas),http://www.wikidata.org/entity/Q1998967
 2707206,Poço das Trincheiras,AL,,http://pt.dbpedia.org/resource/Poço_das_Trincheiras,http://www.wikidata.org/entity/Q1795960
 2707305,Porto Calvo,AL,,http://pt.dbpedia.org/resource/Porto_Calvo,http://www.wikidata.org/entity/Q1772636
 2707404,Porto de Pedras,AL,,http://pt.dbpedia.org/resource/Porto_de_Pedras,http://www.wikidata.org/entity/Q1796131
-2707503,Porto Real do Colégio,AL,,http://pt.dbpedia.org/resource/Porto_Real_do_Colégio,http://www.wikidata.org/entity/Q1772685
+2707503,Porto Real do Colégio,AL,http://dbpedia.org/resource/Porto_Real_do_Colégio,http://pt.dbpedia.org/resource/Porto_Real_do_Colégio,http://www.wikidata.org/entity/Q1772685
 2707602,Quebrangulo,AL,http://dbpedia.org/resource/Quebrangulo,http://pt.dbpedia.org/resource/Quebrangulo,http://www.wikidata.org/entity/Q1772591
 2707701,Rio Largo,AL,http://dbpedia.org/resource/Rio_Largo,http://pt.dbpedia.org/resource/Rio_Largo,http://www.wikidata.org/entity/Q530211
 2707800,Roteiro,AL,,http://pt.dbpedia.org/resource/Roteiro_(Alagoas),http://www.wikidata.org/entity/Q2015625
@@ -1758,22 +1758,22 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2800506,Areia Branca,SE,,http://pt.dbpedia.org/resource/Areia_Branca_(Sergipe),http://www.wikidata.org/entity/Q949854
 2800605,Barra dos Coqueiros,SE,,http://pt.dbpedia.org/resource/Barra_dos_Coqueiros,http://www.wikidata.org/entity/Q1784872
 2800670,Boquim,SE,,http://pt.dbpedia.org/resource/Boquim,http://www.wikidata.org/entity/Q746187
-2800704,Brejo Grande,SE,,http://pt.dbpedia.org/resource/Brejo_Grande,http://www.wikidata.org/entity/Q1802013
+2800704,Brejo Grande,SE,http://dbpedia.org/resource/Brejo_Grande,http://pt.dbpedia.org/resource/Brejo_Grande,http://www.wikidata.org/entity/Q1802013
 2801009,Campo do Brito,SE,,http://pt.dbpedia.org/resource/Campo_do_Brito,http://www.wikidata.org/entity/Q1801972
 2801108,Canhoba,SE,,http://pt.dbpedia.org/resource/Canhoba,http://www.wikidata.org/entity/Q1801984
-2801207,Canindé de São Francisco,SE,,http://pt.dbpedia.org/resource/Canindé_de_São_Francisco,http://www.wikidata.org/entity/Q1807399
+2801207,Canindé de São Francisco,SE,http://dbpedia.org/resource/Canindé_de_São_Francisco,http://pt.dbpedia.org/resource/Canindé_de_São_Francisco,http://www.wikidata.org/entity/Q1807399
 2801306,Capela,SE,,http://pt.dbpedia.org/resource/Capela_(Sergipe),http://www.wikidata.org/entity/Q726730
 2801405,Carira,SE,,http://pt.dbpedia.org/resource/Carira,http://www.wikidata.org/entity/Q2013076
 2801504,Carmópolis,SE,,http://pt.dbpedia.org/resource/Carmópolis,http://www.wikidata.org/entity/Q1801997
 2801603,Cedro de São João,SE,,http://pt.dbpedia.org/resource/Cedro_de_São_João,http://www.wikidata.org/entity/Q2013083
-2801702,Cristinápolis,SE,,http://pt.dbpedia.org/resource/Cristinápolis,http://www.wikidata.org/entity/Q1802492
+2801702,Cristinápolis,SE,http://dbpedia.org/resource/Cristinápolis,http://pt.dbpedia.org/resource/Cristinápolis,http://www.wikidata.org/entity/Q1802492
 2801900,Cumbe,SE,,http://pt.dbpedia.org/resource/Cumbe_(Sergipe),http://www.wikidata.org/entity/Q656402
 2802007,Divina Pastora,SE,,http://pt.dbpedia.org/resource/Divina_Pastora,http://www.wikidata.org/entity/Q1802021
 2802106,Estância,SE,"http://dbpedia.org/resource/Estância,_Sergipe",http://pt.dbpedia.org/resource/Estância_(Sergipe),http://www.wikidata.org/entity/Q1005942
 2802205,Feira Nova,SE,,http://pt.dbpedia.org/resource/Feira_Nova_(Sergipe),http://www.wikidata.org/entity/Q2078439
 2802304,Frei Paulo,SE,,http://pt.dbpedia.org/resource/Frei_Paulo,http://www.wikidata.org/entity/Q588822
 2802403,Gararu,SE,,http://pt.dbpedia.org/resource/Gararu,http://www.wikidata.org/entity/Q2013193
-2802502,General Maynard,SE,,http://pt.dbpedia.org/resource/General_Maynard,http://www.wikidata.org/entity/Q1802002
+2802502,General Maynard,SE,http://dbpedia.org/resource/General_Maynard,http://pt.dbpedia.org/resource/General_Maynard,http://www.wikidata.org/entity/Q1802002
 2802601,Gracho Cardoso,SE,,,
 2802700,Ilha das Flores,SE,,http://pt.dbpedia.org/resource/Ilha_das_Flores_(Sergipe),http://www.wikidata.org/entity/Q1801964
 2802809,Indiaroba,SE,,http://pt.dbpedia.org/resource/Indiaroba,http://www.wikidata.org/entity/Q2013163
@@ -1803,8 +1803,8 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2805109,Pedrinhas,SE,,http://pt.dbpedia.org/resource/Pedrinhas,http://www.wikidata.org/entity/Q2013116
 2805208,Pinhão,SE,,http://pt.dbpedia.org/resource/Pinhão_(Sergipe),http://www.wikidata.org/entity/Q2171696
 2805307,Pirambu,SE,,http://pt.dbpedia.org/resource/Pirambu,http://www.wikidata.org/entity/Q1809608
-2805406,Poço Redondo,SE,,http://pt.dbpedia.org/resource/Poço_Redondo,http://www.wikidata.org/entity/Q430927
-2805505,Poço Verde,SE,,http://pt.dbpedia.org/resource/Poço_Verde,http://www.wikidata.org/entity/Q2014476
+2805406,Poço Redondo,SE,http://dbpedia.org/resource/Poço_Redondo,http://pt.dbpedia.org/resource/Poço_Redondo,http://www.wikidata.org/entity/Q430927
+2805505,Poço Verde,SE,http://dbpedia.org/resource/Poço_Verde,http://pt.dbpedia.org/resource/Poço_Verde,http://www.wikidata.org/entity/Q2014476
 2805604,Porto da Folha,SE,,http://pt.dbpedia.org/resource/Porto_da_Folha,http://www.wikidata.org/entity/Q2014466
 2805703,Propriá,SE,http://dbpedia.org/resource/Propriá,http://pt.dbpedia.org/resource/Propriá,http://www.wikidata.org/entity/Q1807371
 2805802,Riachão do Dantas,SE,,http://pt.dbpedia.org/resource/Riachão_do_Dantas,http://www.wikidata.org/entity/Q2078413
@@ -1816,7 +1816,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2806404,Santana do São Francisco,SE,,http://pt.dbpedia.org/resource/Santana_do_São_Francisco,http://www.wikidata.org/entity/Q668375
 2806503,Santa Rosa de Lima,SE,,http://pt.dbpedia.org/resource/Santa_Rosa_de_Lima_(Sergipe),http://www.wikidata.org/entity/Q2083175
 2806602,Santo Amaro das Brotas,SE,,http://pt.dbpedia.org/resource/Santo_Amaro_das_Brotas,http://www.wikidata.org/entity/Q371369
-2806701,São Cristóvão,SE,,http://pt.dbpedia.org/resource/São_Cristóvão_(Sergipe),http://www.wikidata.org/entity/Q839003
+2806701,São Cristóvão,SE,http://dbpedia.org/resource/São_Cristóvão,http://pt.dbpedia.org/resource/São_Cristóvão_(Sergipe),http://www.wikidata.org/entity/Q839003
 2806800,São Domingos,SE,,http://pt.dbpedia.org/resource/São_Domingos_(Sergipe),http://www.wikidata.org/entity/Q1999718
 2806909,São Francisco,SE,,http://pt.dbpedia.org/resource/São_Francisco_(Sergipe),http://www.wikidata.org/entity/Q2331416
 2807006,São Miguel do Aleixo,SE,,http://pt.dbpedia.org/resource/São_Miguel_do_Aleixo,http://www.wikidata.org/entity/Q2089289
@@ -1887,13 +1887,13 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2904753,Buritirama,BA,http://dbpedia.org/resource/Buritirama,http://pt.dbpedia.org/resource/Buritirama,http://www.wikidata.org/entity/Q1795342
 2904803,Caatiba,BA,http://dbpedia.org/resource/Caatiba,http://pt.dbpedia.org/resource/Caatiba,http://www.wikidata.org/entity/Q1648887
 2904852,Cabaceiras do Paraguaçu,BA,http://dbpedia.org/resource/Cabaceiras_do_Paraguaçu,http://pt.dbpedia.org/resource/Cabaceiras_do_Paraguaçu,http://www.wikidata.org/entity/Q980565
-2904902,Cachoeira,BA,,http://pt.dbpedia.org/resource/Cachoeira_(Bahia),http://www.wikidata.org/entity/Q985576
+2904902,Cachoeira,BA,http://dbpedia.org/resource/Cachoeira,http://pt.dbpedia.org/resource/Cachoeira_(Bahia),http://www.wikidata.org/entity/Q985576
 2905008,Caculé,BA,http://dbpedia.org/resource/Caculé,http://pt.dbpedia.org/resource/Caculé,http://www.wikidata.org/entity/Q1795313
 2905107,Caém,BA,http://dbpedia.org/resource/Caém,http://pt.dbpedia.org/resource/Caém,http://www.wikidata.org/entity/Q1946795
 2905156,Caetanos,BA,http://dbpedia.org/resource/Caetanos,http://pt.dbpedia.org/resource/Caetanos,http://www.wikidata.org/entity/Q1762013
 2905206,Caetité,BA,http://dbpedia.org/resource/Caetité,http://pt.dbpedia.org/resource/Caetité,http://www.wikidata.org/entity/Q1795371
 2905305,Cafarnaum,BA,http://dbpedia.org/resource/Cafarnaum,http://pt.dbpedia.org/resource/Cafarnaum_(Bahia),http://www.wikidata.org/entity/Q1808307
-2905404,Cairu,BA,,http://pt.dbpedia.org/resource/Cairu,http://www.wikidata.org/entity/Q960632
+2905404,Cairu,BA,http://dbpedia.org/resource/Cairu,http://pt.dbpedia.org/resource/Cairu,http://www.wikidata.org/entity/Q960632
 2905503,Caldeirão Grande,BA,http://dbpedia.org/resource/Caldeirão_Grande,http://pt.dbpedia.org/resource/Caldeirão_Grande,http://www.wikidata.org/entity/Q283971
 2905602,Camacan,BA,,,
 2905701,Camaçari,BA,http://dbpedia.org/resource/Camaçari,http://pt.dbpedia.org/resource/Camaçari,http://www.wikidata.org/entity/Q1136204
@@ -1914,7 +1914,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2906899,Caraíbas,BA,http://dbpedia.org/resource/Caraíbas,http://pt.dbpedia.org/resource/Caraíbas_(Bahia),http://www.wikidata.org/entity/Q1800637
 2906907,Caravelas,BA,http://dbpedia.org/resource/Caravelas,http://pt.dbpedia.org/resource/Caravelas_(Bahia),http://www.wikidata.org/entity/Q985956
 2907004,Cardeal da Silva,BA,http://dbpedia.org/resource/Cardeal_da_Silva,http://pt.dbpedia.org/resource/Cardeal_da_Silva,http://www.wikidata.org/entity/Q1761958
-2907103,Carinhanha,BA,,http://pt.dbpedia.org/resource/Carinhanha,http://www.wikidata.org/entity/Q985608
+2907103,Carinhanha,BA,http://dbpedia.org/resource/Carinhanha,http://pt.dbpedia.org/resource/Carinhanha,http://www.wikidata.org/entity/Q985608
 2907202,Casa Nova,BA,http://dbpedia.org/resource/Casa_Nova,http://pt.dbpedia.org/resource/Casa_Nova,http://www.wikidata.org/entity/Q1795593
 2907301,Castro Alves,BA,"http://dbpedia.org/resource/Castro_Alves,_Bahia",http://pt.dbpedia.org/resource/Castro_Alves_(Bahia),http://www.wikidata.org/entity/Q1764155
 2907400,Catolândia,BA,http://dbpedia.org/resource/Catolândia,http://pt.dbpedia.org/resource/Catolândia,http://www.wikidata.org/entity/Q747832
@@ -1968,7 +1968,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2911501,Gongogi,BA,,http://pt.dbpedia.org/resource/Gongogi,http://www.wikidata.org/entity/Q1762146
 2911600,Governador Mangabeira,BA,,http://pt.dbpedia.org/resource/Governador_Mangabeira,http://www.wikidata.org/entity/Q1761869
 2911659,Guajeru,BA,http://dbpedia.org/resource/Guajeru,http://pt.dbpedia.org/resource/Guajeru,http://www.wikidata.org/entity/Q1796414
-2911709,Guanambi,BA,,http://pt.dbpedia.org/resource/Guanambi,http://www.wikidata.org/entity/Q786924
+2911709,Guanambi,BA,http://dbpedia.org/resource/Guanambi,http://pt.dbpedia.org/resource/Guanambi,http://www.wikidata.org/entity/Q786924
 2911808,Guaratinga,BA,,,
 2911857,Heliópolis,BA,"http://dbpedia.org/resource/Heliópolis,_Bahia",http://pt.dbpedia.org/resource/Heliópolis_(Bahia),http://www.wikidata.org/entity/Q2019055
 2911907,Iaçu,BA,http://dbpedia.org/resource/Iaçu,http://pt.dbpedia.org/resource/Iaçu,http://www.wikidata.org/entity/Q1762080
@@ -2090,7 +2090,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2921708,Morro do Chapéu,BA,http://dbpedia.org/resource/Morro_do_Chapéu,http://pt.dbpedia.org/resource/Morro_do_Chapéu,http://www.wikidata.org/entity/Q1807821
 2921807,Mortugaba,BA,http://dbpedia.org/resource/Mortugaba,http://pt.dbpedia.org/resource/Mortugaba,http://www.wikidata.org/entity/Q1793482
 2921906,Mucugê,BA,http://dbpedia.org/resource/Mucugê,http://pt.dbpedia.org/resource/Mucugê,http://www.wikidata.org/entity/Q1762166
-2922003,Mucuri,BA,,http://pt.dbpedia.org/resource/Mucuri,http://www.wikidata.org/entity/Q1761474
+2922003,Mucuri,BA,http://dbpedia.org/resource/Mucuri,http://pt.dbpedia.org/resource/Mucuri,http://www.wikidata.org/entity/Q1761474
 2922052,Mulungu do Morro,BA,http://dbpedia.org/resource/Mulungu_do_Morro,http://pt.dbpedia.org/resource/Mulungu_do_Morro,http://www.wikidata.org/entity/Q1794935
 2922102,Mundo Novo,BA,"http://dbpedia.org/resource/Mundo_Novo,_Bahia",http://pt.dbpedia.org/resource/Mundo_Novo_(Bahia),http://www.wikidata.org/entity/Q1984590
 2922201,Muniz Ferreira,BA,http://dbpedia.org/resource/Muniz_Ferreira,http://pt.dbpedia.org/resource/Muniz_Ferreira,http://www.wikidata.org/entity/Q1793732
@@ -2120,7 +2120,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2923803,Paripiranga,BA,http://dbpedia.org/resource/Paripiranga,http://pt.dbpedia.org/resource/Paripiranga,http://www.wikidata.org/entity/Q1761881
 2923902,Pau Brasil,BA,http://dbpedia.org/resource/Pau_Brasil,http://pt.dbpedia.org/resource/Pau_Brasil_(Bahia),http://www.wikidata.org/entity/Q1772557
 2924009,Paulo Afonso,BA,http://dbpedia.org/resource/Paulo_Afonso,http://pt.dbpedia.org/resource/Paulo_Afonso,http://www.wikidata.org/entity/Q956008
-2924058,Pé de Serra,BA,,http://pt.dbpedia.org/resource/Pé_de_Serra,http://www.wikidata.org/entity/Q1762483
+2924058,Pé de Serra,BA,http://dbpedia.org/resource/Pé_de_Serra,http://pt.dbpedia.org/resource/Pé_de_Serra,http://www.wikidata.org/entity/Q1762483
 2924108,Pedrão,BA,http://dbpedia.org/resource/Pedrão,http://pt.dbpedia.org/resource/Pedrão,http://www.wikidata.org/entity/Q1795191
 2924207,Pedro Alexandre,BA,http://dbpedia.org/resource/Pedro_Alexandre,http://pt.dbpedia.org/resource/Pedro_Alexandre_(Bahia),http://www.wikidata.org/entity/Q928887
 2924306,Piatã,BA,,,
@@ -2197,7 +2197,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 2930006,Sebastião Laranjeiras,BA,http://dbpedia.org/resource/Sebastião_Laranjeiras,http://pt.dbpedia.org/resource/Sebastião_Laranjeiras,http://www.wikidata.org/entity/Q1762159
 2930105,Senhor do Bonfim,BA,,http://pt.dbpedia.org/resource/Senhor_do_Bonfim_(Bahia),http://www.wikidata.org/entity/Q1808316
 2930154,Serra do Ramalho,BA,,http://pt.dbpedia.org/resource/Serra_do_Ramalho_(Bahia),http://www.wikidata.org/entity/Q600869
-2930204,Sento Sé,BA,,http://pt.dbpedia.org/resource/Sento_Sé,http://www.wikidata.org/entity/Q1793620
+2930204,Sento Sé,BA,http://dbpedia.org/resource/Sento_Sé,http://pt.dbpedia.org/resource/Sento_Sé,http://www.wikidata.org/entity/Q1793620
 2930303,Serra Dourada,BA,http://dbpedia.org/resource/Serra_Dourada,http://pt.dbpedia.org/resource/Serra_Dourada,http://www.wikidata.org/entity/Q1794876
 2930402,Serra Preta,BA,http://dbpedia.org/resource/Serra_Preta,http://pt.dbpedia.org/resource/Serra_Preta,http://www.wikidata.org/entity/Q1793663
 2930501,Serrinha,BA,http://dbpedia.org/resource/Serrinha,http://pt.dbpedia.org/resource/Serrinha_(Bahia),http://www.wikidata.org/entity/Q1008215
@@ -2351,7 +2351,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3109709,Cachoeira de Minas,MG,http://dbpedia.org/resource/Cachoeira_de_Minas,http://pt.dbpedia.org/resource/Cachoeira_de_Minas,http://www.wikidata.org/entity/Q1756102
 3109808,Cachoeira Dourada,MG,"http://dbpedia.org/resource/Cachoeira_Dourada,_Minas_Gerais",http://pt.dbpedia.org/resource/Cachoeira_Dourada_(Minas_Gerais),http://www.wikidata.org/entity/Q2077925
 3109907,Caetanópolis,MG,http://dbpedia.org/resource/Caetanópolis,http://pt.dbpedia.org/resource/Caetanópolis,http://www.wikidata.org/entity/Q1792016
-3110004,Caeté,MG,,http://pt.dbpedia.org/resource/Caeté,http://www.wikidata.org/entity/Q1755373
+3110004,Caeté,MG,http://dbpedia.org/resource/Caeté,http://pt.dbpedia.org/resource/Caeté,http://www.wikidata.org/entity/Q1755373
 3110103,Caiana,MG,http://dbpedia.org/resource/Caiana,http://pt.dbpedia.org/resource/Caiana,http://www.wikidata.org/entity/Q1791846
 3110202,Cajuri,MG,http://dbpedia.org/resource/Cajuri,http://pt.dbpedia.org/resource/Cajuri,http://www.wikidata.org/entity/Q1756147
 3110301,Caldas,MG,"http://dbpedia.org/resource/Caldas,_Minas_Gerais",http://pt.dbpedia.org/resource/Caldas,http://www.wikidata.org/entity/Q2007990
@@ -2617,7 +2617,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3132800,Itambé do Mato Dentro,MG,http://dbpedia.org/resource/Itambé_do_Mato_Dentro,http://pt.dbpedia.org/resource/Itambé_do_Mato_Dentro,http://www.wikidata.org/entity/Q950561
 3132909,Itamogi,MG,http://dbpedia.org/resource/Itamogi,http://pt.dbpedia.org/resource/Itamogi,http://www.wikidata.org/entity/Q1791149
 3133006,Itamonte,MG,http://dbpedia.org/resource/Itamonte,http://pt.dbpedia.org/resource/Itamonte,http://www.wikidata.org/entity/Q1772699
-3133105,Itanhandu,MG,,http://pt.dbpedia.org/resource/Itanhandu,http://www.wikidata.org/entity/Q585119
+3133105,Itanhandu,MG,http://dbpedia.org/resource/Itanhandu,http://pt.dbpedia.org/resource/Itanhandu,http://www.wikidata.org/entity/Q585119
 3133204,Itanhomi,MG,http://dbpedia.org/resource/Itanhomi,http://pt.dbpedia.org/resource/Itanhomi,http://www.wikidata.org/entity/Q1791526
 3133303,Itaobim,MG,http://dbpedia.org/resource/Itaobim,http://pt.dbpedia.org/resource/Itaobim,http://www.wikidata.org/entity/Q1790804
 3133402,Itapagipe,MG,http://dbpedia.org/resource/Itapagipe,http://pt.dbpedia.org/resource/Itapagipe,http://www.wikidata.org/entity/Q1791208
@@ -2679,10 +2679,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3137908,Lamim,MG,http://dbpedia.org/resource/Lamim,http://pt.dbpedia.org/resource/Lamim,http://www.wikidata.org/entity/Q1790497
 3138005,Laranjal,MG,"http://dbpedia.org/resource/Laranjal,_Minas_Gerais",http://pt.dbpedia.org/resource/Laranjal_(Minas_Gerais),http://www.wikidata.org/entity/Q979042
 3138104,Lassance,MG,http://dbpedia.org/resource/Lassance,http://pt.dbpedia.org/resource/Lassance,http://www.wikidata.org/entity/Q1790489
-3138203,Lavras,MG,,http://pt.dbpedia.org/resource/Lavras,http://www.wikidata.org/entity/Q1638425
+3138203,Lavras,MG,http://dbpedia.org/resource/Lavras,http://pt.dbpedia.org/resource/Lavras,http://www.wikidata.org/entity/Q1638425
 3138302,Leandro Ferreira,MG,http://dbpedia.org/resource/Leandro_Ferreira,http://pt.dbpedia.org/resource/Leandro_Ferreira,http://www.wikidata.org/entity/Q1754743
 3138351,Leme do Prado,MG,http://dbpedia.org/resource/Leme_do_Prado,http://pt.dbpedia.org/resource/Leme_do_Prado,http://www.wikidata.org/entity/Q1754665
-3138401,Leopoldina,MG,,http://pt.dbpedia.org/resource/Leopoldina_(Minas_Gerais),http://www.wikidata.org/entity/Q1805359
+3138401,Leopoldina,MG,"http://dbpedia.org/resource/Leopoldina,_Minas_Gerais",http://pt.dbpedia.org/resource/Leopoldina_(Minas_Gerais),http://www.wikidata.org/entity/Q1805359
 3138500,Liberdade,MG,"http://dbpedia.org/resource/Liberdade,_Minas_Gerais",http://pt.dbpedia.org/resource/Liberdade_(Minas_Gerais),http://www.wikidata.org/entity/Q1805333
 3138609,Lima Duarte,MG,"http://dbpedia.org/resource/Lima_Duarte,_Minas_Gerais",http://pt.dbpedia.org/resource/Lima_Duarte_(Minas_Gerais),http://www.wikidata.org/entity/Q1754844
 3138625,Limeira do Oeste,MG,http://dbpedia.org/resource/Limeira_do_Oeste,http://pt.dbpedia.org/resource/Limeira_do_Oeste,http://www.wikidata.org/entity/Q1805365
@@ -2949,10 +2949,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3160454,Santo Antônio do Retiro,MG,http://dbpedia.org/resource/Santo_Antônio_do_Retiro,http://pt.dbpedia.org/resource/Santo_Antônio_do_Retiro,http://www.wikidata.org/entity/Q732719
 3160504,Santo Antônio do Rio Abaixo,MG,http://dbpedia.org/resource/Santo_Antônio_do_Rio_Abaixo,http://pt.dbpedia.org/resource/Santo_Antônio_do_Rio_Abaixo,http://www.wikidata.org/entity/Q1789213
 3160603,Santo Hipólito,MG,http://dbpedia.org/resource/Santo_Hipólito,http://pt.dbpedia.org/resource/Santo_Hipólito,http://www.wikidata.org/entity/Q1754904
-3160702,Santos Dumont,MG,,http://pt.dbpedia.org/resource/Santos_Dumont_(Minas_Gerais),http://www.wikidata.org/entity/Q1754760
+3160702,Santos Dumont,MG,"http://dbpedia.org/resource/Santos_Dumont,_Minas_Gerais",http://pt.dbpedia.org/resource/Santos_Dumont_(Minas_Gerais),http://www.wikidata.org/entity/Q1754760
 3160801,São Bento Abade,MG,http://dbpedia.org/resource/São_Bento_Abade,http://pt.dbpedia.org/resource/São_Bento_Abade,http://www.wikidata.org/entity/Q1755164
 3160900,São Brás do Suaçuí,MG,,http://pt.dbpedia.org/resource/São_Brás_do_Suaçuí,http://www.wikidata.org/entity/Q1788539
-3160959,São Domingos das Dores,MG,,http://pt.dbpedia.org/resource/São_Domingos_das_Dores,http://www.wikidata.org/entity/Q1754673
+3160959,São Domingos das Dores,MG,http://dbpedia.org/resource/São_Domingos_das_Dores,http://pt.dbpedia.org/resource/São_Domingos_das_Dores,http://www.wikidata.org/entity/Q1754673
 3161007,São Domingos do Prata,MG,,http://pt.dbpedia.org/resource/São_Domingos_do_Prata,http://www.wikidata.org/entity/Q635947
 3161056,São Félix de Minas,MG,http://dbpedia.org/resource/São_Félix_de_Minas,http://pt.dbpedia.org/resource/São_Félix_de_Minas,http://www.wikidata.org/entity/Q1788630
 3161106,São Francisco,MG,,http://pt.dbpedia.org/resource/São_Francisco_(Minas_Gerais),http://www.wikidata.org/entity/Q1904163
@@ -3111,10 +3111,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3201001,Boa Esperança,ES,,http://pt.dbpedia.org/resource/Boa_Esperança_(Espírito_Santo),http://www.wikidata.org/entity/Q2089691
 3201100,Bom Jesus do Norte,ES,,http://pt.dbpedia.org/resource/Bom_Jesus_do_Norte,http://www.wikidata.org/entity/Q1807022
 3201159,Brejetuba,ES,,,
-3201209,Cachoeiro de Itapemirim,ES,,,
+3201209,Cachoeiro de Itapemirim,ES,http://dbpedia.org/resource/Cachoeiro_de_Itapemirim,,
 3201308,Cariacica,ES,,,
 3201407,Castelo,ES,,,
-3201506,Colatina,ES,,http://pt.dbpedia.org/resource/Colatina,http://www.wikidata.org/entity/Q933380
+3201506,Colatina,ES,http://dbpedia.org/resource/Colatina,http://pt.dbpedia.org/resource/Colatina,http://www.wikidata.org/entity/Q933380
 3201605,Conceição da Barra,ES,,,
 3201704,Conceição do Castelo,ES,,,
 3201803,Divino de São Lourenço,ES,,,
@@ -3133,10 +3133,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3202702,Itaguaçu,ES,,,
 3202801,Itapemirim,ES,,,
 3202900,Itarana,ES,,,
-3203007,Iúna,ES,,,
+3203007,Iúna,ES,http://dbpedia.org/resource/Iúna,,
 3203056,Jaguaré,ES,,,
 3203106,Jerônimo Monteiro,ES,,,
-3203130,João Neiva,ES,,,
+3203130,João Neiva,ES,http://dbpedia.org/resource/João_Neiva,,
 3203163,Laranja da Terra,ES,,,
 3203205,Linhares,ES,,,
 3203304,Mantenópolis,ES,,,
@@ -3174,12 +3174,12 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3205176,Vila Valério,ES,,,
 3205200,Vila Velha,ES,,,
 3205309,Vitória,ES,,,
-3300100,Angra dos Reis,RJ,,http://pt.dbpedia.org/resource/Angra_dos_Reis,http://www.wikidata.org/entity/Q542829
+3300100,Angra dos Reis,RJ,http://dbpedia.org/resource/Angra_dos_Reis,http://pt.dbpedia.org/resource/Angra_dos_Reis,http://www.wikidata.org/entity/Q542829
 3300159,Aperibé,RJ,http://dbpedia.org/resource/Aperibé,http://pt.dbpedia.org/resource/Aperibé,http://www.wikidata.org/entity/Q1787636
 3300209,Araruama,RJ,,http://pt.dbpedia.org/resource/Araruama,http://www.wikidata.org/entity/Q1761549
 3300225,Areal,RJ,,,
 3300233,Armação dos Búzios,RJ,http://dbpedia.org/resource/Armação_dos_Búzios,http://pt.dbpedia.org/resource/Armação_dos_Búzios,http://www.wikidata.org/entity/Q680119
-3300258,Arraial do Cabo,RJ,,http://pt.dbpedia.org/resource/Arraial_do_Cabo,http://www.wikidata.org/entity/Q1750235
+3300258,Arraial do Cabo,RJ,http://dbpedia.org/resource/Arraial_do_Cabo,http://pt.dbpedia.org/resource/Arraial_do_Cabo,http://www.wikidata.org/entity/Q1750235
 3300308,Barra do Piraí,RJ,http://dbpedia.org/resource/Barra_do_Piraí,http://pt.dbpedia.org/resource/Barra_do_Piraí,http://www.wikidata.org/entity/Q1750175
 3300407,Barra Mansa,RJ,,http://pt.dbpedia.org/resource/Barra_Mansa,http://www.wikidata.org/entity/Q808797
 3300456,Belford Roxo,RJ,"http://dbpedia.org/resource/Belford_Roxo,_Rio_de_Janeiro",,
@@ -3241,7 +3241,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3304409,Rio Claro,RJ,"http://dbpedia.org/resource/Rio_Claro,_Rio_de_Janeiro",http://pt.dbpedia.org/resource/Rio_Claro_(Rio_de_Janeiro),http://www.wikidata.org/entity/Q953901
 3304508,Rio das Flores,RJ,http://dbpedia.org/resource/Rio_das_Flores,http://pt.dbpedia.org/resource/Rio_das_Flores,http://www.wikidata.org/entity/Q1761758
 3304524,Rio das Ostras,RJ,http://dbpedia.org/resource/Rio_das_Ostras,http://pt.dbpedia.org/resource/Rio_das_Ostras,http://www.wikidata.org/entity/Q1787668
-3304557,Rio de Janeiro,RJ,,,
+3304557,Rio de Janeiro,RJ,http://dbpedia.org/resource/Rio_de_Janeiro,,http://www.wikidata.org/entity/Q8678
 3304607,Santa Maria Madalena,RJ,"http://dbpedia.org/resource/Santa_Maria_Madalena,_Rio_de_Janeiro",http://pt.dbpedia.org/resource/Santa_Maria_Madalena_(Rio_de_Janeiro),http://www.wikidata.org/entity/Q2013108
 3304706,Santo Antônio de Pádua,RJ,http://dbpedia.org/resource/Santo_Antônio_de_Pádua,http://pt.dbpedia.org/resource/Santo_Antônio_de_Pádua_(Rio_de_Janeiro),http://www.wikidata.org/entity/Q1788412
 3304755,São Francisco de Itabapoana,RJ,http://dbpedia.org/resource/São_Francisco_de_Itabapoana,http://pt.dbpedia.org/resource/São_Francisco_de_Itabapoana,http://www.wikidata.org/entity/Q1787681
@@ -3262,7 +3262,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3305802,Teresópolis,RJ,http://dbpedia.org/resource/Teresópolis,http://pt.dbpedia.org/resource/Teresópolis,http://www.wikidata.org/entity/Q622836
 3305901,Trajano de Moraes,RJ,http://dbpedia.org/resource/Trajano_de_Morais,http://pt.dbpedia.org/resource/Trajano_de_Moraes,http://www.wikidata.org/entity/Q1803189
 3306008,Três Rios,RJ,,http://pt.dbpedia.org/resource/Três_Rios,http://www.wikidata.org/entity/Q1787655
-3306107,Valença,RJ,,http://pt.dbpedia.org/resource/Valença_(Rio_de_Janeiro),http://www.wikidata.org/entity/Q1005931
+3306107,Valença,RJ,"http://dbpedia.org/resource/Valença,_Rio_de_Janeiro",http://pt.dbpedia.org/resource/Valença_(Rio_de_Janeiro),http://www.wikidata.org/entity/Q1005931
 3306156,Varre-Sai,RJ,http://dbpedia.org/resource/Varre-Sai,http://pt.dbpedia.org/resource/Varre-Sai,http://www.wikidata.org/entity/Q1803142
 3306206,Vassouras,RJ,http://dbpedia.org/resource/Vassouras,http://pt.dbpedia.org/resource/Vassouras,http://www.wikidata.org/entity/Q1806430
 3306305,Volta Redonda,RJ,http://dbpedia.org/resource/Volta_Redonda,http://pt.dbpedia.org/resource/Volta_Redonda,http://www.wikidata.org/entity/Q276176
@@ -3313,7 +3313,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3503901,Arujá,SP,,,
 3503950,Aspásia,SP,http://dbpedia.org/resource/Aspásia,http://pt.dbpedia.org/resource/Aspásia_(São_Paulo),http://www.wikidata.org/entity/Q268193
 3504008,Assis,SP,http://dbpedia.org/resource/Assis,http://pt.dbpedia.org/resource/Assis_(São_Paulo),http://www.wikidata.org/entity/Q742227
-3504107,Atibaia,SP,,http://pt.dbpedia.org/resource/Atibaia,http://www.wikidata.org/entity/Q1637405
+3504107,Atibaia,SP,http://dbpedia.org/resource/Atibaia,http://pt.dbpedia.org/resource/Atibaia,http://www.wikidata.org/entity/Q1637405
 3504206,Auriflama,SP,http://dbpedia.org/resource/Auriflama,http://pt.dbpedia.org/resource/Auriflama,http://www.wikidata.org/entity/Q268956
 3504305,Avaí,SP,http://dbpedia.org/resource/Avaí,http://pt.dbpedia.org/resource/Avaí_(São_Paulo),http://www.wikidata.org/entity/Q371734
 3504404,Avanhandava,SP,http://dbpedia.org/resource/Avanhandava,http://pt.dbpedia.org/resource/Avanhandava,http://www.wikidata.org/entity/Q1646956
@@ -3386,7 +3386,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3510203,Capão Bonito,SP,,http://pt.dbpedia.org/resource/Capão_Bonito,http://www.wikidata.org/entity/Q1798802
 3510302,Capela do Alto,SP,http://dbpedia.org/resource/Capela_do_Alto,http://pt.dbpedia.org/resource/Capela_do_Alto,http://www.wikidata.org/entity/Q610390
 3510401,Capivari,SP,http://dbpedia.org/resource/Capivari,http://pt.dbpedia.org/resource/Capivari,http://www.wikidata.org/entity/Q1750439
-3510500,Caraguatatuba,SP,,http://pt.dbpedia.org/resource/Caraguatatuba,http://www.wikidata.org/entity/Q983498
+3510500,Caraguatatuba,SP,http://dbpedia.org/resource/Caraguatatuba,http://pt.dbpedia.org/resource/Caraguatatuba,http://www.wikidata.org/entity/Q983498
 3510609,Carapicuíba,SP,,,
 3510708,Cardoso,SP,"http://dbpedia.org/resource/Cardoso,_São_Paulo",http://pt.dbpedia.org/resource/Cardoso,http://www.wikidata.org/entity/Q1649954
 3510807,Casa Branca,SP,http://dbpedia.org/resource/Casa_Branca,http://pt.dbpedia.org/resource/Casa_Branca_(São_Paulo),http://www.wikidata.org/entity/Q1760459
@@ -3414,7 +3414,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3513108,Cravinhos,SP,http://dbpedia.org/resource/Cravinhos,http://pt.dbpedia.org/resource/Cravinhos,http://www.wikidata.org/entity/Q1798797
 3513207,Cristais Paulista,SP,http://dbpedia.org/resource/Cristais_Paulista,http://pt.dbpedia.org/resource/Cristais_Paulista,http://www.wikidata.org/entity/Q1759841
 3513306,Cruzália,SP,http://dbpedia.org/resource/Cruzália,http://pt.dbpedia.org/resource/Cruzália,http://www.wikidata.org/entity/Q787070
-3513405,Cruzeiro,SP,,http://pt.dbpedia.org/resource/Cruzeiro_(São_Paulo),http://www.wikidata.org/entity/Q1003429
+3513405,Cruzeiro,SP,"http://dbpedia.org/resource/Cruzeiro,_São_Paulo",http://pt.dbpedia.org/resource/Cruzeiro_(São_Paulo),http://www.wikidata.org/entity/Q1003429
 3513504,Cubatão,SP,http://dbpedia.org/resource/Cubatão,http://pt.dbpedia.org/resource/Cubatão,http://www.wikidata.org/entity/Q817954
 3513603,Cunha,SP,"http://dbpedia.org/resource/Cunha,_São_Paulo",http://pt.dbpedia.org/resource/Cunha_(São_Paulo),http://www.wikidata.org/entity/Q1003456
 3513702,Descalvado,SP,http://dbpedia.org/resource/Descalvado,http://pt.dbpedia.org/resource/Descalvado,http://www.wikidata.org/entity/Q1761089
@@ -3518,7 +3518,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3521804,Itaí,SP,http://dbpedia.org/resource/Itaí,http://pt.dbpedia.org/resource/Itaí,http://www.wikidata.org/entity/Q1648305
 3521903,Itajobi,SP,http://dbpedia.org/resource/Itajobi,http://pt.dbpedia.org/resource/Itajobi,http://www.wikidata.org/entity/Q1759769
 3522000,Itaju,SP,http://dbpedia.org/resource/Itaju,http://pt.dbpedia.org/resource/Itaju,http://www.wikidata.org/entity/Q926176
-3522109,Itanhaém,SP,,,
+3522109,Itanhaém,SP,http://dbpedia.org/resource/Itanhaém,,
 3522158,Itaoca,SP,http://dbpedia.org/resource/Itaoca,http://pt.dbpedia.org/resource/Itaoca,http://www.wikidata.org/entity/Q1760856
 3522208,Itapecerica da Serra,SP,,,
 3522307,Itapetininga,SP,http://dbpedia.org/resource/Itapetininga,http://pt.dbpedia.org/resource/Itapetininga,http://www.wikidata.org/entity/Q942071
@@ -3533,7 +3533,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3523107,Itaquaquecetuba,SP,,,
 3523206,Itararé,SP,http://dbpedia.org/resource/Itararé,http://pt.dbpedia.org/resource/Itararé,http://www.wikidata.org/entity/Q985581
 3523305,Itariri,SP,http://dbpedia.org/resource/Itariri,http://pt.dbpedia.org/resource/Itariri,http://www.wikidata.org/entity/Q579753
-3523404,Itatiba,SP,,http://pt.dbpedia.org/resource/Itatiba,http://www.wikidata.org/entity/Q773065
+3523404,Itatiba,SP,http://dbpedia.org/resource/Itatiba,http://pt.dbpedia.org/resource/Itatiba,http://www.wikidata.org/entity/Q773065
 3523503,Itatinga,SP,http://dbpedia.org/resource/Itatinga,http://pt.dbpedia.org/resource/Itatinga,http://www.wikidata.org/entity/Q1648194
 3523602,Itirapina,SP,http://dbpedia.org/resource/Itirapina,http://pt.dbpedia.org/resource/Itirapina,http://www.wikidata.org/entity/Q1759703
 3523701,Itirapuã,SP,http://dbpedia.org/resource/Itirapuã,http://pt.dbpedia.org/resource/Itirapuã,http://www.wikidata.org/entity/Q1760228
@@ -3596,7 +3596,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3529104,Marinópolis,SP,http://dbpedia.org/resource/Marinópolis,http://pt.dbpedia.org/resource/Marinópolis,http://www.wikidata.org/entity/Q1648293
 3529203,Martinópolis,SP,http://dbpedia.org/resource/Martinópolis,http://pt.dbpedia.org/resource/Martinópolis,http://www.wikidata.org/entity/Q1800770
 3529302,Matão,SP,http://dbpedia.org/resource/Matão,http://pt.dbpedia.org/resource/Matão,http://www.wikidata.org/entity/Q1649629
-3529401,Mauá,SP,,,
+3529401,Mauá,SP,"http://dbpedia.org/resource/Mauá,_São_Paulo",,
 3529500,Mendonça,SP,"http://dbpedia.org/resource/Mendonça,_São_Paulo",http://pt.dbpedia.org/resource/Mendonça,http://www.wikidata.org/entity/Q1800752
 3529609,Meridiano,SP,"http://dbpedia.org/resource/Meridiano,_São_Paulo",http://pt.dbpedia.org/resource/Meridiano_(São_Paulo),http://www.wikidata.org/entity/Q946326
 3529658,Mesópolis,SP,http://dbpedia.org/resource/Mesópolis,http://pt.dbpedia.org/resource/Mesópolis,http://www.wikidata.org/entity/Q1759241
@@ -3611,7 +3611,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3530508,Mococa,SP,http://dbpedia.org/resource/Mococa,http://pt.dbpedia.org/resource/Mococa,http://www.wikidata.org/entity/Q1760484
 3530607,Mogi das Cruzes,SP,,,
 3530706,Mogi Guaçu,SP,http://dbpedia.org/resource/Mogi_Guaçu,http://pt.dbpedia.org/resource/Mogi_Guaçu,http://www.wikidata.org/entity/Q956172
-3530805,Mogi Mirim,SP,,http://pt.dbpedia.org/resource/Mogi_Mirim,http://www.wikidata.org/entity/Q600310
+3530805,Mogi Mirim,SP,http://dbpedia.org/resource/Mogi_Mirim,http://pt.dbpedia.org/resource/Mogi_Mirim,http://www.wikidata.org/entity/Q600310
 3530904,Mombuca,SP,http://dbpedia.org/resource/Mombuca,http://pt.dbpedia.org/resource/Mombuca,http://www.wikidata.org/entity/Q745014
 3531001,Monções,SP,http://dbpedia.org/resource/Monções,http://pt.dbpedia.org/resource/Monções_(São_Paulo),http://www.wikidata.org/entity/Q1774484
 3531100,Mongaguá,SP,http://dbpedia.org/resource/Mongaguá,http://pt.dbpedia.org/resource/Mongaguá,http://www.wikidata.org/entity/Q983529
@@ -3631,7 +3631,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3532306,Natividade da Serra,SP,http://dbpedia.org/resource/Natividade_da_Serra,http://pt.dbpedia.org/resource/Natividade_da_Serra,http://www.wikidata.org/entity/Q1759364
 3532405,Nazaré Paulista,SP,http://dbpedia.org/resource/Nazaré_Paulista,http://pt.dbpedia.org/resource/Nazaré_Paulista,http://www.wikidata.org/entity/Q1760585
 3532504,Neves Paulista,SP,http://dbpedia.org/resource/Neves_Paulista,http://pt.dbpedia.org/resource/Neves_Paulista,http://www.wikidata.org/entity/Q1648196
-3532603,Nhandeara,SP,,http://pt.dbpedia.org/resource/Nhandeara,http://www.wikidata.org/entity/Q1649650
+3532603,Nhandeara,SP,http://dbpedia.org/resource/Nhandeara,http://pt.dbpedia.org/resource/Nhandeara,http://www.wikidata.org/entity/Q1649650
 3532702,Nipoã,SP,http://dbpedia.org/resource/Nipoã,http://pt.dbpedia.org/resource/Nipoã,http://www.wikidata.org/entity/Q1649872
 3532801,Nova Aliança,SP,http://dbpedia.org/resource/Nova_Aliança,http://pt.dbpedia.org/resource/Nova_Aliança,http://www.wikidata.org/entity/Q1648146
 3532827,Nova Campina,SP,http://dbpedia.org/resource/Nova_Campina,http://pt.dbpedia.org/resource/Nova_Campina,http://www.wikidata.org/entity/Q946930
@@ -3907,7 +3907,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3556909,Vista Alegre do Alto,SP,http://dbpedia.org/resource/Vista_Alegre_do_Alto,http://pt.dbpedia.org/resource/Vista_Alegre_do_Alto,http://www.wikidata.org/entity/Q1759858
 3556958,Vitória Brasil,SP,http://dbpedia.org/resource/Vitória_Brasil,http://pt.dbpedia.org/resource/Vitória_Brasil,http://www.wikidata.org/entity/Q1750221
 3557006,Votorantim,SP,http://dbpedia.org/resource/Votorantim,http://pt.dbpedia.org/resource/Votorantim,http://www.wikidata.org/entity/Q942083
-3557105,Votuporanga,SP,,http://pt.dbpedia.org/resource/Votuporanga,http://www.wikidata.org/entity/Q1759612
+3557105,Votuporanga,SP,http://dbpedia.org/resource/Votuporanga,http://pt.dbpedia.org/resource/Votuporanga,http://www.wikidata.org/entity/Q1759612
 3557154,Zacarias,SP,"http://dbpedia.org/resource/Zacarias,_São_Paulo",http://pt.dbpedia.org/resource/Zacarias_(São_Paulo),http://www.wikidata.org/entity/Q1760645
 3557204,Chavantes,SP,http://dbpedia.org/resource/Chavantes,http://pt.dbpedia.org/resource/Chavantes,http://www.wikidata.org/entity/Q1795758
 3557303,Estiva Gerbi,SP,http://dbpedia.org/resource/Estiva_Gerbi,http://pt.dbpedia.org/resource/Estiva_Gerbi,http://www.wikidata.org/entity/Q738934
@@ -3940,7 +3940,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4102208,Atalaia,PR,"http://dbpedia.org/resource/Atalaia,_Paraná",http://pt.dbpedia.org/resource/Atalaia_(Paraná),http://www.wikidata.org/entity/Q607931
 4102307,Balsa Nova,PR,http://dbpedia.org/resource/Balsa_Nova,http://pt.dbpedia.org/resource/Balsa_Nova,http://www.wikidata.org/entity/Q1804262
 4102406,Bandeirantes,PR,"http://dbpedia.org/resource/Bandeirantes,_Paraná",http://pt.dbpedia.org/resource/Bandeirantes_(Paraná),http://www.wikidata.org/entity/Q2064780
-4102505,Barbosa Ferraz,PR,,http://pt.dbpedia.org/resource/Barbosa_Ferraz,http://www.wikidata.org/entity/Q1773359
+4102505,Barbosa Ferraz,PR,"http://dbpedia.org/resource/Barbosa_Ferraz,_Paraná",http://pt.dbpedia.org/resource/Barbosa_Ferraz,http://www.wikidata.org/entity/Q1773359
 4102604,Barracão,PR,,,
 4102703,Barra do Jacaré,PR,http://dbpedia.org/resource/Barra_do_Jacaré,http://pt.dbpedia.org/resource/Barra_do_Jacaré,http://www.wikidata.org/entity/Q2005216
 4102752,Bela Vista da Caroba,PR,http://dbpedia.org/resource/Bela_Vista_da_Caroba,http://pt.dbpedia.org/resource/Bela_Vista_da_Caroba,http://www.wikidata.org/entity/Q1804834
@@ -4185,7 +4185,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4119657,Pitangueiras,PR,"http://dbpedia.org/resource/Pitangueiras,_Paraná",http://pt.dbpedia.org/resource/Pitangueiras_(Paraná),http://www.wikidata.org/entity/Q2077794
 4119707,Planaltina do Paraná,PR,http://dbpedia.org/resource/Planaltina_do_Paraná,http://pt.dbpedia.org/resource/Planaltina_do_Paraná,http://www.wikidata.org/entity/Q927206
 4119806,Planalto,PR,"http://dbpedia.org/resource/Planalto,_Paraná",http://pt.dbpedia.org/resource/Planalto_(Paraná),http://www.wikidata.org/entity/Q608674
-4119905,Ponta Grossa,PR,,http://pt.dbpedia.org/resource/Ponta_Grossa,http://www.wikidata.org/entity/Q242906
+4119905,Ponta Grossa,PR,http://dbpedia.org/resource/Ponta_Grossa,http://pt.dbpedia.org/resource/Ponta_Grossa,http://www.wikidata.org/entity/Q242906
 4119954,Pontal do Paraná,PR,http://dbpedia.org/resource/Pontal_do_Paraná,http://pt.dbpedia.org/resource/Pontal_do_Paraná,http://www.wikidata.org/entity/Q1803813
 4120002,Porecatu,PR,http://dbpedia.org/resource/Porecatu,http://pt.dbpedia.org/resource/Porecatu,http://www.wikidata.org/entity/Q2007362
 4120101,Porto Amazonas,PR,http://dbpedia.org/resource/Porto_Amazonas,http://pt.dbpedia.org/resource/Porto_Amazonas,http://www.wikidata.org/entity/Q2005152
@@ -4324,7 +4324,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4200903,Angelina,SC,"http://dbpedia.org/resource/Angelina,_Santa_Catarina",http://pt.dbpedia.org/resource/Angelina_(Santa_Catarina),http://www.wikidata.org/entity/Q1784392
 4201000,Anita Garibaldi,SC,"http://dbpedia.org/resource/Anita_Garibaldi,_Santa_Catarina",http://pt.dbpedia.org/resource/Anita_Garibaldi_(Santa_Catarina),http://www.wikidata.org/entity/Q617657
 4201109,Anitápolis,SC,http://dbpedia.org/resource/Anitápolis,http://pt.dbpedia.org/resource/Anitápolis,http://www.wikidata.org/entity/Q1750770
-4201208,Antônio Carlos,SC,,http://pt.dbpedia.org/resource/Antônio_Carlos_(Santa_Catarina),http://www.wikidata.org/entity/Q975677
+4201208,Antônio Carlos,SC,"http://dbpedia.org/resource/Antônio_Carlos,_Santa_Catarina",http://pt.dbpedia.org/resource/Antônio_Carlos_(Santa_Catarina),http://www.wikidata.org/entity/Q975677
 4201257,Apiúna,SC,http://dbpedia.org/resource/Apiúna,http://pt.dbpedia.org/resource/Apiúna,http://www.wikidata.org/entity/Q1758008
 4201273,Arabutã,SC,http://dbpedia.org/resource/Arabutã,http://pt.dbpedia.org/resource/Arabutã,http://www.wikidata.org/entity/Q374753
 4201307,Araquari,SC,http://dbpedia.org/resource/Araquari,http://pt.dbpedia.org/resource/Araquari,http://www.wikidata.org/entity/Q607184
@@ -4357,20 +4357,20 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4202800,Braço do Norte,SC,http://dbpedia.org/resource/Braço_do_Norte,http://pt.dbpedia.org/resource/Braço_do_Norte,http://www.wikidata.org/entity/Q903373
 4202859,Braço do Trombudo,SC,http://dbpedia.org/resource/Braço_do_Trombudo,http://pt.dbpedia.org/resource/Braço_do_Trombudo,http://www.wikidata.org/entity/Q1784745
 4202875,Brunópolis,SC,http://dbpedia.org/resource/Brunópolis,http://pt.dbpedia.org/resource/Brunópolis,http://www.wikidata.org/entity/Q1765062
-4202909,Brusque,SC,,http://pt.dbpedia.org/resource/Brusque,http://www.wikidata.org/entity/Q329488
+4202909,Brusque,SC,"http://dbpedia.org/resource/Brusque,_Santa_Catarina",http://pt.dbpedia.org/resource/Brusque,http://www.wikidata.org/entity/Q329488
 4203006,Caçador,SC,http://dbpedia.org/resource/Caçador,http://pt.dbpedia.org/resource/Caçador,http://www.wikidata.org/entity/Q986540
 4203105,Caibi,SC,,http://pt.dbpedia.org/resource/Caibi,http://www.wikidata.org/entity/Q1758966
 4203154,Calmon,SC,,http://pt.dbpedia.org/resource/Calmon,http://www.wikidata.org/entity/Q1784723
 4203204,Camboriú,SC,http://dbpedia.org/resource/Camboriú,http://pt.dbpedia.org/resource/Camboriú,http://www.wikidata.org/entity/Q744097
 4203253,Capão Alto,SC,http://dbpedia.org/resource/Capão_Alto,http://pt.dbpedia.org/resource/Capão_Alto,http://www.wikidata.org/entity/Q1112283
 4203303,Campo Alegre,SC,"http://dbpedia.org/resource/Campo_Alegre,_Santa_Catarina",http://pt.dbpedia.org/resource/Campo_Alegre_(Santa_Catarina),http://www.wikidata.org/entity/Q2087030
-4203402,Campo Belo do Sul,SC,,http://pt.dbpedia.org/resource/Campo_Belo_do_Sul,http://www.wikidata.org/entity/Q1765051
+4203402,Campo Belo do Sul,SC,http://dbpedia.org/resource/Campo_Belo_do_Sul,http://pt.dbpedia.org/resource/Campo_Belo_do_Sul,http://www.wikidata.org/entity/Q1765051
 4203501,Campo Erê,SC,http://dbpedia.org/resource/Campo_Erê,http://pt.dbpedia.org/resource/Campo_Erê,http://www.wikidata.org/entity/Q1757768
 4203600,Campos Novos,SC,http://dbpedia.org/resource/Campos_Novos,http://pt.dbpedia.org/resource/Campos_Novos,http://www.wikidata.org/entity/Q1764972
-4203709,Canelinha,SC,,http://pt.dbpedia.org/resource/Canelinha,http://www.wikidata.org/entity/Q957908
+4203709,Canelinha,SC,http://dbpedia.org/resource/Canelinha,http://pt.dbpedia.org/resource/Canelinha,http://www.wikidata.org/entity/Q957908
 4203808,Canoinhas,SC,,http://pt.dbpedia.org/resource/Canoinhas,http://www.wikidata.org/entity/Q1799304
 4203907,Capinzal,SC,http://dbpedia.org/resource/Capinzal,http://pt.dbpedia.org/resource/Capinzal,http://www.wikidata.org/entity/Q780452
-4203956,Capivari de Baixo,SC,,http://pt.dbpedia.org/resource/Capivari_de_Baixo,http://www.wikidata.org/entity/Q1750765
+4203956,Capivari de Baixo,SC,http://dbpedia.org/resource/Capivari_de_Baixo,http://pt.dbpedia.org/resource/Capivari_de_Baixo,http://www.wikidata.org/entity/Q1750765
 4204004,Catanduvas,SC,"http://dbpedia.org/resource/Catanduvas,_Santa_Catarina",http://pt.dbpedia.org/resource/Catanduvas_(Santa_Catarina),http://www.wikidata.org/entity/Q2087108
 4204103,Caxambu do Sul,SC,,http://pt.dbpedia.org/resource/Caxambu_do_Sul,http://www.wikidata.org/entity/Q1758980
 4204152,Celso Ramos,SC,,http://pt.dbpedia.org/resource/Celso_Ramos_(Santa_Catarina),http://www.wikidata.org/entity/Q1750758
@@ -4400,8 +4400,8 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4205407,Florianópolis,SC,http://dbpedia.org/resource/Florianópolis,http://pt.dbpedia.org/resource/Florianópolis,http://www.wikidata.org/entity/Q132997
 4205431,Formosa do Sul,SC,http://dbpedia.org/resource/Formosa_do_Sul,http://pt.dbpedia.org/resource/Formosa_do_Sul,http://www.wikidata.org/entity/Q1759017
 4205456,Forquilhinha,SC,,http://pt.dbpedia.org/resource/Forquilhinha,http://www.wikidata.org/entity/Q1784729
-4205506,Fraiburgo,SC,,http://pt.dbpedia.org/resource/Fraiburgo,http://www.wikidata.org/entity/Q543046
-4205555,Frei Rogério,SC,,http://pt.dbpedia.org/resource/Frei_Rogério,http://www.wikidata.org/entity/Q1765020
+4205506,Fraiburgo,SC,http://dbpedia.org/resource/Fraiburgo,http://pt.dbpedia.org/resource/Fraiburgo,http://www.wikidata.org/entity/Q543046
+4205555,Frei Rogério,SC,http://dbpedia.org/resource/Frei_Rogério,http://pt.dbpedia.org/resource/Frei_Rogério,http://www.wikidata.org/entity/Q1765020
 4205605,Galvão,SC,,http://pt.dbpedia.org/resource/Galvão_(Santa_Catarina),http://www.wikidata.org/entity/Q1784498
 4205704,Garopaba,SC,,http://pt.dbpedia.org/resource/Garopaba,http://www.wikidata.org/entity/Q612191
 4205803,Garuva,SC,,http://pt.dbpedia.org/resource/Garuva,http://www.wikidata.org/entity/Q1784623
@@ -4438,7 +4438,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4208203,Itajaí,SC,http://dbpedia.org/resource/Itajaí,http://pt.dbpedia.org/resource/Itajaí,http://www.wikidata.org/entity/Q842713
 4208302,Itapema,SC,http://dbpedia.org/resource/Itapema,http://pt.dbpedia.org/resource/Itapema,http://www.wikidata.org/entity/Q1750776
 4208401,Itapiranga,SC,"http://dbpedia.org/resource/Itapiranga,_Santa_Catarina",http://pt.dbpedia.org/resource/Itapiranga_(Santa_Catarina),http://www.wikidata.org/entity/Q595033
-4208450,Itapoá,SC,,http://pt.dbpedia.org/resource/Itapoá,http://www.wikidata.org/entity/Q1758956
+4208450,Itapoá,SC,http://dbpedia.org/resource/Itapoá,http://pt.dbpedia.org/resource/Itapoá,http://www.wikidata.org/entity/Q1758956
 4208500,Ituporanga,SC,http://dbpedia.org/resource/Ituporanga,http://pt.dbpedia.org/resource/Ituporanga,http://www.wikidata.org/entity/Q1758267
 4208609,Jaborá,SC,http://dbpedia.org/resource/Jaborá,http://pt.dbpedia.org/resource/Jaborá,http://www.wikidata.org/entity/Q612795
 4208708,Jacinto Machado,SC,http://dbpedia.org/resource/Jacinto_Machado,http://pt.dbpedia.org/resource/Jacinto_Machado,http://www.wikidata.org/entity/Q1799312
@@ -4454,7 +4454,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4209409,Laguna,SC,"http://dbpedia.org/resource/Laguna,_Santa_Catarina",http://pt.dbpedia.org/resource/Laguna_(Santa_Catarina),http://www.wikidata.org/entity/Q1615291
 4209458,Lajeado Grande,SC,http://dbpedia.org/resource/Lajeado_Grande,http://pt.dbpedia.org/resource/Lajeado_Grande,http://www.wikidata.org/entity/Q1784377
 4209508,Laurentino,SC,,http://pt.dbpedia.org/resource/Laurentino,http://www.wikidata.org/entity/Q1784534
-4209607,Lauro Müller,SC,,http://pt.dbpedia.org/resource/Lauro_Müller_(Santa_Catarina),http://www.wikidata.org/entity/Q651077
+4209607,Lauro Müller,SC,"http://dbpedia.org/resource/Lauro_Müller,_Santa_Catarina",http://pt.dbpedia.org/resource/Lauro_Müller_(Santa_Catarina),http://www.wikidata.org/entity/Q651077
 4209706,Lebon Régis,SC,http://dbpedia.org/resource/Lebon_Régis,http://pt.dbpedia.org/resource/Lebon_Régis,http://www.wikidata.org/entity/Q1799343
 4209805,Leoberto Leal,SC,http://dbpedia.org/resource/Leoberto_Leal,http://pt.dbpedia.org/resource/Leoberto_Leal_(Santa_Catarina),http://www.wikidata.org/entity/Q1765068
 4209854,Lindóia do Sul,SC,http://dbpedia.org/resource/Lindóia_do_Sul,http://pt.dbpedia.org/resource/Lindóia_do_Sul,http://www.wikidata.org/entity/Q1757818
@@ -4468,17 +4468,17 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4210407,Maracajá,SC,,http://pt.dbpedia.org/resource/Maracajá,http://www.wikidata.org/entity/Q1799325
 4210506,Maravilha,SC,"http://dbpedia.org/resource/Maravilha,_Santa_Catarina",http://pt.dbpedia.org/resource/Maravilha_(Santa_Catarina),http://www.wikidata.org/entity/Q1815756
 4210555,Marema,SC,http://dbpedia.org/resource/Marema,http://pt.dbpedia.org/resource/Marema,http://www.wikidata.org/entity/Q1815686
-4210605,Massaranduba,SC,,http://pt.dbpedia.org/resource/Massaranduba_(Santa_Catarina),http://www.wikidata.org/entity/Q980131
+4210605,Massaranduba,SC,"http://dbpedia.org/resource/Massaranduba,_Santa_Catarina",http://pt.dbpedia.org/resource/Massaranduba_(Santa_Catarina),http://www.wikidata.org/entity/Q980131
 4210704,Matos Costa,SC,http://dbpedia.org/resource/Matos_Costa,http://pt.dbpedia.org/resource/Matos_Costa,http://www.wikidata.org/entity/Q1784736
 4210803,Meleiro,SC,,http://pt.dbpedia.org/resource/Meleiro,http://www.wikidata.org/entity/Q1799434
 4210852,Mirim Doce,SC,,http://pt.dbpedia.org/resource/Mirim_Doce,http://www.wikidata.org/entity/Q1799318
-4210902,Modelo,SC,,http://pt.dbpedia.org/resource/Modelo_(Santa_Catarina),http://www.wikidata.org/entity/Q1796806
+4210902,Modelo,SC,"http://dbpedia.org/resource/Modelo,_Santa_Catarina",http://pt.dbpedia.org/resource/Modelo_(Santa_Catarina),http://www.wikidata.org/entity/Q1796806
 4211009,Mondaí,SC,http://dbpedia.org/resource/Mondaí,http://pt.dbpedia.org/resource/Mondaí,http://www.wikidata.org/entity/Q1758042
-4211058,Monte Carlo,SC,,http://pt.dbpedia.org/resource/Monte_Carlo_(Santa_Catarina),http://www.wikidata.org/entity/Q1815693
-4211108,Monte Castelo,SC,,http://pt.dbpedia.org/resource/Monte_Castelo_(Santa_Catarina),http://www.wikidata.org/entity/Q2011999
+4211058,Monte Carlo,SC,"http://dbpedia.org/resource/Monte_Carlo,_Santa_Catarina",http://pt.dbpedia.org/resource/Monte_Carlo_(Santa_Catarina),http://www.wikidata.org/entity/Q1815693
+4211108,Monte Castelo,SC,"http://dbpedia.org/resource/Monte_Castelo,_Santa_Catarina",http://pt.dbpedia.org/resource/Monte_Castelo_(Santa_Catarina),http://www.wikidata.org/entity/Q2011999
 4211207,Morro da Fumaça,SC,http://dbpedia.org/resource/Morro_da_Fumaça,http://pt.dbpedia.org/resource/Morro_da_Fumaça,http://www.wikidata.org/entity/Q1758949
-4211256,Morro Grande,SC,,http://pt.dbpedia.org/resource/Morro_Grande,http://www.wikidata.org/entity/Q1784594
-4211306,Navegantes,SC,,http://pt.dbpedia.org/resource/Navegantes,http://www.wikidata.org/entity/Q1010299
+4211256,Morro Grande,SC,http://dbpedia.org/resource/Morro_Grande,http://pt.dbpedia.org/resource/Morro_Grande,http://www.wikidata.org/entity/Q1784594
+4211306,Navegantes,SC,http://dbpedia.org/resource/Navegantes,http://pt.dbpedia.org/resource/Navegantes,http://www.wikidata.org/entity/Q1010299
 4211405,Nova Erechim,SC,http://dbpedia.org/resource/Nova_Erechim,http://pt.dbpedia.org/resource/Nova_Erechim,http://www.wikidata.org/entity/Q955577
 4211454,Nova Itaberaba,SC,,http://pt.dbpedia.org/resource/Nova_Itaberaba,http://www.wikidata.org/entity/Q1758973
 4211504,Nova Trento,SC,,http://pt.dbpedia.org/resource/Nova_Trento,http://www.wikidata.org/entity/Q1637513
@@ -4492,7 +4492,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4211892,Painel,SC,,http://pt.dbpedia.org/resource/Painel,http://www.wikidata.org/entity/Q1764975
 4211900,Palhoça,SC,http://dbpedia.org/resource/Palhoça,http://pt.dbpedia.org/resource/Palhoça,http://www.wikidata.org/entity/Q973513
 4212007,Palma Sola,SC,"http://dbpedia.org/resource/Palma_Sola,_Santa_Catarina",http://pt.dbpedia.org/resource/Palma_Sola,http://www.wikidata.org/entity/Q1799425
-4212056,Palmeira,SC,,http://pt.dbpedia.org/resource/Palmeira_(Santa_Catarina),http://www.wikidata.org/entity/Q1784383
+4212056,Palmeira,SC,"http://dbpedia.org/resource/Palmeira,_Santa_Catarina",http://pt.dbpedia.org/resource/Palmeira_(Santa_Catarina),http://www.wikidata.org/entity/Q1784383
 4212106,Palmitos,SC,http://dbpedia.org/resource/Palmitos,http://pt.dbpedia.org/resource/Palmitos,http://www.wikidata.org/entity/Q588170
 4212205,Papanduva,SC,,http://pt.dbpedia.org/resource/Papanduva,http://www.wikidata.org/entity/Q1796797
 4212239,Paraíso,SC,"http://dbpedia.org/resource/Paraíso,_Santa_Catarina",http://pt.dbpedia.org/resource/Paraíso_(Santa_Catarina),http://www.wikidata.org/entity/Q428892
@@ -4510,13 +4510,13 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4213104,Piratuba,SC,,http://pt.dbpedia.org/resource/Piratuba,http://www.wikidata.org/entity/Q952174
 4213153,Planalto Alegre,SC,,http://pt.dbpedia.org/resource/Planalto_Alegre,http://www.wikidata.org/entity/Q1758995
 4213203,Pomerode,SC,http://dbpedia.org/resource/Pomerode,http://pt.dbpedia.org/resource/Pomerode,http://www.wikidata.org/entity/Q326651
-4213302,Ponte Alta,SC,,http://pt.dbpedia.org/resource/Ponte_Alta,http://www.wikidata.org/entity/Q1764920
-4213351,Ponte Alta do Norte,SC,,http://pt.dbpedia.org/resource/Ponte_Alta_do_Norte,http://www.wikidata.org/entity/Q1777271
+4213302,Ponte Alta,SC,http://dbpedia.org/resource/Ponte_Alta,http://pt.dbpedia.org/resource/Ponte_Alta,http://www.wikidata.org/entity/Q1764920
+4213351,Ponte Alta do Norte,SC,http://dbpedia.org/resource/Ponte_Alta_do_Norte,http://pt.dbpedia.org/resource/Ponte_Alta_do_Norte,http://www.wikidata.org/entity/Q1777271
 4213401,Ponte Serrada,SC,http://dbpedia.org/resource/Ponte_Serrada,http://pt.dbpedia.org/resource/Ponte_Serrada,http://www.wikidata.org/entity/Q1784813
-4213500,Porto Belo,SC,,http://pt.dbpedia.org/resource/Porto_Belo,http://www.wikidata.org/entity/Q1799285
-4213609,Porto União,SC,,http://pt.dbpedia.org/resource/Porto_União,http://www.wikidata.org/entity/Q1784679
+4213500,Porto Belo,SC,http://dbpedia.org/resource/Porto_Belo,http://pt.dbpedia.org/resource/Porto_Belo,http://www.wikidata.org/entity/Q1799285
+4213609,Porto União,SC,http://dbpedia.org/resource/Porto_União,http://pt.dbpedia.org/resource/Porto_União,http://www.wikidata.org/entity/Q1784679
 4213708,Pouso Redondo,SC,,http://pt.dbpedia.org/resource/Pouso_Redondo,http://www.wikidata.org/entity/Q1796818
-4213807,Praia Grande,SC,,http://pt.dbpedia.org/resource/Praia_Grande_(Santa_Catarina),http://www.wikidata.org/entity/Q1822575
+4213807,Praia Grande,SC,"http://dbpedia.org/resource/Praia_Grande,_Santa_Catarina",http://pt.dbpedia.org/resource/Praia_Grande_(Santa_Catarina),http://www.wikidata.org/entity/Q1822575
 4213906,Presidente Castello Branco,SC,,,
 4214003,Presidente Getúlio,SC,http://dbpedia.org/resource/Presidente_Getúlio,http://pt.dbpedia.org/resource/Presidente_Getúlio,http://www.wikidata.org/entity/Q1757828
 4214102,Presidente Nereu,SC,,http://pt.dbpedia.org/resource/Presidente_Nereu,http://www.wikidata.org/entity/Q1799367
@@ -4535,10 +4535,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4215109,Rodeio,SC,,http://pt.dbpedia.org/resource/Rodeio_(Santa_Catarina),http://www.wikidata.org/entity/Q2012010
 4215208,Romelândia,SC,http://dbpedia.org/resource/Romelândia,http://pt.dbpedia.org/resource/Romelândia,http://www.wikidata.org/entity/Q1757763
 4215307,Salete,SC,,http://pt.dbpedia.org/resource/Salete_(Santa_Catarina),http://www.wikidata.org/entity/Q1784692
-4215356,Saltinho,SC,,http://pt.dbpedia.org/resource/Saltinho_(Santa_Catarina),http://www.wikidata.org/entity/Q2011982
+4215356,Saltinho,SC,"http://dbpedia.org/resource/Saltinho,_Santa_Catarina",http://pt.dbpedia.org/resource/Saltinho_(Santa_Catarina),http://www.wikidata.org/entity/Q2011982
 4215406,Salto Veloso,SC,http://dbpedia.org/resource/Salto_Veloso,http://pt.dbpedia.org/resource/Salto_Veloso,http://www.wikidata.org/entity/Q289981
 4215455,Sangão,SC,,http://pt.dbpedia.org/resource/Sangão,http://www.wikidata.org/entity/Q945132
-4215505,Santa Cecília,SC,,http://pt.dbpedia.org/resource/Santa_Cecília_(Santa_Catarina),http://www.wikidata.org/entity/Q931280
+4215505,Santa Cecília,SC,http://dbpedia.org/resource/Santa_Cecília,http://pt.dbpedia.org/resource/Santa_Cecília_(Santa_Catarina),http://www.wikidata.org/entity/Q931280
 4215554,Santa Helena,SC,"http://dbpedia.org/resource/Santa_Helena,_Santa_Catarina",http://pt.dbpedia.org/resource/Santa_Helena_(Santa_Catarina),http://www.wikidata.org/entity/Q2020284
 4215604,Santa Rosa de Lima,SC,,http://pt.dbpedia.org/resource/Santa_Rosa_de_Lima_(Santa_Catarina),http://www.wikidata.org/entity/Q706547
 4215653,Santa Rosa do Sul,SC,,http://pt.dbpedia.org/resource/Santa_Rosa_do_Sul,http://www.wikidata.org/entity/Q1799409
@@ -4546,11 +4546,11 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4215687,Santa Terezinha do Progresso,SC,,http://pt.dbpedia.org/resource/Santa_Terezinha_do_Progresso,http://www.wikidata.org/entity/Q1759023
 4215695,Santiago do Sul,SC,http://dbpedia.org/resource/Santiago_do_Sul,http://pt.dbpedia.org/resource/Santiago_do_Sul,http://www.wikidata.org/entity/Q1758231
 4215703,Santo Amaro da Imperatriz,SC,,http://pt.dbpedia.org/resource/Santo_Amaro_da_Imperatriz,http://www.wikidata.org/entity/Q327210
-4215752,São Bernardino,SC,,http://pt.dbpedia.org/resource/São_Bernardino,http://www.wikidata.org/entity/Q1758962
+4215752,São Bernardino,SC,http://dbpedia.org/resource/São_Bernardino,http://pt.dbpedia.org/resource/São_Bernardino,http://www.wikidata.org/entity/Q1758962
 4215802,São Bento do Sul,SC,,http://pt.dbpedia.org/resource/São_Bento_do_Sul,http://www.wikidata.org/entity/Q1765057
 4215901,São Bonifácio,SC,http://dbpedia.org/resource/São_Bonifácio,http://pt.dbpedia.org/resource/São_Bonifácio_(Santa_Catarina),http://www.wikidata.org/entity/Q1784638
 4216008,São Carlos,SC,"http://dbpedia.org/resource/São_Carlos,_Santa_Catarina",http://pt.dbpedia.org/resource/São_Carlos_(Santa_Catarina),http://www.wikidata.org/entity/Q1815617
-4216057,São Cristóvão do Sul,SC,,http://pt.dbpedia.org/resource/São_Cristóvão_do_Sul,http://www.wikidata.org/entity/Q639952
+4216057,São Cristóvão do Sul,SC,http://dbpedia.org/resource/São_Cristóvão_do_Sul,http://pt.dbpedia.org/resource/São_Cristóvão_do_Sul,http://www.wikidata.org/entity/Q639952
 4216107,São Domingos,SC,"http://dbpedia.org/resource/São_Domingos,_Santa_Catarina",http://pt.dbpedia.org/resource/São_Domingos_(Santa_Catarina),http://www.wikidata.org/entity/Q617155
 4216206,São Francisco do Sul,SC,,http://pt.dbpedia.org/resource/São_Francisco_do_Sul,http://www.wikidata.org/entity/Q986536
 4216255,São João do Oeste,SC,,http://pt.dbpedia.org/resource/São_João_do_Oeste,http://www.wikidata.org/entity/Q599623
@@ -4568,10 +4568,10 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4217204,São Miguel do Oeste,SC,http://dbpedia.org/resource/São_Miguel_do_Oeste,http://pt.dbpedia.org/resource/São_Miguel_do_Oeste,http://www.wikidata.org/entity/Q1757748
 4217253,São Pedro de Alcântara,SC,,http://pt.dbpedia.org/resource/São_Pedro_de_Alcântara,http://www.wikidata.org/entity/Q1750756
 4217303,Saudades,SC,"http://dbpedia.org/resource/Saudades,_Santa_Catarina",http://pt.dbpedia.org/resource/Saudades_(Santa_Catarina),http://www.wikidata.org/entity/Q1757999
-4217402,Schroeder,SC,,http://pt.dbpedia.org/resource/Schroeder,http://www.wikidata.org/entity/Q398844
+4217402,Schroeder,SC,"http://dbpedia.org/resource/Schroeder,_Santa_Catarina",http://pt.dbpedia.org/resource/Schroeder,http://www.wikidata.org/entity/Q398844
 4217501,Seara,SC,http://dbpedia.org/resource/Seara,http://pt.dbpedia.org/resource/Seara_(Santa_Catarina),http://www.wikidata.org/entity/Q1784472
 4217550,Serra Alta,SC,,http://pt.dbpedia.org/resource/Serra_Alta,http://www.wikidata.org/entity/Q1757812
-4217600,Siderópolis,SC,,http://pt.dbpedia.org/resource/Siderópolis,http://www.wikidata.org/entity/Q1759010
+4217600,Siderópolis,SC,http://dbpedia.org/resource/Siderópolis,http://pt.dbpedia.org/resource/Siderópolis,http://www.wikidata.org/entity/Q1759010
 4217709,Sombrio,SC,,http://pt.dbpedia.org/resource/Sombrio,http://www.wikidata.org/entity/Q1784827
 4217758,Sul Brasil,SC,,http://pt.dbpedia.org/resource/Sul_Brasil,http://www.wikidata.org/entity/Q549349
 4217808,Taió,SC,,http://pt.dbpedia.org/resource/Taió,http://www.wikidata.org/entity/Q1759213
@@ -4579,7 +4579,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4217956,Tigrinhos,SC,,http://pt.dbpedia.org/resource/Tigrinhos,http://www.wikidata.org/entity/Q1758053
 4218004,Tijucas,SC,http://dbpedia.org/resource/Tijucas,http://pt.dbpedia.org/resource/Tijucas,http://www.wikidata.org/entity/Q951660
 4218103,Timbé do Sul,SC,,http://pt.dbpedia.org/resource/Timbé_do_Sul,http://www.wikidata.org/entity/Q1799417
-4218202,Timbó,SC,,http://pt.dbpedia.org/resource/Timbó_(Santa_Catarina),http://www.wikidata.org/entity/Q773783
+4218202,Timbó,SC,http://dbpedia.org/resource/Timbó,http://pt.dbpedia.org/resource/Timbó_(Santa_Catarina),http://www.wikidata.org/entity/Q773783
 4218251,Timbó Grande,SC,,http://pt.dbpedia.org/resource/Timbó_Grande,http://www.wikidata.org/entity/Q614626
 4218301,Três Barras,SC,,http://pt.dbpedia.org/resource/Três_Barras,http://www.wikidata.org/entity/Q1784369
 4218350,Treviso,SC,,http://pt.dbpedia.org/resource/Treviso_(Santa_Catarina),http://www.wikidata.org/entity/Q1799332
@@ -4588,29 +4588,29 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4218608,Trombudo Central,SC,,http://pt.dbpedia.org/resource/Trombudo_Central,http://www.wikidata.org/entity/Q1784066
 4218707,Tubarão,SC,http://dbpedia.org/resource/Tubarão,http://pt.dbpedia.org/resource/Tubarão_(Santa_Catarina),http://www.wikidata.org/entity/Q1815730
 4218756,Tunápolis,SC,http://dbpedia.org/resource/Tunápolis,http://pt.dbpedia.org/resource/Tunápolis,http://www.wikidata.org/entity/Q1758036
-4218806,Turvo,SC,,http://pt.dbpedia.org/resource/Turvo_(Santa_Catarina),http://www.wikidata.org/entity/Q1833591
+4218806,Turvo,SC,http://dbpedia.org/resource/Turvo,http://pt.dbpedia.org/resource/Turvo_(Santa_Catarina),http://www.wikidata.org/entity/Q1833591
 4218855,União do Oeste,SC,,http://pt.dbpedia.org/resource/União_do_Oeste,http://www.wikidata.org/entity/Q1758015
 4218905,Urubici,SC,http://dbpedia.org/resource/Urubici,http://pt.dbpedia.org/resource/Urubici,http://www.wikidata.org/entity/Q1646925
 4218954,Urupema,SC,,http://pt.dbpedia.org/resource/Urupema,http://www.wikidata.org/entity/Q1765034
 4219002,Urussanga,SC,http://dbpedia.org/resource/Urussanga,http://pt.dbpedia.org/resource/Urussanga,http://www.wikidata.org/entity/Q1765078
 4219101,Vargeão,SC,http://dbpedia.org/resource/Vargeão,http://pt.dbpedia.org/resource/Vargeão,http://www.wikidata.org/entity/Q1758111
-4219150,Vargem,SC,,http://pt.dbpedia.org/resource/Vargem_(Santa_Catarina),http://www.wikidata.org/entity/Q2011987
+4219150,Vargem,SC,"http://dbpedia.org/resource/Vargem,_Santa_Catarina",http://pt.dbpedia.org/resource/Vargem_(Santa_Catarina),http://www.wikidata.org/entity/Q2011987
 4219176,Vargem Bonita,SC,,http://pt.dbpedia.org/resource/Vargem_Bonita_(Santa_Catarina),http://www.wikidata.org/entity/Q609989
 4219200,Vidal Ramos,SC,,http://pt.dbpedia.org/resource/Vidal_Ramos_(Santa_Catarina),http://www.wikidata.org/entity/Q1784642
-4219309,Videira,SC,,http://pt.dbpedia.org/resource/Videira_(Santa_Catarina),http://www.wikidata.org/entity/Q1799400
+4219309,Videira,SC,http://dbpedia.org/resource/Videira,http://pt.dbpedia.org/resource/Videira_(Santa_Catarina),http://www.wikidata.org/entity/Q1799400
 4219358,Vitor Meireles,SC,http://dbpedia.org/resource/Vitor_Meireles,http://pt.dbpedia.org/resource/Vitor_Meireles_(Santa_Catarina),http://www.wikidata.org/entity/Q1784631
 4219408,Witmarsum,SC,,http://pt.dbpedia.org/resource/Witmarsum,http://www.wikidata.org/entity/Q1000671
-4219507,Xanxerê,SC,,http://pt.dbpedia.org/resource/Xanxerê,http://www.wikidata.org/entity/Q1758153
+4219507,Xanxerê,SC,http://dbpedia.org/resource/Xanxerê,http://pt.dbpedia.org/resource/Xanxerê,http://www.wikidata.org/entity/Q1758153
 4219606,Xavantina,SC,http://dbpedia.org/resource/Xavantina,http://pt.dbpedia.org/resource/Xavantina,http://www.wikidata.org/entity/Q923208
 4219705,Xaxim,SC,http://dbpedia.org/resource/Xaxim,http://pt.dbpedia.org/resource/Xaxim_(Santa_Catarina),http://www.wikidata.org/entity/Q1751322
 4219853,Zortéa,SC,http://dbpedia.org/resource/Zortéa,http://pt.dbpedia.org/resource/Zortéa,http://www.wikidata.org/entity/Q1648503
 4220000,Balneário Rincão,SC,http://dbpedia.org/resource/Balneário_Rincão,http://pt.dbpedia.org/resource/Balneário_Rincão,http://www.wikidata.org/entity/Q2881477
 4300034,Aceguá,RS,http://dbpedia.org/resource/Aceguá,http://pt.dbpedia.org/resource/Aceguá,http://www.wikidata.org/entity/Q913259
-4300059,Água Santa,RS,,http://pt.dbpedia.org/resource/Água_Santa_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q249795
+4300059,Água Santa,RS,http://dbpedia.org/resource/Água_Santa,http://pt.dbpedia.org/resource/Água_Santa_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q249795
 4300109,Agudo,RS,"http://dbpedia.org/resource/Agudo,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Agudo,http://www.wikidata.org/entity/Q398173
 4300208,Ajuricaba,RS,http://dbpedia.org/resource/Ajuricaba,http://pt.dbpedia.org/resource/Ajuricaba,http://www.wikidata.org/entity/Q413408
 4300307,Alecrim,RS,http://dbpedia.org/resource/Alecrim,http://pt.dbpedia.org/resource/Alecrim_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q995308
-4300406,Alegrete,RS,,http://pt.dbpedia.org/resource/Alegrete_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q851276
+4300406,Alegrete,RS,http://dbpedia.org/resource/Alegrete,http://pt.dbpedia.org/resource/Alegrete_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q851276
 4300455,Alegria,RS,"http://dbpedia.org/resource/Alegria,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Alegria_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q601127
 4300471,Almirante Tamandaré do Sul,RS,http://dbpedia.org/resource/Almirante_Tamandaré_do_Sul,http://pt.dbpedia.org/resource/Almirante_Tamandaré_do_Sul,http://www.wikidata.org/entity/Q957758
 4300505,Alpestre,RS,"http://dbpedia.org/resource/Alpestre,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Alpestre,http://www.wikidata.org/entity/Q957796
@@ -4793,7 +4793,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4309209,Gravataí,RS,http://dbpedia.org/resource/Gravataí,http://pt.dbpedia.org/resource/Gravataí,http://www.wikidata.org/entity/Q694822
 4309258,Guabiju,RS,http://dbpedia.org/resource/Guabiju,http://pt.dbpedia.org/resource/Guabiju,http://www.wikidata.org/entity/Q1785836
 4309308,Guaíba,RS,http://dbpedia.org/resource/Guaíba,http://pt.dbpedia.org/resource/Guaíba,http://www.wikidata.org/entity/Q957668
-4309407,Guaporé,RS,,http://pt.dbpedia.org/resource/Guaporé_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1758136
+4309407,Guaporé,RS,"http://dbpedia.org/resource/Guaporé,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Guaporé_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1758136
 4309506,Guarani das Missões,RS,http://dbpedia.org/resource/Guarani_das_Missões,http://pt.dbpedia.org/resource/Guarani_das_Missões,http://www.wikidata.org/entity/Q1758128
 4309555,Harmonia,RS,"http://dbpedia.org/resource/Harmonia,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Harmonia_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1151685
 4309571,Herveiras,RS,http://dbpedia.org/resource/Herveiras,http://pt.dbpedia.org/resource/Herveiras,http://www.wikidata.org/entity/Q1758745
@@ -4806,7 +4806,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4309951,Ibirapuitã,RS,http://dbpedia.org/resource/Ibirapuitã,http://pt.dbpedia.org/resource/Ibirapuitã,http://www.wikidata.org/entity/Q1774765
 4310009,Ibirubá,RS,http://dbpedia.org/resource/Ibirubá,http://pt.dbpedia.org/resource/Ibirubá,http://www.wikidata.org/entity/Q194423
 4310108,Igrejinha,RS,http://dbpedia.org/resource/Igrejinha,http://pt.dbpedia.org/resource/Igrejinha,http://www.wikidata.org/entity/Q926647
-4310207,Ijuí,RS,,http://pt.dbpedia.org/resource/Ijuí,http://www.wikidata.org/entity/Q194374
+4310207,Ijuí,RS,http://dbpedia.org/resource/Ijuí,http://pt.dbpedia.org/resource/Ijuí,http://www.wikidata.org/entity/Q194374
 4310306,Ilópolis,RS,http://dbpedia.org/resource/Ilópolis,http://pt.dbpedia.org/resource/Ilópolis,http://www.wikidata.org/entity/Q1757392
 4310330,Imbé,RS,http://dbpedia.org/resource/Imbé,http://pt.dbpedia.org/resource/Imbé,http://www.wikidata.org/entity/Q592652
 4310363,Imigrante,RS,http://dbpedia.org/resource/Imigrante,http://pt.dbpedia.org/resource/Imigrante,http://www.wikidata.org/entity/Q736649
@@ -4909,7 +4909,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4314050,Parobé,RS,http://dbpedia.org/resource/Parobé,http://pt.dbpedia.org/resource/Parobé,http://www.wikidata.org/entity/Q983702
 4314068,Passa Sete,RS,,,
 4314076,Passo do Sobrado,RS,http://dbpedia.org/resource/Passo_do_Sobrado,http://pt.dbpedia.org/resource/Passo_do_Sobrado,http://www.wikidata.org/entity/Q677252
-4314100,Passo Fundo,RS,,http://pt.dbpedia.org/resource/Passo_Fundo,http://www.wikidata.org/entity/Q525647
+4314100,Passo Fundo,RS,http://dbpedia.org/resource/Passo_Fundo,http://pt.dbpedia.org/resource/Passo_Fundo,http://www.wikidata.org/entity/Q525647
 4314134,Paulo Bento,RS,"http://dbpedia.org/resource/Paulo_Bento,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Paulo_Bento,http://www.wikidata.org/entity/Q2007799
 4314159,Paverama,RS,http://dbpedia.org/resource/Paverama,http://pt.dbpedia.org/resource/Paverama,http://www.wikidata.org/entity/Q1758766
 4314175,Pedras Altas,RS,http://dbpedia.org/resource/Pedras_Altas,http://pt.dbpedia.org/resource/Pedras_Altas,http://www.wikidata.org/entity/Q1785825
@@ -5045,9 +5045,9 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 4320859,Tabaí,RS,http://dbpedia.org/resource/Tabaí,http://pt.dbpedia.org/resource/Tabaí,http://www.wikidata.org/entity/Q1758828
 4320909,Tapejara,RS,"http://dbpedia.org/resource/Tapejara,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Tapejara_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q2045002
 4321006,Tapera,RS,"http://dbpedia.org/resource/Tapera,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Tapera,http://www.wikidata.org/entity/Q1749888
-4321105,Tapes,RS,,http://pt.dbpedia.org/resource/Tapes_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1785886
+4321105,Tapes,RS,http://dbpedia.org/resource/Tapes,http://pt.dbpedia.org/resource/Tapes_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1785886
 4321204,Taquara,RS,http://dbpedia.org/resource/Taquara,http://pt.dbpedia.org/resource/Taquara_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q967715
-4321303,Taquari,RS,,http://pt.dbpedia.org/resource/Taquari,http://www.wikidata.org/entity/Q1646949
+4321303,Taquari,RS,http://dbpedia.org/resource/Taquari,http://pt.dbpedia.org/resource/Taquari,http://www.wikidata.org/entity/Q1646949
 4321329,Taquaruçu do Sul,RS,http://dbpedia.org/resource/Taquaruçu_do_Sul,http://pt.dbpedia.org/resource/Taquaruçu_do_Sul,http://www.wikidata.org/entity/Q1785461
 4321352,Tavares,RS,"http://dbpedia.org/resource/Tavares,_Rio_Grande_do_Sul",http://pt.dbpedia.org/resource/Tavares_(Rio_Grande_do_Sul),http://www.wikidata.org/entity/Q1803256
 4321402,Tenente Portela,RS,http://dbpedia.org/resource/Tenente_Portela,http://pt.dbpedia.org/resource/Tenente_Portela,http://www.wikidata.org/entity/Q1784447
@@ -5214,7 +5214,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 5103106,Cocalinho,MT,http://dbpedia.org/resource/Cocalinho,http://pt.dbpedia.org/resource/Cocalinho,http://www.wikidata.org/entity/Q1793037
 5103205,Colíder,MT,http://dbpedia.org/resource/Colíder,http://pt.dbpedia.org/resource/Colíder,http://www.wikidata.org/entity/Q1805608
 5103254,Colniza,MT,http://dbpedia.org/resource/Colniza,http://pt.dbpedia.org/resource/Colniza,http://www.wikidata.org/entity/Q2065396
-5103304,Comodoro,MT,,http://pt.dbpedia.org/resource/Comodoro_(Mato_Grosso),http://www.wikidata.org/entity/Q1221976
+5103304,Comodoro,MT,http://dbpedia.org/resource/Comodoro,http://pt.dbpedia.org/resource/Comodoro_(Mato_Grosso),http://www.wikidata.org/entity/Q1221976
 5103353,Confresa,MT,http://dbpedia.org/resource/Confresa,http://pt.dbpedia.org/resource/Confresa,http://www.wikidata.org/entity/Q1805601
 5103361,Conquista D'Oeste,MT,,,
 5103379,Cotriguaçu,MT,http://dbpedia.org/resource/Cotriguaçu,http://pt.dbpedia.org/resource/Cotriguaçu_(MT),http://www.wikidata.org/entity/Q2013031
@@ -5267,7 +5267,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 5106281,Novo São Joaquim,MT,http://dbpedia.org/resource/Novo_São_Joaquim,http://pt.dbpedia.org/resource/Novo_São_Joaquim,http://www.wikidata.org/entity/Q2011959
 5106299,Paranaíta,MT,http://dbpedia.org/resource/Paranaíta,http://pt.dbpedia.org/resource/Paranaíta,http://www.wikidata.org/entity/Q1805645
 5106307,Paranatinga,MT,http://dbpedia.org/resource/Paranatinga,http://pt.dbpedia.org/resource/Paranatinga,http://www.wikidata.org/entity/Q1805618
-5106315,Novo Santo Antônio,MT,,http://pt.dbpedia.org/resource/Novo_Santo_Antônio_(Mato_Grosso),http://www.wikidata.org/entity/Q2107875
+5106315,Novo Santo Antônio,MT,"http://dbpedia.org/resource/Novo_Santo_Antônio,_Mato_Grosso",http://pt.dbpedia.org/resource/Novo_Santo_Antônio_(Mato_Grosso),http://www.wikidata.org/entity/Q2107875
 5106372,Pedra Preta,MT,http://dbpedia.org/resource/Pedra_Preta,http://pt.dbpedia.org/resource/Pedra_Preta_(Mato_Grosso),http://www.wikidata.org/entity/Q1857809
 5106422,Peixoto de Azevedo,MT,http://dbpedia.org/resource/Peixoto_de_Azevedo,http://pt.dbpedia.org/resource/Peixoto_de_Azevedo,http://www.wikidata.org/entity/Q933251
 5106455,Planalto da Serra,MT,http://dbpedia.org/resource/Planalto_da_Serra,http://pt.dbpedia.org/resource/Planalto_da_Serra,http://www.wikidata.org/entity/Q1806584
