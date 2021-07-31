@@ -3096,84 +3096,84 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 3172004,Visconde do Rio Branco,MG,"http://dbpedia.org/resource/Visconde_do_Rio_Branco,_Minas_Gerais",http://pt.dbpedia.org/resource/Visconde_do_Rio_Branco_(Minas_Gerais),http://www.wikidata.org/entity/Q1754796
 3172103,Volta Grande,MG,http://dbpedia.org/resource/Volta_Grande,http://pt.dbpedia.org/resource/Volta_Grande,http://www.wikidata.org/entity/Q1778624
 3172202,Wenceslau Braz,MG,"http://dbpedia.org/resource/Wenceslau_Braz,_Minas_Gerais",http://pt.dbpedia.org/resource/Wenceslau_Braz_(Minas_Gerais),http://www.wikidata.org/entity/Q658813
-3200102,Afonso Cláudio,ES,,,
-3200136,Águia Branca,ES,,,
-3200169,Água Doce do Norte,ES,,,
-3200201,Alegre,ES,,,
-3200300,Alfredo Chaves,ES,,,
-3200359,Alto Rio Novo,ES,,,
-3200409,Anchieta,ES,,,
-3200508,Apiacá,ES,,,
-3200607,Aracruz,ES,,,
-3200706,Atílio Vivacqua,ES,,,
-3200805,Baixo Guandu,ES,,,
-3200904,Barra de São Francisco,ES,,,
-3201001,Boa Esperança,ES,,http://pt.dbpedia.org/resource/Boa_Esperança_(Espírito_Santo),http://www.wikidata.org/entity/Q2089691
-3201100,Bom Jesus do Norte,ES,,http://pt.dbpedia.org/resource/Bom_Jesus_do_Norte,http://www.wikidata.org/entity/Q1807022
-3201159,Brejetuba,ES,,,
-3201209,Cachoeiro de Itapemirim,ES,http://dbpedia.org/resource/Cachoeiro_de_Itapemirim,,
-3201308,Cariacica,ES,,,
-3201407,Castelo,ES,,,
+3200102,Afonso Cláudio,ES,http://dbpedia.org/resource/Afonso_Cláudio,,http://www.wikidata.org/entity/Q1793672
+3200136,Águia Branca,ES,http://dbpedia.org/resource/Águia_Branca,,http://www.wikidata.org/entity/Q1982827
+3200169,Água Doce do Norte,ES,http://dbpedia.org/resource/Água_Doce_do_Norte,,http://www.wikidata.org/entity/Q652959
+3200201,Alegre,ES,"http://dbpedia.org/resource/Alegre,_Espírito_Santo",,http://www.wikidata.org/entity/Q1807909
+3200300,Alfredo Chaves,ES,http://dbpedia.org/resource/Alfredo_Chaves,,http://www.wikidata.org/entity/Q596538
+3200359,Alto Rio Novo,ES,http://dbpedia.org/resource/Alto_Rio_Novo,,http://www.wikidata.org/entity/Q973430
+3200409,Anchieta,ES,"http://dbpedia.org/resource/Anchieta,_Espírito_Santo",,http://www.wikidata.org/entity/Q2019024
+3200508,Apiacá,ES,"http://dbpedia.org/resource/Apiacá,_Espírito_Santo",,http://www.wikidata.org/entity/Q2021210
+3200607,Aracruz,ES,"http://dbpedia.org/resource/Aracruz,_Espírito_Santo",,http://www.wikidata.org/entity/Q1794219
+3200706,Atílio Vivacqua,ES,http://dbpedia.org/resource/Atílio_Vivacqua,,http://www.wikidata.org/entity/Q648890
+3200805,Baixo Guandu,ES,http://dbpedia.org/resource/Baixo_Guandu,,http://www.wikidata.org/entity/Q804041
+3200904,Barra de São Francisco,ES,http://dbpedia.org/resource/Barra_de_São_Francisco,,http://www.wikidata.org/entity/Q1794183
+3201001,Boa Esperança,ES,"http://dbpedia.org/resource/Boa_Esperança,_Espírito_Santo",http://pt.dbpedia.org/resource/Boa_Esperança_(Espírito_Santo),http://www.wikidata.org/entity/Q2089691
+3201100,Bom Jesus do Norte,ES,http://dbpedia.org/resource/Bom_Jesus_do_Norte,http://pt.dbpedia.org/resource/Bom_Jesus_do_Norte,http://www.wikidata.org/entity/Q1807022
+3201159,Brejetuba,ES,http://dbpedia.org/resource/Brejetuba,,http://www.wikidata.org/entity/Q1982959
+3201209,Cachoeiro de Itapemirim,ES,http://dbpedia.org/resource/Cachoeiro_de_Itapemirim,,http://www.wikidata.org/entity/Q1439193
+3201308,Cariacica,ES,http://dbpedia.org/resource/Cariacica,,http://www.wikidata.org/entity/Q841222
+3201407,Castelo,ES,"http://dbpedia.org/resource/Castelo,_Espírito_Santo",,http://www.wikidata.org/entity/Q1794952
 3201506,Colatina,ES,http://dbpedia.org/resource/Colatina,http://pt.dbpedia.org/resource/Colatina,http://www.wikidata.org/entity/Q933380
-3201605,Conceição da Barra,ES,,,
-3201704,Conceição do Castelo,ES,,,
-3201803,Divino de São Lourenço,ES,,,
-3201902,Domingos Martins,ES,,,
-3202009,Dores do Rio Preto,ES,,,
-3202108,Ecoporanga,ES,,,
-3202207,Fundão,ES,,,
-3202256,Governador Lindenberg,ES,,,
-3202306,Guaçuí,ES,,,
-3202405,Guarapari,ES,,,
-3202454,Ibatiba,ES,,,
-3202504,Ibiraçu,ES,,,
-3202553,Ibitirama,ES,,,
-3202603,Iconha,ES,,,
-3202652,Irupi,ES,,,
-3202702,Itaguaçu,ES,,,
-3202801,Itapemirim,ES,,,
-3202900,Itarana,ES,,,
-3203007,Iúna,ES,http://dbpedia.org/resource/Iúna,,
-3203056,Jaguaré,ES,,,
-3203106,Jerônimo Monteiro,ES,,,
-3203130,João Neiva,ES,http://dbpedia.org/resource/João_Neiva,,
-3203163,Laranja da Terra,ES,,,
-3203205,Linhares,ES,,,
-3203304,Mantenópolis,ES,,,
-3203320,Marataízes,ES,,,
-3203346,Marechal Floriano,ES,,,
-3203353,Marilândia,ES,,,
-3203403,Mimoso do Sul,ES,,,
-3203502,Montanha,ES,,,
-3203601,Mucurici,ES,,,
-3203700,Muniz Freire,ES,,,
-3203809,Muqui,ES,,,
-3203908,Nova Venécia,ES,,,
-3204005,Pancas,ES,,,
-3204054,Pedro Canário,ES,,,
-3204104,Pinheiros,ES,,,
-3204203,Piúma,ES,,,
-3204252,Ponto Belo,ES,,,
-3204302,Presidente Kennedy,ES,,,
-3204351,Rio Bananal,ES,,,
-3204401,Rio Novo do Sul,ES,,,
-3204500,Santa Leopoldina,ES,,,
-3204559,Santa Maria de Jetibá,ES,,,
-3204609,Santa Teresa,ES,,,
-3204658,São Domingos do Norte,ES,,,
-3204708,São Gabriel da Palha,ES,,,
-3204807,São José do Calçado,ES,,,
-3204906,São Mateus,ES,"http://dbpedia.org/resource/São_Mateus,_Espírito_Santo",,
-3204955,São Roque do Canaã,ES,,,
-3205002,Serra,ES,,,
-3205010,Sooretama,ES,,,
-3205036,Vargem Alta,ES,,,
-3205069,Venda Nova do Imigrante,ES,,,
-3205101,Viana,ES,,,
-3205150,Vila Pavão,ES,http://dbpedia.org/resource/Vila_Pavão,,
-3205176,Vila Valério,ES,,,
-3205200,Vila Velha,ES,,,
-3205309,Vitória,ES,,,
+3201605,Conceição da Barra,ES,http://dbpedia.org/resource/Conceição_da_Barra,,http://www.wikidata.org/entity/Q1998957
+3201704,Conceição do Castelo,ES,http://dbpedia.org/resource/Conceição_do_Castelo,,http://www.wikidata.org/entity/Q1795227
+3201803,Divino de São Lourenço,ES,http://dbpedia.org/resource/Divino_de_São_Lourenço,,http://www.wikidata.org/entity/Q1807012
+3201902,Domingos Martins,ES,http://dbpedia.org/resource/Domingos_Martins,,http://www.wikidata.org/entity/Q616475
+3202009,Dores do Rio Preto,ES,http://dbpedia.org/resource/Dores_do_Rio_Preto,,http://www.wikidata.org/entity/Q993623
+3202108,Ecoporanga,ES,"http://dbpedia.org/resource/Ecoporanga,_Espírito_Santo",,http://www.wikidata.org/entity/Q1794439
+3202207,Fundão,ES,"http://dbpedia.org/resource/Fundão,_Espírito_Santo",,http://www.wikidata.org/entity/Q1024927
+3202256,Governador Lindenberg,ES,http://dbpedia.org/resource/Governador_Lindenberg,,http://www.wikidata.org/entity/Q1985082
+3202306,Guaçuí,ES,http://dbpedia.org/resource/Guaçuí,,http://www.wikidata.org/entity/Q1807792
+3202405,Guarapari,ES,http://dbpedia.org/resource/Guarapari,,http://www.wikidata.org/entity/Q267439
+3202454,Ibatiba,ES,http://dbpedia.org/resource/Ibatiba,,http://www.wikidata.org/entity/Q1795195
+3202504,Ibiraçu,ES,http://dbpedia.org/resource/Ibiraçu,,http://www.wikidata.org/entity/Q1807804
+3202553,Ibitirama,ES,http://dbpedia.org/resource/Ibitirama,,http://www.wikidata.org/entity/Q1807726
+3202603,Iconha,ES,http://dbpedia.org/resource/Iconha,,http://www.wikidata.org/entity/Q595222
+3202652,Irupi,ES,http://dbpedia.org/resource/Irupi,,http://www.wikidata.org/entity/Q1807920
+3202702,Itaguaçu,ES,http://dbpedia.org/resource/Itaguaçu,,http://www.wikidata.org/entity/Q1793795
+3202801,Itapemirim,ES,"http://dbpedia.org/resource/Itapemirim,_Espírito_Santo",,http://www.wikidata.org/entity/Q1806710
+3202900,Itarana,ES,http://dbpedia.org/resource/Itarana,,http://www.wikidata.org/entity/Q1806714
+3203007,Iúna,ES,http://dbpedia.org/resource/Iúna,,http://www.wikidata.org/entity/Q1793709
+3203056,Jaguaré,ES,http://dbpedia.org/resource/Jaguaré,,http://www.wikidata.org/entity/Q668992
+3203106,Jerônimo Monteiro,ES,http://dbpedia.org/resource/Jerônimo_Monteiro,,http://www.wikidata.org/entity/Q1806739
+3203130,João Neiva,ES,http://dbpedia.org/resource/João_Neiva,,http://www.wikidata.org/entity/Q1982819
+3203163,Laranja da Terra,ES,http://dbpedia.org/resource/Laranja_da_Terra,,http://www.wikidata.org/entity/Q616506
+3203205,Linhares,ES,http://dbpedia.org/resource/Linhares,,http://www.wikidata.org/entity/Q1755402
+3203304,Mantenópolis,ES,http://dbpedia.org/resource/Mantenópolis,,http://www.wikidata.org/entity/Q1806721
+3203320,Marataízes,ES,http://dbpedia.org/resource/Marataízes,,http://www.wikidata.org/entity/Q1806661
+3203346,Marechal Floriano,ES,http://dbpedia.org/resource/Marechal_Floriano,,http://www.wikidata.org/entity/Q1806664
+3203353,Marilândia,ES,http://dbpedia.org/resource/Marilândia,,http://www.wikidata.org/entity/Q1806633
+3203403,Mimoso do Sul,ES,http://dbpedia.org/resource/Mimoso_do_Sul,,http://www.wikidata.org/entity/Q1795062
+3203502,Montanha,ES,"http://dbpedia.org/resource/Montanha,_Espírito_Santo",,http://www.wikidata.org/entity/Q2013818
+3203601,Mucurici,ES,http://dbpedia.org/resource/Mucurici,,http://www.wikidata.org/entity/Q339532
+3203700,Muniz Freire,ES,"http://dbpedia.org/resource/Muniz_Freire,_Espírito_Santo",,http://www.wikidata.org/entity/Q1797483
+3203809,Muqui,ES,"http://dbpedia.org/resource/Muqui,_Espírito_Santo",,http://www.wikidata.org/entity/Q739272
+3203908,Nova Venécia,ES,http://dbpedia.org/resource/Nova_Venécia,,http://www.wikidata.org/entity/Q734635
+3204005,Pancas,ES,http://dbpedia.org/resource/Pancas,,http://www.wikidata.org/entity/Q505326
+3204054,Pedro Canário,ES,http://dbpedia.org/resource/Pedro_Canário,,http://www.wikidata.org/entity/Q549543
+3204104,Pinheiros,ES,"http://dbpedia.org/resource/Pinheiros,_Espírito_Santo",,http://www.wikidata.org/entity/Q2018987
+3204203,Piúma,ES,http://dbpedia.org/resource/Piúma,,http://www.wikidata.org/entity/Q1806645
+3204252,Ponto Belo,ES,http://dbpedia.org/resource/Ponto_Belo,,http://www.wikidata.org/entity/Q1806678
+3204302,Presidente Kennedy,ES,"http://dbpedia.org/resource/Presidente_Kennedy,_Espírito_Santo",,http://www.wikidata.org/entity/Q2021405
+3204351,Rio Bananal,ES,http://dbpedia.org/resource/Rio_Bananal,,http://www.wikidata.org/entity/Q1806671
+3204401,Rio Novo do Sul,ES,http://dbpedia.org/resource/Rio_Novo_do_Sul,,http://www.wikidata.org/entity/Q1994852
+3204500,Santa Leopoldina,ES,http://dbpedia.org/resource/Santa_Leopoldina,,http://www.wikidata.org/entity/Q678885
+3204559,Santa Maria de Jetibá,ES,http://dbpedia.org/resource/Santa_Maria_de_Jetibá,,http://www.wikidata.org/entity/Q616486
+3204609,Santa Teresa,ES,"http://dbpedia.org/resource/Santa_Teresa,_Espírito_Santo",,http://www.wikidata.org/entity/Q2039418
+3204658,São Domingos do Norte,ES,http://dbpedia.org/resource/São_Domingos_do_Norte,,http://www.wikidata.org/entity/Q1806625
+3204708,São Gabriel da Palha,ES,http://dbpedia.org/resource/São_Gabriel_da_Palha,,http://www.wikidata.org/entity/Q1798735
+3204807,São José do Calçado,ES,http://dbpedia.org/resource/São_José_do_Calçado,,http://www.wikidata.org/entity/Q1806727
+3204906,São Mateus,ES,"http://dbpedia.org/resource/São_Mateus,_Espírito_Santo",,http://www.wikidata.org/entity/Q1763574
+3204955,São Roque do Canaã,ES,http://dbpedia.org/resource/São_Roque_do_Canaã,,http://www.wikidata.org/entity/Q1806620
+3205002,Serra,ES,"http://dbpedia.org/resource/Serra,_Espírito_Santo",,http://www.wikidata.org/entity/Q206957
+3205010,Sooretama,ES,http://dbpedia.org/resource/Sooretama,,http://www.wikidata.org/entity/Q1806732
+3205036,Vargem Alta,ES,http://dbpedia.org/resource/Vargem_Alta,,http://www.wikidata.org/entity/Q762224
+3205069,Venda Nova do Imigrante,ES,http://dbpedia.org/resource/Venda_Nova_do_Imigrante,,http://www.wikidata.org/entity/Q1806745
+3205101,Viana,ES,"http://dbpedia.org/resource/Viana,_Espírito_Santo",,http://www.wikidata.org/entity/Q2020315
+3205150,Vila Pavão,ES,http://dbpedia.org/resource/Vila_Pavão,,http://www.wikidata.org/entity/Q505266
+3205176,Vila Valério,ES,http://dbpedia.org/resource/Vila_Valério,,http://www.wikidata.org/entity/Q1806653
+3205200,Vila Velha,ES,http://dbpedia.org/resource/Vila_Velha,,http://www.wikidata.org/entity/Q334197
+3205309,Vitória,ES,"http://dbpedia.org/resource/Vitória,_Espírito_Santo",,http://www.wikidata.org/entity/Q168376
 3300100,Angra dos Reis,RJ,http://dbpedia.org/resource/Angra_dos_Reis,http://pt.dbpedia.org/resource/Angra_dos_Reis,http://www.wikidata.org/entity/Q542829
 3300159,Aperibé,RJ,http://dbpedia.org/resource/Aperibé,http://pt.dbpedia.org/resource/Aperibé,http://www.wikidata.org/entity/Q1787636
 3300209,Araruama,RJ,,http://pt.dbpedia.org/resource/Araruama,http://www.wikidata.org/entity/Q1761549
