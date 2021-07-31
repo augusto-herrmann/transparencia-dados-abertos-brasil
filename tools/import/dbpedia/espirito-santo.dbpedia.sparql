@@ -1,0 +1,42 @@
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo:<http://dbpedia.org/ontology/>
+PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX dbp:<http://dbpedia.org/property/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX yago:<http://dbpedia.org/class/yago/>
+
+SELECT ?city, ?name, ?state, ?link, ?external_link, ?wikidata
+
+WHERE {
+
+    # select by classes
+    ?city a ?city_type .
+    FILTER (?city_type IN (dbo:City, dbo:Settlement))
+
+    { ?city dbo:subdivision dbr:Espírito_Santo }
+    UNION { ?city dct:subject dbc:Municipalities_in_Espírito_Santo }
+
+    # get municipality name and state
+    OPTIONAL {
+        ?city rdfs:label ?name
+        FILTER(LANG(?name) = "" || LANGMATCHES(LANG(?name), "pt") || LANGMATCHES(LANG(?name), "en"))
+    }
+    OPTIONAL {
+        dbr:Espírito_Santo rdfs:label ?state .
+        FILTER(LANGMATCHES(LANG(?state), "pt"))
+    }
+
+    # get the properties likely to contain links
+    OPTIONAL { ?city foaf:homepage ?link }
+    OPTIONAL {
+        ?city dbo:wikiPageExternalLink ?external_link .
+        FILTER REGEX(STR(?external_link), ".gov.br")
+    }
+
+    # sameAs WikiData
+    OPTIONAL {
+        ?city owl:sameAs ?wikidata .
+        FILTER REGEX(STR(?wikidata), "wikidata.org")
+    }
+}
