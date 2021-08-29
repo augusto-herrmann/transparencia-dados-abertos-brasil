@@ -1,0 +1,8 @@
+# This sets up the DBPedia script options.
+sources:
+  - endpoint: 'http://pt.dbpedia.org/sparql'
+    options: 'default-graph-uri=&{}&should-sponge=&format=text%2Fcsv&timeout=0&debug=on'
+    sparql_fle: 'dbpedia-pt.sparql'
+  - endpoint: 'https://dbpedia.org/sparql
+    options: 'default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
+    sparql_fle: ''dbpedia.sparql'
