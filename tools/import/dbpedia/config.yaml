@@ -1,8 +1,15 @@
 # This sets up the DBPedia script options.
 sources:
+  # from Portuguese language DBPedia
   - endpoint: 'http://pt.dbpedia.org/sparql'
-    options: 'default-graph-uri=&{}&should-sponge=&format=text%2Fcsv&timeout=0&debug=on'
-    sparql_fle: 'dbpedia-pt.sparql'
-  - endpoint: 'https://dbpedia.org/sparql
-    options: 'default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
-    sparql_fle: ''dbpedia.sparql'
+    queries:
+    - options: 'default-graph-uri=&{}&should-sponge=&format=text%2Fcsv&timeout=0&debug=on'
+      sparql_file: 'dbpedia-pt.sparql'
+  # from English DBPedia
+  - endpoint: 'https://dbpedia.org/sparql'
+    queries:
+    - options: 'default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
+      sparql_file: 'dbpedia.sparql'
+    # state of Espírito Santo from English DBPedia
+    - options: 'default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
+      sparql_file: 'espirito-santo.dbpedia.sparql'

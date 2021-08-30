@@ -8,6 +8,9 @@
 import re
 import os
 import urllib
+import yaml
+import random
+import time
 import pandas as pd
 from frictionless import Package
 
@@ -15,15 +18,11 @@ GEO_FOLDER = '../../../data/auxiliary/geographic'
 GEO_FILE = 'municipality.csv'
 OUTPUT_FOLDER = '../../../data/auxiliary/geographic'
 OUTPUT_FILE = 'municipality.csv'
+CONFIG_FILE = 'config.yaml'
 
 remove_parenthesis = re.compile(r'[^(,]+')
 
-DBPEDIA_PT_SPARQL = 'dbpedia-pt.sparql'
-DBPEDIA_SPARQL = 'dbpedia.sparql'
-ESPIRITO_SANTO_DBPEDIA_SPARQL = 'espirito-santo.dbpedia.sparql'
-DBPEDIA_PT_URL = 'http://pt.dbpedia.org/sparql?default-graph-uri=&{}&should-sponge=&format=text%2Fcsv&timeout=0&debug=on'
-DBPEDIA_URL = 'https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&{}&format=text%2Fcsv&timeout=30000&signal_void=on&signal_unconnected=on'
-
+REQUEST_INTERVAL = (8, 16)
 
 def update_column(
     old_df: pd.DataFrame,
@@ -169,24 +168,22 @@ def update_from_dbpedia(
     mun.to_csv(output_file, index=False)
 
 if __name__ == '__main__':
-    # from Portuguese language DBPedia
-    update_from_dbpedia(
-        os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
-        os.path.join(GEO_FOLDER, GEO_FILE),
-        DBPEDIA_PT_SPARQL,
-        DBPEDIA_PT_URL
-    )
-    # from English DBPedia
-    update_from_dbpedia(
-        os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
-        os.path.join(GEO_FOLDER, GEO_FILE),
-        DBPEDIA_SPARQL,
-        DBPEDIA_URL
-    )
-    # state of Espírito Santo from English DBPedia
-    update_from_dbpedia(
-        os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
-        os.path.join(GEO_FOLDER, GEO_FILE),
-        ESPIRITO_SANTO_DBPEDIA_SPARQL,
-        DBPEDIA_URL
-    )
+    with open(CONFIG_FILE, 'r') as f:
+        config = yaml.safe_load(f.read())
+        sources = config['sources']
+
+        for source in sources:
+            endpoint = source['endpoint']
+            print(f'Processing endpoint: {endpoint}\n')
+            for i, query in enumerate(source['queries']):
+                update_from_dbpedia(
+                        os.path.join(OUTPUT_FOLDER, OUTPUT_FILE),
+                        os.path.join(GEO_FOLDER, GEO_FILE),
+                        query['sparql_file'],
+                        f"{endpoint}?{query['options']}"
+                )
+                if i + 1 < len(source['queries']): # do not wait the last one
+                    interval = random.uniform(*REQUEST_INTERVAL)
+                    print(f'Waiting {interval:.2f} seconds before '
+                            'the next request...')
+                    time.sleep(interval)
