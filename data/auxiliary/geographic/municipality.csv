@@ -297,7 +297,7 @@ code,name,uf,dbpedia,dbpedia_pt,wikidata
 1600055,Serra do Navio,AP,http://dbpedia.org/resource/Serra_do_Navio,http://pt.dbpedia.org/resource/Serra_do_Navio,http://www.wikidata.org/entity/Q1754413
 1600105,Amapá,AP,http://dbpedia.org/resource/Amapá_(municipality),,http://www.wikidata.org/entity/Q586263
 1600154,Pedra Branca do Amapari,AP,http://dbpedia.org/resource/Pedra_Branca_do_Amapari,http://pt.dbpedia.org/resource/Pedra_Branca_do_Amapari,http://www.wikidata.org/entity/Q1772647
-1600204,Calçoene,AP,http://dbpedia.org/resource/Calçoene,,http://www.wikidata.org/entity/Q1754431
+1600204,Calçoene,AP,http://dbpedia.org/resource/Calçoene,http://pt.dbpedia.org/resource/Calçoene,http://www.wikidata.org/entity/Q1754431
 1600212,Cutias,AP,,,
 1600238,Ferreira Gomes,AP,http://dbpedia.org/resource/Ferreira_Gomes,http://pt.dbpedia.org/resource/Ferreira_Gomes,http://www.wikidata.org/entity/Q1647054
 1600253,Itaubal,AP,http://dbpedia.org/resource/Itaubal,http://pt.dbpedia.org/resource/Itaubal,http://www.wikidata.org/entity/Q368933
