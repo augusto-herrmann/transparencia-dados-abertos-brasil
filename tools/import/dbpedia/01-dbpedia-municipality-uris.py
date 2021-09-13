@@ -1,16 +1,17 @@
-# 01-dbpedia-municipality-uris.py
-"""
- This script fetches the municipalities URIs from DBPedia.
- 
- Este script traz as URIs de municípios da DBPedia.
+"""01-dbpedia-municipality-uris.py
+
+This script fetches the municipalities URIs from DBPedia.
+
+Este script traz as URIs de municípios da DBPedia.
 """
 
 import re
 import os
 import urllib
-import yaml
 import random
 import time
+import yaml
+
 import pandas as pd
 from frictionless import Package
 
@@ -20,17 +21,59 @@ OUTPUT_FOLDER = '../../../data/auxiliary/geographic'
 OUTPUT_FILE = 'municipality.csv'
 CONFIG_FILE = 'config.yaml'
 
-remove_parenthesis = re.compile(r'[^(,]+')
+re_remove_parenthesis = re.compile(r'[^(,]+')
 
 REQUEST_INTERVAL = (8, 16)
+
+def query_from_dbpedia(
+    sparql_file_name: str,
+    sparql_query_url: str
+    ) -> pd.DataFrame:
+    """Reads a sparql query from file and returns a data frame.
+    """
+
+    # read SPARQL query
+    with open (sparql_file_name, 'r') as f:
+        sparql_query = urllib.parse.urlencode({'query':f.read()})
+
+    # get query URL
+    sparql_query_as_csv = sparql_query_url.format(sparql_query)
+
+    # read data frame from Portuguese DBPedia
+    return pd.read_csv(sparql_query_as_csv)
+
+def get_mun_uf(geo_file: str) -> (pd.DataFrame, pd.DataFrame):
+    """Get the state (UF) abbreviations from the geographic data package.
+    """
+    package = Package(
+        os.path.join(os.path.dirname(geo_file),'datapackage.json')
+    )
+    uf = package.get_resource('uf').to_pandas()
+
+    # adjust column names and types
+    uf.rename(columns={'name': 'state'}, inplace=True)
+    uf.drop('code', axis=1, inplace=True)
+    uf['state'] = uf['state'].astype('category')
+
+    mun = package.get_resource('municipality').to_pandas()
+
+    return mun, uf
+
+def remove_parenthesis(label: str) -> str:
+    """Returns the string up to but not including the first comma or
+    parenthesis."""
+    return re_remove_parenthesis.match(label).group().strip()\
+            if isinstance(label, str) else label
 
 def update_column(
     old_df: pd.DataFrame,
     new_df:pd.DataFrame,
     column: str
     ) -> pd.DataFrame:
-    "Update the column in the old dataframe with data from the same column in the new dataframe"
-    
+    """Update the column in the old dataframe with data from the same
+    column in the new dataframe.
+    """
+
     return old_df[column].combine(
         new_df[column],
         lambda old_URI, new_URI: old_URI if not new_URI or pd.isna(new_URI) else new_URI,
@@ -45,28 +88,14 @@ def update_from_dbpedia(
     """Makes a DBPedia query to retrieve data about municipalities and
     updates the csv file.
     """
-    
-    # read SPARQL query
-    with open (sparql_file, 'r') as f:
-        sparql_query = urllib.parse.urlencode({'query':f.read()})
-    
-    # get query URL
-    sparql_query_as_csv = sparql_query_url.format(sparql_query)
 
-    # read data frame from Portuguese DBPedia
-    dbp = pd.read_csv(sparql_query_as_csv)
+    dbp = query_from_dbpedia(sparql_file, sparql_query_url)
 
     # remove parenthesis in city names
-    dbp['name'] = dbp['name'].apply(
-        lambda s: remove_parenthesis.match(s).group().strip()\
-            if isinstance(s, str) else s
-    )
+    dbp['name'] = dbp['name'].apply(remove_parenthesis)
 
     # remove parenthesis in state names
-    dbp['state'] = dbp['state'].apply(
-        lambda s: remove_parenthesis.match(s).group().strip() \
-            if isinstance(s, str) else s
-    )
+    dbp['state'] = dbp['state'].apply(remove_parenthesis)
 
     # get WikiData URIs for later
     wikidata = (
@@ -78,16 +107,9 @@ def update_from_dbpedia(
         .copy()
     )
 
-    # get the state (UF) abbreviations as the DBPedia data does not contain them
-    package = Package(
-        os.path.join(os.path.dirname(geo_file),'datapackage.json')
-    )
-    uf = package.get_resource('uf').to_pandas()
-
-    # adjust column names and types
-    uf.rename(columns={'name': 'state'}, inplace=True)
-    uf.drop('code', axis=1, inplace=True)
-    uf['state'] = uf['state'].astype('category')
+    # get the state (UF) abbreviations and municipality codes, as the
+    # DBPedia data does not contain that information
+    mun, uf = get_mun_uf(geo_file)
 
     # get state abbreviations for wikidata df
     wikidata = (
@@ -129,11 +151,8 @@ def update_from_dbpedia(
         .drop_duplicates()
     )
 
-    # get the municipality codes as the DBPedia data does not contain them
-    mun = package.get_resource('municipality').to_pandas()
-
     # just add the municipality codes to the dataframe
-    dbp = dbp.merge( 
+    dbp = dbp.merge(
         mun.loc[:, ['code', 'name', 'uf']], # use just those columns for merge
         on=['name', 'uf'], # keys for the join operation
         how='right', # keep the keys from mun dataframe even if not found on dbp
