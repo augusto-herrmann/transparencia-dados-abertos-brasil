@@ -1,4 +1,11 @@
 .*
+# python virtual environments
 pyenv
 env
+
+# python packages
+__pycache__
+*.egg-info
+
+# unverified data files
 data/unverified/*.csv
