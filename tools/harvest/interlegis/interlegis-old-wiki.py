@@ -1,6 +1,7 @@
 import csv
 import os
 from urllib.parse import urlparse
+import logging
 
 import requests
 from bs4 import BeautifulSoup
@@ -40,6 +41,9 @@ portals.extend([
         'uf': urlparse(li.a['href']).hostname,
     } for li in soup.find(id='Prefeituras').find_next('ul').find_all('li')
 ])
+
+logging.info("Read data about %s portals from Interlegis' old wiki.",
+                                                        len(portals))
 
 # with open(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), 'a') as f:
 #     spamwriter = csv.DictWriter(f,fieldnames=portals[0].keys())
