@@ -12,7 +12,7 @@ SOURCE_URL = 'https://colab.interlegis.leg.br/wiki/CasasUsamPortalModelo?version
 
 response = requests.get(SOURCE_URL)
 
-if response.code != 200:
+if response.status_code != 200:
     raise ValueError(
         f'Request to {SOURCE_URL} failed with status code {response.code}'
         )
