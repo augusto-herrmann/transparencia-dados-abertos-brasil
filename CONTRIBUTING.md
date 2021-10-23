@@ -126,7 +126,7 @@ order to help them manually validate data in a way.
 ### Sources
 
 Documentation on data sources. Use text in markdown and
-[data packages](https://frictionlessdata.io/specs/data-package/) to do it.
+[data packages](https://specs.frictionlessdata.io/data-package/) to do it.
 
 ### Documentation
 

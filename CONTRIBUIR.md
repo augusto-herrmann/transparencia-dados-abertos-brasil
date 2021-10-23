@@ -131,7 +131,7 @@ auxiliá-lo a validar os dados manualmente de alguma forma.
 ### Fontes
 
 Documentação sobre as fontes de dados. Use texto em markdown e
-*[data packages](https://frictionlessdata.io/specs/data-package/)* para
+*[data packages](https://specs.frictionlessdata.io/data-package/)* para
 fazê-lo.
 
 ### Documentação
