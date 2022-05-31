@@ -1,0 +1,8 @@
+main:
+  tasks:
+    - source: data/valid/datapackage.json
+      type: package
+    - source: data/auxiliary/geographic/datapackage.json
+      type: package
+    - source: data/archive/datapackage.json
+      type: package
