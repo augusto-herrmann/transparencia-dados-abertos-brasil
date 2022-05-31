@@ -1,4 +1,4 @@
-name: frictionless-repository
+name: frictionless
 
 on:
   push:
