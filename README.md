@@ -2,7 +2,7 @@ A survey of Brazilian states' and municipalities' transparency and open data por
 
 Este texto também está disponível em português: 🇧🇷[LEIAME.md](LEIAME.md).
 
-[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless-repository.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless-repository)
+[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless)
 
 ## Transparency and Open Data Portals of Brazilian states and municipalities
 

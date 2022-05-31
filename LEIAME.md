@@ -2,7 +2,7 @@ Levantamento de portais estaduais e municipais de transparência e dados abertos
 
 This text is also available in English: 🇬🇧[README.md](README.md).
 
-[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless-repository.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless-repository)
+[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless)
 
 ## Portais de Transparência e Dados Abertos de estados e municípios do Brasil
 
