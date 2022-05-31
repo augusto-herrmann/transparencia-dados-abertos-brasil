@@ -1,5 +1,0 @@
-datapackages:
-    - data/valid/datapackage.json
-    - data/auxiliary/geographic/datapackage.json
-    - data/archive/datapackage.json
-
