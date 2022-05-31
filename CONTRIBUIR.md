@@ -85,17 +85,19 @@ Há algumas categorias de dados neste repositório:
 
 Certifique-se de rodar
 
-```
-$ goodtables data/.../datapackage.json
+```bash
+frictionless validate data/.../datapackage.json
 ```
 
 nos dados que você está trabalhando, antes de fazer *commit* neles para o
-repositório. Isso garante que apenas dados válidos entrem.
+repositório. Isto é, troque as reticências (...) pelo nome da pasta
+apropriada para completar o caminho. Isso garante que apenas dados válidos
+entrem.
 
-Faça com que o comando `goodtables` esteja disponível na sua linha de comando,
-seguindo as instruções no nosso [LEIAME](LEIA.md) ou as
-[instruções de instalação](https://github.com/frictionlessdata/goodtables-py#installing)
-do próprio Goodtables.
+Faça com que o comando `frictionless` esteja disponível na sua linha de
+comando, seguindo as instruções no nosso [LEIAME](LEIA.md) ou as
+[instruções de instalação](https://framework.frictionlessdata.io/docs/guides/quick-start#installation)
+do próprio Frictionless Framework.
 
 ### Código
 

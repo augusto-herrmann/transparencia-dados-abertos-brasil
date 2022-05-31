@@ -2,7 +2,7 @@ Levantamento de portais estaduais e municipais de transparência e dados abertos
 
 This text is also available in English: 🇬🇧[README.md](README.md).
 
-[![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
+[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless-repository.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless-repository)
 
 ## Portais de Transparência e Dados Abertos de estados e municípios do Brasil
 
@@ -55,8 +55,8 @@ para manter a integridade dos dados já validados. É como a
 [integração contínua](https://en.wikipedia.org/wiki/Continuous_integration),
 mas para dados em vez de software. Ela ajuda a manter dados incorretos fora do
 repositório, já que todo *commit* e *pull request* é automaticamente
-verificado, graças a um *hook* no Github e o serviço
-[goodtables.io](https://goodtables.io/).
+verificado, graças a um *workflow* no Github Actions que chama a validação do
+[Frictionless Repository](https://repository.frictionlessdata.io/).
 
 Os metadados são mantidos usando a
 [especificação Data Package](https://frictionlessdata.io/specs/data-package/),

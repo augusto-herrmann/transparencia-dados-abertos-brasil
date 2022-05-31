@@ -2,7 +2,7 @@ A survey of Brazilian states' and municipalities' transparency and open data por
 
 Este texto também está disponível em português: 🇧🇷[LEIAME.md](LEIAME.md).
 
-[![goodtables.io](https://goodtables.io/badge/github/augusto-herrmann/transparencia-dados-abertos-brasil.svg)](https://goodtables.io/github/augusto-herrmann/transparencia-dados-abertos-brasil)
+[![Frictionless-repository](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/actions/workflows/frictionless-repository.yaml/badge.svg)](https://repository.frictionlessdata.io/report?user=augusto-herrmann&repo=transparencia-dados-abertos-brasil&flow=frictionless-repository)
 
 ## Transparency and Open Data Portals of Brazilian states and municipalities
 
@@ -55,8 +55,8 @@ to keep the integrity of data already validated. It's like
 [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration),
 but for data instead of software. It helps keep the incorrect data out of the
 repository, as every commit and pull request gets automatically verified,
-thanks to a hook on Github and the [goodtables.io](https://goodtables.io/)
-service.
+thanks to a workflow on Github Actions that calls the
+[Frictionless Repository](https://repository.frictionlessdata.io/) validation service.
 
 Metadata is maintained using the
 [Data Package specification](https://frictionlessdata.io/specs/data-package/),

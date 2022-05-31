@@ -82,16 +82,18 @@ There are a few kinds of data in the repository:
 
 Make sure you run
 
-```
-$ goodtables data/.../datapackage.json
+```bash
+frictionless validate data/.../datapackage.json
 ```
 
 on the data you're working on, before committing to the repository. That
-ensures that only valid data comes in.
+is, replace the ellipsis (...) with the proper folder to complete the
+path. This ensures that only valid data comes in.
 
-Make sure you have `goodtables` command available on your command line, by
-following the instructions on our [README](README.md) or Goodtable's own
-[installation instructions](https://github.com/frictionlessdata/goodtables-py#installing).
+Make sure you have `frictionless` command available on your command line, by
+following the instructions on our [README](README.md) or the Frictionless
+Framework's own
+[installation instructions](https://framework.frictionlessdata.io/docs/guides/quick-start#installation).
 
 ### Code
 
