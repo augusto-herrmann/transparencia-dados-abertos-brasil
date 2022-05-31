@@ -1,4 +1,6 @@
-.*
+# local VSCode config
+.vscode
+
 # python virtual environments
 pyenv
 env
