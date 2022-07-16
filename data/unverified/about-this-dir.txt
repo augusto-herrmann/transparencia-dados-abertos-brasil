@@ -1,3 +1,3 @@
-The CSV file(s) with candidate site URLs go here. Don't commit them to the
-repository, though, as we want to keep track in git of just links that
-have undergone verification.
+The CSV file(s) with candidate site URLs go here. Don't commit them to
+the repository, though, as we want to track in git only links that have
+undergone verification.
