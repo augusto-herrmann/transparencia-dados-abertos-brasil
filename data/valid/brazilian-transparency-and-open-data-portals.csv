@@ -1,5 +1,6 @@
 state_code,municipality_code,municipality,sphere,branch,url,type,notes,last-verified-auto,last-verified-manual
 ,,,federal,judiciary,https://dadosabertos.web.stj.jus.br/,PEDAG,,,2022-07-16T02:52:00
+,,,federal,judiciary,https://dadosabertos.tse.jus.br/,PEDAG,,,2022-07-25T18:56:26
 AC,,,state,executive,http://sefaznet.ac.gov.br/transparencia/servlet/portaltransparencia,SPT,,,
 AL,,,state,executive,http://dados.al.gov.br/,PEDAG,,,
 AP,,,state,executive,http://www.transparencia.ap.gov.br/,SPT,,,
