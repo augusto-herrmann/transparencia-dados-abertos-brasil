@@ -13,14 +13,14 @@
 
 import os
 import pandas as pd
-from datapackage import Package
+from frictionless import Package
 
-INPUT_PATH = '../../data/archive'
+INPUT_PATH = '../../../../data/archive'
 INPUT_MUNICIPAL = 'portais-municipais.csv'
 INPUT_STATE = 'portais-estaduais.csv'
-OUTPUT_PATH = '../../data/valid'
+OUTPUT_PATH = '../../../../data/valid'
 OUTPUT_FILE = 'brazilian-transparency-and-open-data-portals.csv'
-IBGE_CODE_PATH = '../../data/auxiliary/geographic'
+IBGE_CODE_PATH = '../../../../data/auxiliary/geographic'
 
 # state portals
 df_state = (
@@ -63,10 +63,7 @@ df = pd.concat([
 # look up municipal codes
 
 geo_package = Package(os.path.join(IBGE_CODE_PATH, 'datapackage.json'))
-municipalities = pd.DataFrame(
-    geo_package.get_resource('municipality')
-    .read(keyed=True)
-)
+municipalities = geo_package.get_resource('municipality').to_pandas()
 
 municipalities.rename( # line up column names in preparation for merge
     columns={
