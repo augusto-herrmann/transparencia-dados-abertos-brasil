@@ -1,3 +1,0 @@
-pandas==0.25.3
-datapackage==1.10.0
-
