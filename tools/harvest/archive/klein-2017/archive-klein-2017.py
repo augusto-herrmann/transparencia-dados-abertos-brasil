@@ -4,6 +4,9 @@
 # format (used to be the main data in this repository) to the current format
 # where state and municipal transparency and open data portals are represented
 # in a single CSV resource.
+#
+# Usage:
+#   python archive-klein-2017.py
 # 
 # Este script converte os dados do dataset Klein-2017, no formato arquivado
 # (anteriormente era o conjunto de dados principal deste repositório) para o
