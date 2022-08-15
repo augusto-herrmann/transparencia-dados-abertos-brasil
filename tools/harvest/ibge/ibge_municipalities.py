@@ -1,8 +1,11 @@
-# 01-ibge-municipalities.py
+# ibge_municipalities.py
 # 
 # This script downloads and stores auxiliary data from IBGE about
 # municipalities. This will be useful later for disambiguation and finding out
 # the municipality codes.
+#
+# Usage:
+#   python ibge_municipalities.py
 #
 # Este script faz o download e armazena dados auxiliares do IBGE sobre os
 # municípios. Isso será útil mais tarde para desambiguação e para descobrir
@@ -16,8 +19,7 @@ import ftplib
 from zipfile import ZipFile
 from tqdm import tqdm
 import pandas as pd
-from tableschema import Storage
-from datapackage import Package
+from frictionless import Package
 
 TEMPORARY_FOLDER = 'download-cache'
 DOWNLOAD_URL = 'ftp://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2018/DTB_2018.zip'
@@ -30,12 +32,12 @@ def download_file(folder, url):
     'Download a (large) file using a progress bar.'
     local_filename = os.path.join(folder,url.split('/')[-1])
     # NOTE the stream=True parameter below
-    with requests.get(url, stream=True) as r:
-        r.raise_for_status()
-        with open(local_filename, 'wb') as f:
+    with requests.get(url, stream=True) as request:
+        request.raise_for_status()
+        with open(local_filename, 'wb') as file:
             for chunk in tqdm(r.iter_content(chunk_size=8192)):
                 if chunk: # filter out keep-alive new chunks
-                    f.write(chunk)
+                    file.write(chunk)
                     # f.flush()
     return local_filename
 
@@ -47,7 +49,7 @@ def download_ftp_file(folder, url):
     ftp.cwd(os.path.dirname(url.path))
     filename = os.path.basename(url.path)
     size = ftp.size(filename)
-    
+
     with open(os.path.join(folder, filename), 'wb') as downloaded:
         with tqdm(total=size, unit='B', unit_scale=True,
                   unit_divisor=1024) as progress:
@@ -87,13 +89,16 @@ with ZipFile(os.path.join(TEMPORARY_FOLDER, IBGE_FILE_NAME)) as pacote:
 
 # get the state (UF) codes as the IBGE DTB file does not contain them
 
-geographic = Storage.connect('pandas')
 package = Package(os.path.join(OUTPUT_FOLDER,'datapackage.json'))
-package.save(storage=geographic)
+uf = package.get_resource('uf').to_pandas()
+
+uf = (
+    uf
+    .rename(columns={'code': 'UF', 'abbr': 'Sigla_UF'})
+    .drop('name', axis=1)
+)
 
 # adjust column names and types
-uf = geographic['uf'].rename(columns={'code': 'UF', 'abbr': 'Sigla_UF'})
-uf.drop('name', axis=1, inplace=True)
 uf['Sigla_UF'] = uf['Sigla_UF'].astype('category')
 
 # merge back into the IBGE DTB data
@@ -126,4 +131,3 @@ df.rename(
 )
 
 df.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
-
