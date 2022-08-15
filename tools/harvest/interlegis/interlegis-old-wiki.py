@@ -1,5 +1,3 @@
-import csv
-import os
 from urllib.parse import urlparse
 import logging
 
@@ -9,7 +7,7 @@ from bs4 import BeautifulSoup
 OUTPUT_FOLDER = '../../../data/unverified'
 OUTPUT_FILE = 'municipality-website-candidate-links.csv'
 
-SOURCE_URL = 'https://colab.interlegis.leg.br/wiki/CasasUsamPortalModelo?version=414#L1'
+SOURCE_URL = 'https://web.archive.org/web/20190110071424/http://colab.interlegis.leg.br:80/wiki/CasasUsamPortalModelo'
 
 response = requests.get(SOURCE_URL)
 
