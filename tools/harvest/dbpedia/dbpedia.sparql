@@ -6,7 +6,7 @@ PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX foaf:<http://xmlns.com/foaf/0.1/>
 PREFIX yago:<http://dbpedia.org/class/yago/>
 
-SELECT ?city, ?name, ?state, ?link, ?external_link, ?wikidata
+SELECT ?city, ?name, ?state, ?homepage_link, ?external_link, ?wikidata
 
 WHERE {
 
@@ -37,13 +37,13 @@ WHERE {
     }
     OPTIONAL {
         ?city dbo:subdivision ?state_node .
-        ?state_node dbo:type dbr:States_of_Brazil .
+        ?state_node dbo:type dbr:Federative_units_of_Brazil .
         ?state_node rdfs:label ?state .
         FILTER(LANGMATCHES(LANG(?state), "pt"))
     }
     
     # get the properties likely to contain links
-    OPTIONAL { ?city foaf:homepage ?link }
+    OPTIONAL { ?city foaf:homepage ?homepage_link }
     OPTIONAL {
         ?city dbo:wikiPageExternalLink ?external_link .
         FILTER REGEX(STR(?external_link), ".gov.br")

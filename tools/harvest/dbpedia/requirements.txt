@@ -1,4 +1,0 @@
-requests==2.22.0
-pandas==1.2.3
-tqdm==4.40.0
-frictionless[pandas]==4.1.0

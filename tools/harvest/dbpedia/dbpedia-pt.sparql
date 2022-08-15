@@ -6,7 +6,7 @@ PREFIX dbp:<http://dbpedia.org/property/>
 PREFIX dbr:<http://dbpedia.org/resource/>
 PREFIX ptdbp:<http://pt.dbpedia.org/property/>
 
-SELECT ?city, ?name, ?state, ?wikidata, ?link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial
+SELECT ?city, ?name, ?state, ?wikidata, ?homepage_link, ?link_prefeitura, ?link_camara, ?external_link, ?link_site, ?link_site_oficial
 
 WHERE {
     
@@ -23,7 +23,7 @@ WHERE {
     
     # restrict query to make sure those are cities in Brazil
     FILTER (
-        EXISTS { ?city dbo:wikiPageWikiLink dbr:States_of_Brazil } ||
+        EXISTS { ?city dbo:wikiPageWikiLink dbr:Federative_units_of_Brazil } ||
         EXISTS { ?city ptdbp:wikiPageUsesTemplate <http://pt.dbpedia.org/resource/Predefinição:Info/Município_do_Brasil> } ||
         EXISTS { ?city dbo:country dbr:Brazil }
     )
@@ -34,7 +34,7 @@ WHERE {
     OPTIONAL { ?city dbo:state/rdfs:label ?state }
 
     # get the properties likely to contain links
-    OPTIONAL { ?city foaf:homepage ?link }
+    OPTIONAL { ?city foaf:homepage ?homepage_link }
     OPTIONAL {
         ?city dbo:wikiPageExternalLink ?external_link .
         FILTER REGEX(STR(?external_link), ".gov.br")
