@@ -1,9 +1,12 @@
-# manually-verify-links.py
+# manually_verify_links.py
 #
 # This script opens candidate URLs for municipalities websites in the
 # web browser and asks the user to check whether or not they seem to be the
 # official city hall or city council portals.
 # 
+# Usage:
+#   python manually_verify_links.py
+#
 # Este script abre no navegador as URLs candidatas a sites dos municípios e
 # pede ao utilizador que verifique se elas parcem ser os portais das
 # prefeituras e câmaras municipais.
@@ -11,8 +14,7 @@
 
 import os
 import argparse
-import urllib
-from datetime import datetime, timezone
+from datetime import datetime
 import random
 import warnings
 import webbrowser
@@ -21,8 +23,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 from unidecode import unidecode
-from datapackage import Package
-from tableschema import Storage
+from frictionless import Package
 
 USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.1'
 INPUT_FOLDER = '../../data/unverified'
@@ -194,10 +195,8 @@ for code in codes[:MAX_QUANTITY]:
 
 # read resource to be updated
 package = Package(os.path.join(OUTPUT_FOLDER, 'datapackage.json'))
-r = package.get_resource('brazilian-municipality-and-state-websites')
-valid_data = Storage.connect('pandas')
-package.save(storage=valid_data)
-df = valid_data[r.name.replace('-','_')] # bucket names use _ instead of -
+resource = package.get_resource('brazilian-municipality-and-state-websites')
+df = resource.to_pandas()
 
 print('Updating values...')
 for result in results:
@@ -223,4 +222,3 @@ df.drop_duplicates(subset='url', keep='last', inplace=True)
 df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
 df.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
-
