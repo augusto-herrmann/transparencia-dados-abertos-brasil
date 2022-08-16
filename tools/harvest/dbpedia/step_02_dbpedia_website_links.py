@@ -51,7 +51,7 @@ def remove_parenthesis(text: str) -> str:
     """Removes parenthesis from a string.
 
     Many city names are followed by the state name in parenthesis.
-    
+
     Args:
         text (str): The text to process, usually a name that may or may
             not contain parenthesis.
@@ -274,20 +274,21 @@ def store_dbpedia_links(table: pd.DataFrame, output_folder: str,
     # store the results
     new_df.to_csv(output, index=False)
 
-config = get_config()
+if __name__ == '__main__':
+    config = get_config()
 
-# combine data: concatenate the results
-dbp_links = pd.concat(
-    [
-        get_dbpedia_links_dataframe(query['url'])
-        for source in config['sources']
-        for query in source['queries']
-    ],
-    sort=True
-)
+    # combine data: concatenate the results
+    dbp_links = pd.concat(
+        [
+            get_dbpedia_links_dataframe(query['url'])
+            for source in config['sources']
+            for query in source['queries']
+        ],
+        sort=True
+    )
 
-# remove garbage links
-dbp_links = clean_dbpedia_links(dbp_links)
+    # remove garbage links
+    dbp_links = clean_dbpedia_links(dbp_links)
 
-# store the results
-store_dbpedia_links(dbp_links, OUTPUT_FOLDER, OUTPUT_FILE)
+    # store the results
+    store_dbpedia_links(dbp_links, OUTPUT_FOLDER, OUTPUT_FILE)
