@@ -1,28 +1,28 @@
 uf,uf_nome,url,tipo
-AC,Acre,http://sefaznet.ac.gov.br/transparencia/servlet/portaltransparencia,SPT 
-AL,Alagoas,http://dados.al.gov.br/,PEDAG 
-AP,Amapá,http://www.transparencia.ap.gov.br/,SPT 
-AM,Amazonas,http://www.transparencia.am.gov.br/,SPT 
-BA,Bahia,http://www.transparencia.ba.gov.br/Home/,SPT 
-CE,Ceará,http://transparencia.ce.gov.br,SPT 
-DF,Distrito Federal,http://www.transparencia.df.gov.br/#/,SPT 
-ES,Espírito Santo,https://transparencia.es.gov.br/DadosAbertos/BaseDeDados#,PTDAG 
-GO,Goiás,http://www.transparencia.go.gov.br/pagina.php?id=740,PTDAG 
+AC,Acre,http://sefaznet.ac.gov.br/transparencia/servlet/portaltransparencia,SPT
+AL,Alagoas,http://dados.al.gov.br/,PEDAG
+AP,Amapá,http://www.transparencia.ap.gov.br/,SPT
+AM,Amazonas,http://www.transparencia.am.gov.br/,SPT
+BA,Bahia,http://www.transparencia.ba.gov.br/Home/,SPT
+CE,Ceará,http://transparencia.ce.gov.br,SPT
+DF,Distrito Federal,http://www.transparencia.df.gov.br/#/,SPT
+ES,Espírito Santo,https://transparencia.es.gov.br/DadosAbertos/BaseDeDados#,PTDAG
+GO,Goiás,http://www.transparencia.go.gov.br/pagina.php?id=740,PTDAG
 MA,Maranhão,http://www.transparencia.ma.gov.br/,SPT
-MT,Mato Grosso,http://www.transparencia.mt.gov.br/downloads-de-bases,PTDAG 
-MS,Mato Grosso do Sul,http://www.transparencia.ms.gov.br/,SPT 
-MG,Minas Gerais,http://transparencia.mg.gov.br/dados-abertos,PTDAG 
-PR,Paraná,http://www.transparencia.pr.gov.br/pte/home?windowId=cf6,SPT 
-PB,Paraíba,http://transparencia.pb.gov.br/dados/dados_abertos,PTDAG 
-PA,Pará,http://www.transparencia.pa.gov.br/,SPT 
-PE,Pernambuco,http://www2.transparencia.pe.gov.br/web/portal-da-transparencia/80,PTDAG 
-PI,Piauí,http://transparencia.pi.gov.br:8081/apex/f?p=101:1:4897168103739::NO:::,SPT 
-RJ,Rio de Janeiro,http://www.transparencia.rj.gov.br/,SPT 
-RN,Rio Grande do Norte,http://www.transparencia.rn.gov.br/,SPT 
-RS,Rio Grande do Sul,http://www.transparencia.rs.gov.br/webpart/system/ConsultaDadosFiltro.aspx?x=lOpor7XC12fBTsxX0qEheSU2bTDrOfFDYbtuBXLZsIWZ83d,PTDAG 
-RO,Rondônia,http://www.transparencia.ro.gov.br/,SPT 
-RR,Roraima,http://transparencia.rr.gov.br/,SPT 
-SC,Santa Catarina,http://www.sef.sc.gov.br/transparencia,SPT 
-SE,Sergipe,http://www.transparenciasergipe.se.gov.br/,SPT 
-SP,São Paulo,http://governoaberto.sp.gov.br/,PEDAG 
-TO,Tocantins,http://www.transparencia.to.gov.br/,SPT 
+MT,Mato Grosso,http://www.transparencia.mt.gov.br/downloads-de-bases,PTDAG
+MS,Mato Grosso do Sul,http://www.transparencia.ms.gov.br/,SPT
+MG,Minas Gerais,http://transparencia.mg.gov.br/dados-abertos,PTDAG
+PR,Paraná,http://www.transparencia.pr.gov.br/pte/home?windowId=cf6,SPT
+PB,Paraíba,http://transparencia.pb.gov.br/dados/dados_abertos,PTDAG
+PA,Pará,http://www.transparencia.pa.gov.br/,SPT
+PE,Pernambuco,http://www2.transparencia.pe.gov.br/web/portal-da-transparencia/80,PTDAG
+PI,Piauí,http://transparencia.pi.gov.br:8081/apex/f?p=101:1:4897168103739::NO:::,SPT
+RJ,Rio de Janeiro,http://www.transparencia.rj.gov.br/,SPT
+RN,Rio Grande do Norte,http://www.transparencia.rn.gov.br/,SPT
+RS,Rio Grande do Sul,http://www.transparencia.rs.gov.br/webpart/system/ConsultaDadosFiltro.aspx?x=lOpor7XC12fBTsxX0qEheSU2bTDrOfFDYbtuBXLZsIWZ83d,PTDAG
+RO,Rondônia,http://www.transparencia.ro.gov.br/,SPT
+RR,Roraima,http://transparencia.rr.gov.br/,SPT
+SC,Santa Catarina,http://www.sef.sc.gov.br/transparencia,SPT
+SE,Sergipe,http://www.transparenciasergipe.se.gov.br/,SPT
+SP,São Paulo,http://governoaberto.sp.gov.br/,PEDAG
+TO,Tocantins,http://www.transparencia.to.gov.br/,SPT
