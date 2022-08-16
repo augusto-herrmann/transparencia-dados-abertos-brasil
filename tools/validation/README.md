@@ -8,20 +8,18 @@ city council portals.
 
 1. Create a Pyton virtual environment. This is not required, but it is
    recommended.
-2. Install the dependencies:
-   ```
-   pip install -r requirements.txt
+2. Install the dependencies. From the tools directory:
+   ```bash
+   pip install -e .
    ```
 3. Run the script:
-   ```
-   python auto-verify-links.py input_file.csv output_file.csv -q quantity -p processes
+   ```bash
+   python auto_verify_links.py input_file.csv output_file.csv -q quantity -p processes
    ```
    
    For more information run:
-   ```
-   python auto-verify-links.py --help
+   ```bash
+   python auto_verify_links.py --help
    ```
 
-Note: Python 3 is required for this script. Tested on 3.6.9. Python 2 is not
-supported.
-
+Note: Python 3 is required for this script. Tested on 3.8.10.
