@@ -17,6 +17,8 @@ import urllib
 import requests
 import ftplib
 from zipfile import ZipFile
+import logging
+
 from tqdm import tqdm
 import pandas as pd
 from frictionless import Package
@@ -61,73 +63,101 @@ def download_ftp_file(folder, url):
                 download_chunk
             )
 
+def fetch_ibge_spreadsheet(tmp_path: str,
+    url: str) -> pd.DataFrame:
+    """Check if folder and downloaded file already do exist and, if not,
+    create and download them.
 
-# check if folder and downloaded file alredy do exist and, if not, create /
-# download them
+    Args:
+        tmp_path (str): Temporary folder path.
+        url (str): The url of the file to download.
+    """
+    file_name = os.path.basename(urllib.parse.urlparse(url).path)
 
-if not os.path.exists(TEMPORARY_FOLDER):
-    print(f'Temporary folder does not yet exist. Creating "{TEMPORARY_FOLDER}"...')
-    os.mkdir(TEMPORARY_FOLDER)
+    if not os.path.exists(tmp_path):
+        logging.info('Temporary folder does not yet exist. Creating "%s"...', tmp_path)
+        os.mkdir(tmp_path)
 
-if not os.path.exists(os.path.join(TEMPORARY_FOLDER, IBGE_FILE_NAME)):
-    print(f'IBGE file does not yet exist. Downloading from "{DOWNLOAD_URL}"...')
-    download_ftp_file(TEMPORARY_FOLDER, DOWNLOAD_URL)
+    if not os.path.exists(os.path.join(tmp_path, file_name)):
+        logging.info('IBGE file does not yet exist. Downloading from "%s"...', url)
+        download_ftp_file(tmp_path, url)
 
+    # unpack the zipped file
+    with ZipFile(os.path.join(tmp_path, file_name)) as pacote:
+        with io.BytesIO(pacote.read('RELATORIO_DTB_BRASIL_MUNICIPIO.xls')) as f:
+            table = pd.read_excel(
+                f,
+                dtype={
+                    'Nome_UF': 'category',
+                    'Nome_Mesorregião': 'category',
+                    'Nome_Microrregião': 'category'
+                }
+            )
 
-# unpack the zipped file
+    return table
 
-with ZipFile(os.path.join(TEMPORARY_FOLDER, IBGE_FILE_NAME)) as pacote:
-    with io.BytesIO(pacote.read('RELATORIO_DTB_BRASIL_MUNICIPIO.xls')) as f:
-        df = pd.read_excel(
-            f,
-            dtype={
-                'Nome_UF': 'category',
-                'Nome_Mesorregião': 'category',
-                'Nome_Microrregião': 'category'
-            }
-        )
+def add_state_codes(table: pd.DataFrame) -> pd.DataFrame:
+    """Get the state (UF) codes as the IBGE DTB file does not contain
+    them.
 
-# get the state (UF) codes as the IBGE DTB file does not contain them
+    Args:
+        table (pd.DataFrame): The original dataframe from IBGE spreadsheet.
 
-package = Package(os.path.join(OUTPUT_FOLDER,'datapackage.json'))
-uf = package.get_resource('uf').to_pandas()
+    Returns:
+        pd.DataFrame: The enriched dataframe with state codes.
+    """
+    package = Package(os.path.join(OUTPUT_FOLDER,'datapackage.json'))
+    states = package.get_resource('uf').to_pandas()
 
-uf = (
-    uf
-    .rename(columns={'code': 'UF', 'abbr': 'Sigla_UF'})
-    .drop('name', axis=1)
-)
+    states = (
+        states
+        .rename(columns={'code': 'UF', 'abbr': 'Sigla_UF'})
+        .drop('name', axis=1)
+    )
 
-# adjust column names and types
-uf['Sigla_UF'] = uf['Sigla_UF'].astype('category')
+    # adjust column names and types
+    states['Sigla_UF'] = states['Sigla_UF'].astype('category')
 
-# merge back into the IBGE DTB data
-df = df.merge(uf)
+    # merge back into the IBGE DTB data
+    return table.merge(states)
 
+def remove_and_rename_columns(table: pd.DataFrame) -> pd.DataFrame:
+    """Remove unneeded columns and rename other columns according to
+    our schema.
 
-# clean and store auxiliary data
+    Args:
+        table (pd.DataFrame): The dataframe with municipality data.
 
-df.drop(
-    [
-        'UF',
-        'Nome_UF',
-        'Mesorregião Geográfica',
-        'Nome_Mesorregião',
-        'Microrregião Geográfica',
-        'Nome_Microrregião',
-        'Município'
-    ],
-    axis=1,
-    inplace=True
-)
+    Returns:
+        pd.DataFrame: The dataframe adapted to our schema.
+    """
+    table.drop(
+        [
+            'UF',
+            'Nome_UF',
+            'Mesorregião Geográfica',
+            'Nome_Mesorregião',
+            'Microrregião Geográfica',
+            'Nome_Microrregião',
+            'Município'
+        ],
+        axis=1,
+        inplace=True
+    )
 
-df.rename(
-    columns={
-        'Código Município Completo': 'code',
-        'Nome_Município': 'name',
-        'Sigla_UF':'uf'
-    },
-    inplace=True
-)
+    table.rename(
+        columns={
+            'Código Município Completo': 'code',
+            'Nome_Município': 'name',
+            'Sigla_UF':'uf'
+        },
+        inplace=True
+    )
 
-df.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
+    return table
+
+if __name__ == '__main__':
+    table = fetch_ibge_spreadsheet(TEMPORARY_FOLDER, DOWNLOAD_URL)
+    table = add_state_codes(table)
+    table = remove_and_rename_columns(table)
+    table.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
