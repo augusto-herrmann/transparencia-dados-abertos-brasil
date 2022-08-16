@@ -1,8 +1,11 @@
-# auto-verify-links.py
+# auto_verify_links.py
 #
 # This script crawls candidate URLs for municipalities websites and
 # checks if they are active and likely to be the city hall or
 # city council portals.
+#
+# Usage:
+#   python auto_verify_links.py
 # 
 # Este script navega nas URLs candidatas a sites dos municípios e
 # verifica se elas estão ativas e são prováveis portais das prefeituras
@@ -12,8 +15,7 @@
 import os
 import argparse
 import re
-import urllib
-from datetime import datetime, timezone
+from datetime import datetime
 import random
 import warnings
 import multiprocessing
@@ -24,8 +26,7 @@ from tqdm import tqdm
 import requests
 from bs4 import BeautifulSoup
 from unidecode import unidecode
-from datapackage import Package
-from tableschema import Storage
+from frictionless import Package
 
 USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.2'
 TIMEOUT = 20
@@ -175,10 +176,8 @@ with tqdm(total=len(codes)) as pbar:
 
 # read schema
 package = Package(os.path.join(OUTPUT_FOLDER, 'datapackage.json'))
-r = package.get_resource('brazilian-municipality-and-state-websites')
-valid_data = Storage.connect('pandas')
-package.save(storage=valid_data)
-df = valid_data[r.name.replace('-','_')] # bucket names use _ instead of -
+resource = package.get_resource('brazilian-municipality-and-state-websites')
+df = resource.to_pandas()
 
 # prepare column names
 goodlinks.rename(columns={
@@ -210,7 +209,7 @@ for index, result in goodlinks.iterrows():
     else:
         df = df.append(result, ignore_index=True)
 
-output = r.source # filename of csv to write
+output = resource.path # filename of csv to write
 print(f'Recording {output}...')
 # remove duplicate entries,
 # take into account only url column,
@@ -219,4 +218,3 @@ df.drop_duplicates(subset='url', keep='last', inplace=True)
 df.sort_values(by=['state_code', 'municipality'], inplace=True)
 # store the results
 df.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
-
