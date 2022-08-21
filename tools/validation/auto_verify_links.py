@@ -217,7 +217,9 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
     # take into account only url column,
     # keep last entry to preserve the last-verified-auto timestamp
     table.drop_duplicates(subset='url', keep='last', inplace=True)
-    table.sort_values(by=['state_code', 'municipality'], inplace=True)
+    table.sort_values(
+        by=['sphere', 'state_code', 'municipality', 'branch'],
+        inplace=True)
 
     # returns the results
     return table
