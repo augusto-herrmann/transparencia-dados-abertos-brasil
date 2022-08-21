@@ -282,7 +282,7 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
         else:
             table = table.append(result, ignore_index=True)
 
-    output = r.source # filename of csv to write
+    output = resource.path # filename of csv to write
     print(f'Recording {output}...')
     # remove duplicate entries,
     # take into account only url column,
