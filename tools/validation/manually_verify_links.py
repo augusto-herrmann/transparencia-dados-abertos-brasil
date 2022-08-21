@@ -18,6 +18,7 @@ import os
 import argparse
 from datetime import datetime
 import logging
+import random
 import webbrowser
 
 import pandas as pd
@@ -118,7 +119,7 @@ def verify_city_links(candidates, code):
     uf = city_links.uf.iloc[0]
     print(f'Verifying candidate links for {name}, {uf}...')
     for link in city_links.link.unique():
-        print(f'  Checking link "{link}"...')
+        print(f'\n  Checking link "{link}"...')
         working_link = healthy_link(link)
         if working_link:
             print(f'  Returned status code {working_link.status_code}')
@@ -128,6 +129,12 @@ def verify_city_links(candidates, code):
             )
             print(f'  Title is: {title}.')
             print(f'  Most likely site type is: {link_type}')
+            if link_type == 'prefeitura':
+                branch = 'executive'
+            elif link_type == 'camara':
+                branch = 'legislative'
+            else:
+                branch = None
             print('  Opening URL in browser...')
             webbrowser.open(link)
             choice = choose('''
@@ -143,13 +150,23 @@ def verify_city_links(candidates, code):
             # TODO: implement deletion if link type is none or broken
             if choice in ['n','s']: # none or skip
                 continue
-            elif choice == 'q': # quit
+            if choice == 'q': # quit
                 signal = 'q'
                 break
-            elif choice == 'p': # prefeitura
+            if choice == 'p': # prefeitura
                 branch = 'executive'
             elif choice == 'c': # camara
                 branch = 'legislative'
+            # TODO: implement recording transparency portals
+            if branch is None:
+                # unable to determine branch and user did not select one,
+                # skip to next one in loop
+                print('  None of the above, ignoring link.')
+                continue
+            if branch == 'executive':
+                print('  Setting link as Prefeitura.')
+            elif branch == 'legislative':
+                print('  Setting link as Câmara.')
             verified_link = {
                 'state_code': uf,
                 'municipality_code': code,
@@ -186,6 +203,7 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
         file_path=os.path.join(input_folder, input_file),
         max_quantity=max_quantity)
     codes = candidates.code.unique()
+    random.shuffle(codes)
 
     results = []
     print(f'Verifying candidate URLs for {max_quantity} cities...')
@@ -207,12 +225,16 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
                 (table.branch == result['branch'])
             ]
         if len(existing_data) > 0:
+            index = existing_data.index[0]
             row = existing_data.iloc[0].copy()
             for key in ['sphere', 'branch', 'url', 'last-verified-manual']:
-                row[key] = result[key] # update the values
-            table = table.append(row, ignore_index=True)
+                row[key] = result[key] # update only the new values
+            print(f'Updating {index} with {row}...')
+            table.loc[index] = row
         else:
-            table = table.append(result, ignore_index=True)
+            # add row to the end
+            print(f'Adding {result} to the end...')
+            table.loc[len(table)] = result
 
     # remove duplicate entries,
     # take into account only url column,
