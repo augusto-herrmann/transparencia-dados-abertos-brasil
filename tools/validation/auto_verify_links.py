@@ -6,6 +6,9 @@ city council portals.
 Usage:
   python auto_verify_links.py
 
+For instructions use:
+  python auto_verify_links.py --help
+
 Este script navega nas URLs candidatas a sites dos municípios e
 verifica se elas estão ativas e são prováveis portais das prefeituras
 e câmaras municipais.
