@@ -6,6 +6,9 @@ official city hall or city council portals.
 Usage:
   python manually_verify_links.py
 
+For instructions use:
+  python manually_verify_links.py --help
+
 Este script abre no navegador as URLs candidatas a sites dos municípios e
 pede ao utilizador que verifique se elas parecem ser os portais das
 prefeituras e câmaras municipais.
