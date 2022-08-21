@@ -163,7 +163,7 @@ def parse_cli() -> dict:
     )
     parser.add_argument('output',
         help=('output folder for the CSV '
-            '(must have a datapackage.json with  a schema)'),
+            '(must have a datapackage.json with a schema)'),
         default='',
         nargs='?',
     )
