@@ -1,16 +1,15 @@
-# auto_verify_links.py
-#
-# This script crawls candidate URLs for municipalities websites and
-# checks if they are active and likely to be the city hall or
-# city council portals.
-#
-# Usage:
-#   python auto_verify_links.py
-# 
-# Este script navega nas URLs candidatas a sites dos municípios e
-# verifica se elas estão ativas e são prováveis portais das prefeituras
-# e câmaras municipais.
-#
+"""
+This script crawls candidate URLs for municipalities websites and
+checks if they are active and likely to be the city hall or
+city council portals.
+
+Usage:
+  python auto_verify_links.py
+
+Este script navega nas URLs candidatas a sites dos municípios e
+verifica se elas estão ativas e são prováveis portais das prefeituras
+e câmaras municipais.
+"""
 
 import os
 import argparse
@@ -20,7 +19,7 @@ import random
 import logging
 import multiprocessing
 from functools import partial
-from typing import Sequence, Tuple, List
+from typing import Sequence, List
 
 import pandas as pd
 from tqdm import tqdm
