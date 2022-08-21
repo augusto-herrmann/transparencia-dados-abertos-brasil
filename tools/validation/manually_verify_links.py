@@ -17,18 +17,14 @@ prefeituras e câmaras municipais.
 import os
 import argparse
 from datetime import datetime
-import random
 import logging
 import webbrowser
 
 import pandas as pd
-import requests
-from bs4 import BeautifulSoup
-from unidecode import unidecode
-from frictionless import Package
 
-USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.2'
-TIMEOUT = 20
+from validation.verify_links import (healthy_link, get_title_and_type,
+    get_candidate_links, get_output_to_be_merged, store_csv)
+
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
 OUTPUT_FOLDER = '../../data/valid'
@@ -113,60 +109,6 @@ def choose(text: str, options: str) -> str:
             break
     return key
 
-def healthy_link(link: str) -> requests.Response:
-    """Check whether or not the link is healthy.
-
-    Args:
-        link (str): The url of the link to be verified.
-
-    Returns:
-        requests.Response: The Response object in case the link
-            is healthy, None otherwise.
-    """
-    try:
-        response = requests.get(
-            link,
-            headers={'user-agent': USER_AGENT},
-            timeout=TIMEOUT
-            )
-    except (
-        requests.exceptions.ConnectionError,
-        requests.exceptions.InvalidURL,
-        requests.exceptions.TooManyRedirects,
-        requests.exceptions.ReadTimeout
-    ):
-        return None
-    if response and response.status_code == 200:
-        return response
-    return None
-
-def title_and_type(r, candidates):
-    'Try to infer the type of site this is.'
-    soup = BeautifulSoup(r.text, 'html.parser')
-    title_tag = soup.find('title')
-    if title_tag is None:
-        title = ''
-    else:
-        title = unidecode(title_tag.text)
-    link_types = candidates.link_type
-    if 'prefeitura' in link_types:
-        link_type = 'prefeitura'
-    elif 'camara' in link_types:
-        link_type = 'camara'
-    elif 'prefeitura' in title.lower():
-        link_type = 'prefeitura'
-    elif 'municipio' in title.lower():
-        link_type = 'prefeitura'
-    elif 'camara municipal' in title.lower():
-        link_type = 'camara'
-    elif 'camara de' in title.lower():
-        link_type = 'camara'
-    else:
-        logging.warning(
-            'Unable to determine site type from title: “%s”.', title)
-        link_type = None
-    return title, link_type
-
 def verify_city_links(candidates, code):
     'Verify links for a city with a given code.'
     verified_links = []
@@ -180,7 +122,7 @@ def verify_city_links(candidates, code):
         working_link = healthy_link(link)
         if working_link:
             print(f'  Returned status code {working_link.status_code}')
-            title, link_type = title_and_type(
+            title, link_type = get_title_and_type(
                 working_link,
                 candidates[candidates.link==link]
             )
@@ -240,21 +182,10 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
     Returns:
         pd.DataFrame: Pandas dataframe containing the verified links.
     """
-    candidates = pd.read_csv(os.path.join(input_folder, input_file))
-    logging.info(
-        'Found %d websites in %s.',
-        len(candidates),
-        os.path.join(input_folder, input_file))
-    logging.info(
-        'Encontrados %d websites em %s.',
-        len(candidates),
-        os.path.join(input_folder, input_file))
+    candidates = get_candidate_links(
+        file_path=os.path.join(input_folder, input_file),
+        max_quantity=max_quantity)
     codes = candidates.code.unique()
-    random.shuffle(codes) # randomize sequence
-    if max_quantity:
-        codes = codes[:max_quantity] # take a subsample for shorter session
-    else:
-        max_quantity = len(codes)
 
     results = []
     print(f'Verifying candidate URLs for {max_quantity} cities...')
@@ -266,9 +197,7 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
         results.extend(links_to_add)
 
     # read resource to be updated
-    package = Package(data_package_path)
-    resource = package.get_resource('brazilian-municipality-and-state-websites')
-    table = resource.to_pandas()
+    table = get_output_to_be_merged(data_package_path)
 
     print('Updating values...')
     for result in results:
@@ -285,8 +214,6 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
         else:
             table = table.append(result, ignore_index=True)
 
-    output = resource.path # filename of csv to write
-    print(f'Recording {output}...')
     # remove duplicate entries,
     # take into account only url column,
     # keep last entry to preserve the last-verified-auto timestamp
@@ -294,22 +221,9 @@ def manual_verify(input_folder: str, input_file: str, data_package_path: str,
     table.sort_values(by=['state_code', 'municipality'], inplace=True)
     return table
 
-def store_csv(table: pd.DataFrame, data_package_path: str):
-    """Stores the csv file in the output folder.
-
-    Args:
-        table (pd.DataFrame): The dataframe containing the data.
-        data_package_path (str): Path to the datapackage.json file.
-    """
-    package = Package(data_package_path)
-    resource = package.get_resource('brazilian-municipality-and-state-websites')
-    output = resource.path # filename of csv to write
-    logging.info('Recording %s...', output)
-    # store the file
-    table.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
-
 if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
     options = parse_cli()
     table = manual_verify(**options)
+    print(f'Recording {options["data_package_path"]}...')
     store_csv(table, options['data_package_path'])

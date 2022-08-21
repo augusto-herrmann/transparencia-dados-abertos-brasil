@@ -14,104 +14,26 @@ verifica se elas estão ativas e são prováveis portais das prefeituras
 e câmaras municipais.
 """
 
-import os
 import argparse
-import re
 from datetime import datetime
-import random
+from functools import partial
 import logging
 import multiprocessing
-from functools import partial
+import os
 from typing import Sequence, List
 
 import pandas as pd
 from tqdm import tqdm
-import requests
-from bs4 import BeautifulSoup
-from unidecode import unidecode
-from frictionless import Package
 
-USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.2'
-TIMEOUT = 20
+from validation.verify_links import (healthy_link, get_title_and_type,
+    get_candidate_links, get_output_to_be_merged, store_csv)
+
 INPUT_FOLDER = '../../data/unverified'
 INPUT_FILE = 'municipality-website-candidate-links.csv'
 MAX_SIMULTANEOUS = 10
 MAX_QUANTITY = 0
 OUTPUT_FOLDER = '../../data/valid'
 OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
-
-def healthy_link(link: str) -> requests.Response:
-    """Check whether or not the link is healthy.
-
-    Args:
-        link (str): The url of the link to be verified.
-
-    Returns:
-        requests.Response: The Response object in case the link
-            is healthy, None otherwise.
-    """
-    try:
-        response = requests.get(
-            link,
-            headers={'user-agent': USER_AGENT},
-            timeout=TIMEOUT
-            )
-    except (
-        requests.exceptions.ConnectionError,
-        requests.exceptions.InvalidURL,
-        requests.exceptions.TooManyRedirects,
-        requests.exceptions.ReadTimeout
-    ):
-        return None
-    if response and response.status_code == 200:
-        return response
-    return None
-
-def check_type(
-    response: requests.Response,
-    candidates: pd.DataFrame) -> str:
-    """Try to infer the type of site this is.
-
-    Args:
-        response (requests.Response): The Response object obtained when
-            crawling the page.
-        candidates (pd.DataFrame): The Pandas dataframe slice containing
-            the candidate links.
-
-    Returns:
-        str: The link type category.
-    """
-    soup = BeautifulSoup(response.text, 'html.parser')
-    title_tag = soup.find('title')
-    if title_tag is None:
-        return None
-    title = unidecode(title_tag.text.lower())
-    link_types = candidates.link_type
-    if 'prefeitura' in link_types:
-        link_type = 'prefeitura'
-    elif 'camara' in link_types:
-        link_type = 'camara'
-    elif 'hino' in title:
-        link_type = None
-    elif 'brasao' in title:
-        link_type = None
-    elif 'prefeitura' in title:
-        link_type = 'prefeitura'
-    elif 'municipio' in title:
-        link_type = 'prefeitura'
-    elif re.match(r'c.{0,3}mara', title, re.IGNORECASE):
-        link_type = 'camara'
-    elif 'poder executivo' in title:
-        link_type = 'prefeitura'
-    elif 'governo municipal' in title:
-        link_type = 'prefeitura'
-    elif 'pref.' in title:
-        link_type = 'prefeitura'
-    else:
-        logging.warning(
-            'Unable to determine site type from title: “%s”.', title)
-        link_type = None
-    return link_type
 
 def verify_city_links(candidates: pd.DataFrame, code: int) -> List[dict]:
     """Verify links for a city with a given code.
@@ -130,7 +52,7 @@ def verify_city_links(candidates: pd.DataFrame, code: int) -> List[dict]:
     for link in city_links.link.unique():
         working_link = healthy_link(link)
         if working_link:
-            link_type = check_type(
+            _, link_type = get_title_and_type(
                 working_link,
                 candidates[candidates.link==link]
             )
@@ -227,15 +149,10 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
     Returns:
         pd.DataFrame: Pandas dataframe containing the verified links.
     """
-    candidates = pd.read_csv(os.path.join(input_folder, input_file))
-    logging.info(
-        'Found %d link candidates in %s.',
-        len(candidates),
-        os.path.join(input_folder, input_file))
+    candidates = get_candidate_links(
+        file_path=os.path.join(input_folder, input_file),
+        max_quantity=max_quantity)
     codes = candidates.code.unique()
-    random.shuffle(codes) # randomize sequence
-    if max_quantity:
-        codes = codes[:max_quantity] # take a subsample for quicker processing
     goodlinks = pd.DataFrame(columns=candidates.columns)
 
     def in_chunks(seq: Sequence, size: int) -> Sequence:
@@ -263,12 +180,8 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
                         verified_link, ignore_index=True)
             progress_bar.update(max_simultaneous)
 
-    # record validated
-
-    # read schema
-    package = Package(data_package_path)
-    resource = package.get_resource('brazilian-municipality-and-state-websites')
-    table = resource.to_pandas()
+    # read resource to be updated
+    table = get_output_to_be_merged(data_package_path)
 
     # prepare column names
     goodlinks.rename(columns={
@@ -308,20 +221,6 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
 
     # returns the results
     return table
-
-def store_csv(table: pd.DataFrame, data_package_path: str):
-    """Stores the csv file in the output folder.
-
-    Args:
-        table (pd.DataFrame): The dataframe containing the data.
-        data_package_path (str): Path to the datapackage.json file.
-    """
-    package = Package(data_package_path)
-    resource = package.get_resource('brazilian-municipality-and-state-websites')
-    output = resource.path # filename of csv to write
-    logging.info('Recording %s...', output)
-    # store the file
-    table.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
 
 if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
