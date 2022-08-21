@@ -207,8 +207,11 @@ def parse_cli() -> dict:
 
 def auto_verify(input_folder: str, input_file: str, data_package_path: str,
         max_quantity: int, max_simultaneous: int) -> pd.DataFrame:
-    """Automatically verifies links. This is the script that is run from
-    the command line.
+    """Automatically verifies links and try to infer the link type for
+    each.
+
+    A Python function that does the same job as the script that is run
+    from the command line.
 
     Args:
         input_folder (str): The folder containing the input table.
