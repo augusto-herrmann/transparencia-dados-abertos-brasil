@@ -9,5 +9,6 @@ env
 __pycache__
 *.egg-info
 
-# unverified data files
+# unverified data files and cache
 data/unverified/*.csv
+data/download-cache
