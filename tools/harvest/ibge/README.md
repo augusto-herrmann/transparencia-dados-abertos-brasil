@@ -17,6 +17,4 @@ use this list to search for the existing municipalities.
    python ibge-municipalities.py
    ```
 
-Note: Python 3 is required for this script. Tested on 3.6.9. Python 2 is not
-supported.
-
+Note: Python 3 is required for this script.
