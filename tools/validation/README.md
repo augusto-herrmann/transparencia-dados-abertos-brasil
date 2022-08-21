@@ -10,7 +10,7 @@ what kind of portal it is.
 
 ## Usage
 
-1. Create a Pyton virtual environment. This is not required, but it is
+1. Create a Python virtual environment. This is not required, but it is
    recommended.
 2. Install the dependencies. From the tools directory:
    ```bash
