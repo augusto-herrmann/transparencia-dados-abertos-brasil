@@ -11,8 +11,8 @@ from bs4 import BeautifulSoup
 from unidecode import unidecode
 from frictionless import Package
 
-USER_AGENT = 'transparencia-dados-abertos-brasil/0.0.2'
-TIMEOUT = 20
+from settings import USER_AGENT, DEFAULT_TIMEOUT as TIMEOUT
+
 WEBSITE_RESOURCE_NAME = 'brazilian-municipality-and-state-websites'
 
 def healthy_link(link: str) -> requests.Response:
