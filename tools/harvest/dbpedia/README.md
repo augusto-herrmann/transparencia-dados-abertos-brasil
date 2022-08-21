@@ -26,4 +26,4 @@ and process, see the
    python 02-dbpedia-website-links.py
    ```
 
-Note: Python 3 is required for this script. Tested on 3.8.10.
+Note: Python 3 is required for this script.
