@@ -33,7 +33,6 @@ INPUT_FILE = 'municipality-website-candidate-links.csv'
 MAX_SIMULTANEOUS = 10
 MAX_QUANTITY = 0
 OUTPUT_FOLDER = '../../data/valid'
-OUTPUT_FILE = 'brazilian-municipality-and-state-websites.csv'
 
 def verify_city_links(candidates: pd.DataFrame, code: int) -> List[dict]:
     """Verify links for a city with a given code.
