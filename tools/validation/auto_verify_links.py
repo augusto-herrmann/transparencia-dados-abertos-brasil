@@ -152,8 +152,8 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
         file_path=os.path.join(input_folder, input_file),
         max_quantity=max_quantity)
     codes = candidates.code.unique()
-    new_links = pd.DataFrame(columns=list(candidates.columns) +
-        ['last_checked'])
+    new_links = pd.DataFrame(columns=candidates.columns)
+    new_links['last_checked'] = pd.Series(dtype='datetime64[ns]')
 
     def in_chunks(seq: Sequence, size: int) -> Sequence:
         """Returns a Sequence spaced in chunks of arbitrary size.
@@ -204,12 +204,23 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
                 (table.branch == result['branch'])
             ]
         if len(existing_data) > 0:
-            row = existing_data.iloc[0].copy()
-            for key in ['sphere', 'branch', 'url', 'last-verified-auto']:
-                row[key] = result[key] # update the values
-            table.loc[len(table)] = row
+            index = existing_data.index[0]
+            row = existing_data.loc[[index,]]
+            changed_columns = ['sphere', 'branch', 'url', 'last-verified-auto']
+            for key in changed_columns:
+                row.loc[index, key] = result[key] # update the values
+            print('\n Old: ', table.loc[index, changed_columns])
+            print('\n New: ', row.loc[index, changed_columns])
+            table.loc[index, changed_columns] = row.loc[index, changed_columns]
         else:
-            table.loc[len(table)] = result
+            print(f'\n Adding at position {len(table)}: ', result)
+            index = len(table)
+            for key in result.keys():
+                table.loc[index, key] = result[key]
+        # enforce correct data types
+        table['municipality_code'] = table['municipality_code'].astype('Int64')
+        table['last-verified-auto'] = pd.to_datetime(
+            table['last-verified-auto'], utc=True)
 
     # remove duplicate entries,
     # take into account only url column,
