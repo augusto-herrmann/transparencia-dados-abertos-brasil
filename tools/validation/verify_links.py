@@ -130,7 +130,7 @@ def store_csv(table: pd.DataFrame, data_package_path: str):
     """
     package = Package(data_package_path)
     resource = package.get_resource(WEBSITE_RESOURCE_NAME)
-    output = resource.path # filename of csv to write
+    output = resource.fullpath # filename of csv to write
     logging.info('Recording %s...', output)
     # store the file
     table.to_csv(output, index=False, date_format='%Y-%m-%dT%H:%M:%SZ')
