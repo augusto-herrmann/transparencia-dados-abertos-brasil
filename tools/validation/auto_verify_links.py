@@ -153,7 +153,8 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
         file_path=os.path.join(input_folder, input_file),
         max_quantity=max_quantity)
     codes = candidates.code.unique()
-    goodlinks = pd.DataFrame(columns=candidates.columns)
+    new_links = pd.DataFrame(columns=list(candidates.columns) +
+        ['last_checked'])
 
     def in_chunks(seq: Sequence, size: int) -> Sequence:
         """Returns a Sequence spaced in chunks of arbitrary size.
@@ -175,16 +176,14 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
             results = pool.map(partial(verify_city_links, candidates), chunk)
             for result in results:
                 for verified_link in result:
-                    # TODO: replace deprecated pd.DataFrame.append
-                    goodlinks = goodlinks.append(
-                        verified_link, ignore_index=True)
+                    new_links.loc[len(new_links)] = verified_link
             progress_bar.update(max_simultaneous)
 
     # read resource to be updated
     table = get_output_to_be_merged(data_package_path)
 
     # prepare column names
-    goodlinks.rename(columns={
+    new_links.rename(columns={
         'uf': 'state_code',
         'code': 'municipality_code',
         'name': 'municipality',
@@ -194,12 +193,12 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
     }, inplace=True)
 
     # map values
-    goodlinks.branch = goodlinks.branch.str.replace('prefeitura', 'executive')
-    goodlinks.branch = goodlinks.branch.str.replace('camara', 'legislative')
-    goodlinks['sphere'] = 'municipal'
+    new_links.branch = new_links.branch.str.replace('prefeitura', 'executive')
+    new_links.branch = new_links.branch.str.replace('camara', 'legislative')
+    new_links['sphere'] = 'municipal'
 
     logging.info('Updating values...')
-    for _, result in goodlinks.iterrows():
+    for _, result in new_links.iterrows():
         # get existing data in file to be updated
         existing_data = table.loc[
                 (table.municipality_code == result['municipality_code']) &
@@ -209,9 +208,9 @@ def auto_verify(input_folder: str, input_file: str, data_package_path: str,
             row = existing_data.iloc[0].copy()
             for key in ['sphere', 'branch', 'url', 'last-verified-auto']:
                 row[key] = result[key] # update the values
-            table = table.append(row, ignore_index=True)
+            table.loc[len(table)] = row
         else:
-            table = table.append(result, ignore_index=True)
+            table.loc[len(table)] = result
 
     # remove duplicate entries,
     # take into account only url column,
