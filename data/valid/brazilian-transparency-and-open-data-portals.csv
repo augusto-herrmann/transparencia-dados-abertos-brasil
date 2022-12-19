@@ -3,6 +3,7 @@ state_code,municipality_code,municipality,sphere,branch,url,type,notes,last-veri
 ,,,federal,judiciary,https://dadosabertos.tse.jus.br/,PEDAG,,,2022-07-25T18:56:26
 AC,1200401,Rio Branco,municipal,executive,http://transparencia.riobranco.ac.gov.br/,SPT,,,
 AL,2704302,Maceió,municipal,executive,http://www.transparencia.maceio.al.gov.br/,SPT,,,
+AL,2704302,Maceió,municipal,legislative,http://www.maceio.al.leg.br/transparencia/,SPT,,,2022-12-19T20:16:34
 AM,1302603,Manaus,municipal,executive,http://transparencia.manaus.am.gov.br/transparencia/v2/#/home,SPT,,,
 AP,1600303,Macapá,municipal,executive,http://transparencia.macapa.ap.gov.br/transparenciafinancas/,SPT,,,
 BA,2907301,Castro Alves,municipal,executive,http://ba.portaldatransparencia.com.br/prefeitura/castroalves/,SPT,,,2022-12-03T21:12:57
