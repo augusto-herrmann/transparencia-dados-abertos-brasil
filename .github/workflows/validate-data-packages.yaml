@@ -1,4 +1,4 @@
-name: frictionless
+name: data packages validation
 
 on:
   push:
