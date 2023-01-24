@@ -18,11 +18,18 @@ what kind of portal it is.
    ```
 3. Run the script:
    ```bash
-   python auto_verify_links.py input_file.csv output_file.csv -q {quantity} -p {processes}
+   python auto_verify_links.py input_file.csv output_folder -q {quantity} -p {processes}
    ```
 
    Where `{quantity}` is the maximum quantity of links to check and
    `{processes}` is the number of processes to use in parallel.
+
+   For example, to automatically crawl 100 candidate links in the default
+   folder, using 10 parallel processes, use:
+
+   ```bash
+   python auto_verify_links.py ../../data/unverified/municipality-website-candidate-links.csv ../../data/valid/ -q 100 -p 10
+   ```
 
    For more information run:
    ```bash
