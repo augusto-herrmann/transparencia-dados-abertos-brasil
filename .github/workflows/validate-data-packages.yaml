@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'data/**'
   pull_request:
     branches:
       - main
+    paths:
+      - 'data/**'
 
 jobs:
   frictionless-repository:
