@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  validate:
+  frictionless-repository:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
