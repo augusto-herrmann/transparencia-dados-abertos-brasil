@@ -136,7 +136,7 @@ def remove_and_rename_columns(table: pd.DataFrame) -> pd.DataFrame:
             'Nome_Município': 'name',
             'Sigla_UF':'uf'
         })
-        .loc[:,['code', 'name', 'uf']]
+        .loc[:,[ 'uf', 'code', 'name']]
         .sort_values(by='code')
     )
 
@@ -177,4 +177,5 @@ if __name__ == '__main__':
     table = add_state_codes(table)
     table = remove_and_rename_columns(table)
     table = merge_existing(table, OUTPUT_FOLDER)
+    table = table.sort_values(['uf', 'name', 'code'])
     table.to_csv(os.path.join(OUTPUT_FOLDER, OUTPUT_FILE), index=False)
