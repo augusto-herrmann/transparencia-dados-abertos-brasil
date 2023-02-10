@@ -43,24 +43,38 @@
       "schema": {
         "fields": [
           {
-            "name": "code",
-            "type": "integer",
+            "name": "uf",
+            "type": "string",
             "format": "default",
-            "title": "municipality code",
-            "description": "Code attributed by IBGE for the municipality."
+            "title": "UF abbreviation",
+            "description": "Official abbreviation (2 letter code) for the Federative Unit.",
+            "constraints": {
+              "required": true,
+              "minLength": 2,
+              "maxLength": 2
+            }
           },
           {
             "name": "name",
             "type": "string",
             "format": "default",
-            "title": "municipality name"
+            "title": "municipality name",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
           },
           {
-            "name": "uf",
-            "type": "string",
+            "name": "code",
+            "type": "integer",
             "format": "default",
-            "title": "UF abbreviation",
-            "description": "Official abbreviation (2 letter code) for the Federative Unit."
+            "title": "municipality code",
+            "description": "Code attributed by IBGE for the municipality.",
+            "constraints": {
+              "required": true,
+              "minimum": 1,
+              "maximum": 9999999
+            }
           },
           {
             "name": "dbpedia",
