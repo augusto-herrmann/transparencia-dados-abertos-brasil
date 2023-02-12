@@ -15,35 +15,57 @@
             "type": "string",
             "format": "default",
             "title": "State code",
-            "description": "Brazilian state abbreviation"
+            "description": "Brazilian state abbreviation",
+            "constraints": {
+              "required": false,
+              "minLength": 2,
+              "maxLength": 2
+            }
           },
           {
             "name": "municipality_code",
             "type": "integer",
             "format": "default",
             "title": "Municipality code",
-            "description": "Municipality code, according to IBGE"
+            "description": "Municipality code, according to IBGE",
+            "constraints": {
+              "required": false,
+              "minimum": 1,
+              "maximum": 9999999
+            }
           },
           {
             "name": "municipality",
             "type": "string",
             "format": "default",
             "title": "Municipality",
-            "description": "Municipality name"
+            "description": "Municipality name",
+            "constraints": {
+              "required": false,
+              "minLength": 1
+            }
           },
           {
             "name": "sphere",
             "type": "string",
             "format": "default",
             "title": "Sphere",
-            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality."
+            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality.",
+            "constraints": {
+              "required": true,
+              "enum": ["federal", "state", "municipal"]
+            }
           },
           {
             "name": "branch",
             "type": "string",
             "format": "default",
             "title": "branch",
-            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp."
+            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp.",
+            "constraints": {
+              "required": true,
+              "enum": ["executive", "legislative", "judiciary"]
+            }
           },
           {
             "name": "url",
@@ -57,7 +79,11 @@
             "type": "string",
             "format": "default",
             "title": "type of portal",
-            "description": "Type of portal (according to KLEIN, 2017).\n\nSPT: Transparency portal only\nPTDAG: Transparency and open data portal\nPEDAG: Open data portal"
+            "description": "Type of portal (according to KLEIN, 2017).\n\nSPT: Transparency portal only\nPTDAG: Transparency and open data portal\nPEDAG: Open data portal",
+            "constraints": {
+              "required": true,
+              "enum": ["SPT", "PTDAG", "PEDAG"]
+            }
           },
           {
             "name": "notes",
@@ -102,35 +128,57 @@
             "type": "string",
             "format": "default",
             "title": "State code",
-            "description": "Brazilian state abbreviation"
+            "description": "Brazilian state abbreviation",
+            "constraints": {
+              "required": false,
+              "minLength": 2,
+              "maxLength": 2
+            }
           },
           {
             "name": "municipality_code",
             "type": "integer",
             "format": "default",
             "title": "Municipality code",
-            "description": "Municipality code, according to IBGE"
+            "description": "Municipality code, according to IBGE",
+            "constraints": {
+              "required": false,
+              "minimum": 1,
+              "maximum": 9999999
+            }
           },
           {
             "name": "municipality",
             "type": "string",
             "format": "default",
             "title": "Municipality",
-            "description": "Municipality name"
+            "description": "Municipality name",
+            "constraints": {
+              "required": false,
+              "minLength": 1
+            }
           },
           {
             "name": "sphere",
             "type": "string",
             "format": "default",
             "title": "Sphere",
-            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality."
+            "description": "Federative sphere of the Brazilian public entity. Can be one of these: federal, state, municipality.",
+            "constraints": {
+              "required": true,
+              "enum": ["federal", "state", "municipal"]
+            }
           },
           {
             "name": "branch",
             "type": "string",
             "format": "default",
             "title": "branch",
-            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp."
+            "description": "Branch of Brazilian administration the entity is situated at. Can be one of these: executive, legislative, judiciary, mp.",
+            "constraints": {
+              "required": true,
+              "enum": ["executive", "legislative", "judiciary"]
+            }
           },
           {
             "name": "url",
