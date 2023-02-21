@@ -14,20 +14,20 @@ reference information.
 Besides, each state and municipality has executive and legislative branches,
 which effectively doubles the work required.
 
-### Steps of data discovery
+### Data discovery
 
-We take many steps to find the actual transparency and open data portals.
-First, we need to find out the institutional websites of city councils and
-city halls in Brazil.
+In order to find the actual transparency and open data portals, some
+steps are required. First, we need to find out the institutional websites
+of city councils and city halls in Brazil.
 
-#### Finding the websites of city councils and city halls
+#### Websites of city councils and city halls
 
 One would expect for a database containing the official websites of all
 city councils and all city halls in Brazil to already exist. But alas, it
 does not. So we try to obtain possible links from several sources.
 
 These data sources are in the [sources](sources) directory. Check each
-individual data source directory for more information. Some examples of
+individual data source folder for more information. Some examples of
 sources that are already implemented are:
 
 * [tables 31 and 32](sources/research/klein-2017) from the PhD thesis of
@@ -41,6 +41,9 @@ possible links to the websites of city administration, which is stored
 in the [data/unverified](data/unverified) directory. Data stored here is
 expected to still contain a lot of garbage and **should not be committed
 to the repository**.
+
+Future potential data sources are discussed in this repository's
+[issues](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/issues).
 
 ##### Validation
 
