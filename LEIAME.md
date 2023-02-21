@@ -14,14 +14,14 @@ informações de referência.
 Além disso, cada estado e município tem seu poder executivo e legislativo, o
 que efetivamente duplica a quantidade de trabalho necessária.
 
-### Passos para a descoberta de dados
+### Descoberta de dados
 
-Nós realizamos muitos passos para encontrar os portais que são de fato da
-transparência e de dados abertos. Em primeiro lugar, precisamos encontrar
+Para encontrar os portais de transparência e de dados abertos são
+nescessários alguns passos. Em primeiro lugar, precisamos encontrar
 os sites institucionais das câmaras ou assembleias legislativas e prefeituras
 no Brasil.
 
-#### Encontrando os sites de câmaras e prefeituras
+#### Sites de câmaras e prefeituras
 
 Poderia se esperar que um banco de dados contendo os sites oficiais de todas
 as câmaras e prefeituras municipais do Brasil já existisse. Mas, na verdade,
@@ -41,6 +41,10 @@ contêm os possíveis links para os sites das administrações locais, os quais
 são armazenados no diretório [data/unverified](data/unverified) (dados/não
 verificados). Espera-se que os dados guardados aqui ainda contenham muito
 lixo e **não devem ser incluídos (commit) no repositório**.
+
+Fontes potenciais futuras de dados são discutidas nas
+[issues](https://github.com/augusto-herrmann/transparencia-dados-abertos-brasil/issues)
+deste repositório.
 
 ##### Validação
 
