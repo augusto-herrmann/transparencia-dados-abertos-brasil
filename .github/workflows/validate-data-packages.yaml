@@ -19,4 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Validate data
-        uses: frictionlessdata/repository@v1
+        uses: frictionlessdata/repository@v2
+        with:
+          inquiry: data/data-validation.yaml
