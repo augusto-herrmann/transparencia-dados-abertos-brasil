@@ -1,4 +1,4 @@
-name: data packages validation
+name: data-packages-validation
 
 on:
   push:
