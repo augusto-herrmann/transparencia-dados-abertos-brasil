@@ -1,0 +1,4 @@
+tasks:
+  - path: data/valid/datapackage.json
+  - path: data/auxiliary/geographic/datapackage.json
+  - path: data/archive/datapackage.json
