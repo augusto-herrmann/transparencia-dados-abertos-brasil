@@ -3,9 +3,10 @@ name: data packages validation
 on:
   push:
     branches:
-      - main
+      - issue-150
+      # - main
     paths:
-      - 'data/**'
+      # - 'data/**'
   pull_request:
     branches:
       - main
