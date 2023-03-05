@@ -2,7 +2,7 @@
 
 These scripts import data from the Interlegis sources. For more information on the rationale
 and process, see the
-[source description here](../../../sources/interlegis/interlegis.md).
+[source description here](../../../sources/interlegis/README.md).
 
 ## Usage
 
