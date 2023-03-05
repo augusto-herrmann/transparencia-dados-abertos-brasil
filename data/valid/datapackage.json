@@ -107,6 +107,7 @@
             "description": "Last time the site was manually verified to be in working order"
           }
         ],
+        "primaryKey": ["state_code", "municipality_code", "sphere", "branch"],
         "missingValues": [
           ""
         ]
@@ -209,6 +210,7 @@
             "description": "Last time the site was manually verified to be in working order"
           }
         ],
+        "primaryKey": ["state_code", "municipality_code", "sphere", "branch", "notes"],
         "missingValues": [
           ""
         ]
