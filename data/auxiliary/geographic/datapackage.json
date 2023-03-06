@@ -124,6 +124,7 @@
   "description": "Codes used by the Brazilian Institute of Geography and Statistics (IBGE) to describe Federative Units (UF) and municipalities in Brazil.",
   "licenses": [
     {
+      "name": "PDM",
       "title": "Public domain",
       "path": "https://creativecommons.org/share-your-work/public-domain/pdm"
     }
