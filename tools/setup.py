@@ -14,7 +14,7 @@ INSTALL_REQUIRES = [
     'pandas==1.4.3',
     'tqdm==4.64.0',
     'beautifulsoup4==4.11.1',
-    'frictionless==4.40.3',
+    'frictionless==5.8.1',
     'Unidecode==1.3.4',
 ]
 
