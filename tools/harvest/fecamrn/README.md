@@ -10,7 +10,9 @@ information on the rationale and process, see the
    recommended.
 2. Install the dependencies:
    ```
-   pip install -r requirements.txt
+   cd tools
+   pip install -e .
+   cd ..
    ```
 3. Run the script:
    ```
