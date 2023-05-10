@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import os
 import unicodedata
+import logging
 
 import requests
 import pandas as pd
@@ -128,9 +129,9 @@ class Harvester(ABC):
 
     def save(self):
         """Saves the file with candidate links."""
-        self.resource.data.to_csv(
-            os.path.join(self.output_folder, self.output_file), index=False
-        )
+        output_file_path = os.path.join(self.output_folder, self.output_file)
+        logging.info("Writing file: %s", output_file_path)
+        self.resource.data.to_csv(output_file_path, index=False)
 
 
 class DataScraper(Harvester, ABC):

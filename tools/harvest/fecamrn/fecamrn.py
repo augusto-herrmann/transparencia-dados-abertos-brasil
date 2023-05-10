@@ -1,5 +1,6 @@
 import os
 import argparse
+import logging
 
 from bs4 import BeautifulSoup
 
@@ -75,5 +76,6 @@ def parse_cli() -> dict:
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     options = parse_cli()
     extract_fecamrn_portals(**options)
