@@ -10,7 +10,7 @@ def read(*paths, encoding='utf-8'):
     return contents
 
 INSTALL_REQUIRES = [
-    'requests==2.28.1',
+    'requests==2.31.0',
     'pandas==1.4.3',
     'tqdm==4.64.0',
     'beautifulsoup4==4.11.1',
